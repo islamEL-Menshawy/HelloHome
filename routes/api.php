@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\AuthController;
 
 use App\Http\Controllers\API\TypeController;
+use App\Http\Controllers\API\LocationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,4 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::apiResource('type', TypeController::class);
+Route::apiResource('location', LocationController::class);
