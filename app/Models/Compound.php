@@ -15,7 +15,16 @@ class Compound extends Model
       'title_ar',
       'slug_ar',
       'description_ar',
+      'website',
       'image_id'
     ];
+
+    /**
+     * Get the image associated with the Compound.
+     */
+    public function image()
+    {
+        return $this->hasOne(Images::class, 'id');
+    }
 
 }

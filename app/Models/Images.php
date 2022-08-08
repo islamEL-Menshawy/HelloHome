@@ -12,4 +12,12 @@ class Images extends Model
     protected $fillable =[
       'image_path'
     ];
+
+    /**
+     * Get the user that owns the phone.
+     */
+    public function compound()
+    {
+        return $this->belongsTo(Compound::class);
+    }
 }

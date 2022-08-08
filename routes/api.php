@@ -4,6 +4,7 @@ use App\Http\Controllers\API\AuthController;
 
 use App\Http\Controllers\API\TypeController;
 use App\Http\Controllers\API\LocationController;
+use App\Http\Controllers\API\CompoundController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::apiResource('type', TypeController::class);
 Route::apiResource('location', LocationController::class);
+Route::apiResource('compound', CompoundController::class);
+Route::post('compound/update-image/{id}', [CompoundController::class, 'updateImage']);
