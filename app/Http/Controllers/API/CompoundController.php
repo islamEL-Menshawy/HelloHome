@@ -85,7 +85,7 @@ class CompoundController extends BaseController
     public function update(Request $request,int $id)
     {
         $request->validate([
-            'title_en'=>'required|string|unique:compounds',
+            'title_en'=>'required|string',
             'description_en'=>'required|string',
             'website'=>'required|url'
         ]);
@@ -98,7 +98,7 @@ class CompoundController extends BaseController
             $compound->website = $request->website;
             $compound->save();
             $image = Images::findOrFail($compound->image_id);
-            $newPath = $this->fileService->renameFileByPath($image->image_path, "compound/". $compound->slug_en);
+            $newPath = $this->fileService->renameFileByPath($image->image_path, "/compound/". $compound->slug_en);
             $image->image_path = $newPath;
             $image->save();
             return $this->sendResponse(new CompoundCollection($compound),"compound created successfully") ;

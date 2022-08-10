@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\File;
 
 class FileService
 {
+//    private static $UPLOAD_PATH = "uploads/";
 
 
     public function uploadFile($file, string $imageName, string $path): string
@@ -29,8 +30,8 @@ class FileService
 
     public function renameFileByPath(string $path,string $newName){
         $extension = File::extension("uploads/".$path);
-        $newPath = "uploads/".$newName."." . $extension;
-        rename(public_path("uploads/".$path), public_path($newPath));
+        $newPath = $newName."." . $extension;
+        rename(public_path("uploads/".$path), public_path("uploads/".$newPath));
         return $newPath;
     }
 }
