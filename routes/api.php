@@ -5,6 +5,7 @@ use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\TypeController;
 use App\Http\Controllers\API\LocationController;
 use App\Http\Controllers\API\CompoundController;
+use App\Http\Controllers\API\AmenitiesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,5 @@ Route::apiResource('type', TypeController::class);
 Route::apiResource('location', LocationController::class);
 Route::apiResource('compound', CompoundController::class);
 Route::post('compound/update-image/{id}', [CompoundController::class, 'updateImage']);
+Route::apiResource('amenities', AmenitiesController::class);
+Route::post('amenities/update-image/{id}', [AmenitiesController::class, 'updateImage']);
