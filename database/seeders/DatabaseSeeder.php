@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             ImageSeeder::class,
             CompoundSeeder::class,
             LocationSeeder::class,
-            TypeSeeder::class
+            TypeSeeder::class,
+            AmenitiesSeeder::class
         ]);
     }
 }

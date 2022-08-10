@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Compound extends Model
 {
@@ -22,9 +23,9 @@ class Compound extends Model
     /**
      * Get the image associated with the Compound.
      */
-    public function image()
+    public function image(): BelongsTo
     {
-        return $this->hasOne(Images::class, 'id');
+        return $this->belongsTo(Images::class);
     }
 
 }

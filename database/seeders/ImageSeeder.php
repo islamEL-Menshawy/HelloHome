@@ -15,7 +15,7 @@ class ImageSeeder extends Seeder
     public function run()
     {
         Images::create([
-           'image_path'=>'defaults/compound.png'
+           'image_path'=>'/defaults/compound.png'
         ]);
     }
 }
