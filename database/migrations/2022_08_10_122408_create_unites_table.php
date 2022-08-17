@@ -26,6 +26,7 @@ class CreateUnitesTable extends Migration
             $table->foreignId('compound_id')->constrained('compounds');
             $table->foreignId('type_id')->constrained('types');
             $table->foreignId('location_id')->constrained('locations');
+            $table->boolean('isActive')->default(true);
             $table->timestamps();
         });
     }

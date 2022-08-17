@@ -21,6 +21,8 @@ class CompoundCollection extends JsonResource
             "description_en"=> $this->description_en,
             "website"=> $this->website,
             "image"=> new ImageCollection($this->image),
+            'is_active' => $this->isActive ,
+            'number_of_unites'=> $this->number_of_unites,
             "updated_at"=> $this->updated_at,
             "created_at"=> $this->created_at
         ];

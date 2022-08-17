@@ -24,6 +24,7 @@ class CreateCompoundsTable extends Migration
             $table->string('slug_ar')->nullable()->unique();
             $table->text('description_ar')->nullable();
             // general fields
+            $table->boolean('isActive')->default(true);
             $table->string('website')->nullable();
             $table->foreignId('image_id')->constrained('images');
             $table->timestamps();

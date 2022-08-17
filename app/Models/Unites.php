@@ -25,6 +25,15 @@ class Unites extends Model
       'location_id'
     ];
 
+    protected $appends = ['last_modify', 'number_of_unites'];
+
+    public function getLastModifyAttribute()
+    {
+        if (!empty($this->created_at) && !empty($this->updated_at)) {
+            return $this->updated_at->diffForHumans();
+        }
+    }
+
     /**
      * The images that belong to the Unit.
      */

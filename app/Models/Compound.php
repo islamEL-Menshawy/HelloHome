@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Compound extends Model
 {
@@ -26,6 +27,26 @@ class Compound extends Model
     public function image(): BelongsTo
     {
         return $this->belongsTo(Images::class);
+    }
+
+    protected $appends = ['last_modify', 'number_of_unites'];
+
+    public function getDiffInDaysAttribute()
+    {
+        if (!empty($this->created_at) && !empty($this->updated_at)) {
+            return $this->updated_at->diffForHumans();
+        }
+    }
+
+
+    public function getLastModifyAttribute(): int
+    {
+        return $this->unites()->count();
+    }
+
+    public function unites(): HasMany
+    {
+        return $this->hasMany(Unites::class);
     }
 
 }

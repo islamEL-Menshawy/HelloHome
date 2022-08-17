@@ -21,6 +21,7 @@ class CreateTypesTable extends Migration
             // arabic fields
             $table->string('title_ar')->nullable();
             $table->string('slug_ar')->nullable()->unique();
+            $table->boolean('isActive')->default(true);
             // general fields
             $table->timestamps();
         });

@@ -48,10 +48,6 @@ class AmenitiesSeeder extends Seeder
                 'title_en' => "Air conditioning",
                 'slug_en' => Str::slug('Air conditioning'),
                 'image_id'=> 1
-            ],[
-                'title_en' => "Security cameras",
-                'slug_en' => Str::slug('Security cameras'),
-                'image_id'=> 1
             ]
         ];
 

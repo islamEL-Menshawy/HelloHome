@@ -22,6 +22,7 @@ class CreateLocationsTable extends Migration
             $table->string('title_ar')->nullable();
             $table->string('slug_ar')->nullable()->unique();
             // general fields
+            $table->boolean('isActive')->default(true);
             $table->timestamps();
         });
     }
