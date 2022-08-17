@@ -49,6 +49,7 @@ class AmenitiesController extends BaseController
         $image->save();
         $amenity = new Amenitie();
         $amenity->title_en = $request->title_en;
+        $amenity->slug_en = $slug;
         $amenity->image_id = $image->id;
         $amenity->save();
         return $this->sendResponse(new AmenitiesCollection($amenity),"Amenity created successfully") ;

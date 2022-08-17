@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Amenitie extends Model
 {
@@ -14,14 +14,12 @@ class Amenitie extends Model
         'title_en', 'image_id'
     ];
 
-
-
     /**
      * Get the image associated with the Compound.
      */
     public function image()
     {
-        return $this->hasOne(Images::class, 'id');
+        return $this->belongsTo(Images::class);
     }
 
     protected $appends = ['last_modify', 'number_of_unites'];
@@ -33,14 +31,13 @@ class Amenitie extends Model
         }
     }
 
-
     public function getNumberOfUnitesAttribute(): int
     {
         return $this->unites()->count();
     }
 
-    public function unites(): HasMany
+    public function unites(): BelongsToMany
     {
-        return $this->hasMany(Unites::class);
+        return $this->belongsToMany(Unites::class);
     }
 }

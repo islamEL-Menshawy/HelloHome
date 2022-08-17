@@ -20,6 +20,20 @@ class Compound extends Model
       'website',
       'image_id'
     ];
+    protected $appends = ['number_of_unites','lastUpdate'];
+
+
+    public function getLastUpdateAttribute(): string
+    {
+//        if (!empty($this->created_at) && !empty($this->updated_at)) {
+            return $this->updated_at->diffForHumans();
+//        }
+    }
+
+    public function getNumberOfUnitesAttribute(): int
+    {
+        return $this->unites()->count();
+    }
 
     /**
      * Get the image associated with the Compound.
@@ -29,20 +43,7 @@ class Compound extends Model
         return $this->belongsTo(Images::class);
     }
 
-    protected $appends = ['last_modify', 'number_of_unites'];
 
-    public function getDiffInDaysAttribute()
-    {
-        if (!empty($this->created_at) && !empty($this->updated_at)) {
-            return $this->updated_at->diffForHumans();
-        }
-    }
-
-
-    public function getLastModifyAttribute(): int
-    {
-        return $this->unites()->count();
-    }
 
     public function unites(): HasMany
     {

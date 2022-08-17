@@ -25,7 +25,7 @@ class Unites extends Model
       'location_id'
     ];
 
-    protected $appends = ['last_modify', 'number_of_unites'];
+    protected $appends = ['last_modify'];
 
     public function getLastModifyAttribute()
     {
