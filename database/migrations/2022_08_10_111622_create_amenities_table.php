@@ -16,8 +16,9 @@ class CreateAmenitiesTable extends Migration
         Schema::create('amenities', function (Blueprint $table) {
             $table->id();
             $table->string('title_en');
-            $table->string('slug_en');
+            $table->string('slug_en')->unique();
             $table->string('title_ar')->nullable();
+            $table->string('slug_ar')->nullable()->unique();
             $table->foreignId('image_id')->constrained('images');
             $table->timestamps();
         });

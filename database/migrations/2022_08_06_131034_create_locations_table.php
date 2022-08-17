@@ -17,10 +17,10 @@ class CreateLocationsTable extends Migration
             $table->id();
             // english fields
             $table->string('title_en');
-            $table->string('slug_en');
+            $table->string('slug_en')->unique();
             // arabic fields
             $table->string('title_ar')->nullable();
-            $table->string('slug_ar')->nullable();
+            $table->string('slug_ar')->nullable()->unique();
             // general fields
             $table->timestamps();
         });

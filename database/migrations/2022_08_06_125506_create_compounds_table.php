@@ -17,11 +17,11 @@ class CreateCompoundsTable extends Migration
             $table->id();
             // english fields
             $table->string('title_en');
-            $table->string('slug_en');
+            $table->string('slug_en')->unique();
             $table->text('description_en');
             // arabic fields
             $table->string('title_ar')->nullable();
-            $table->string('slug_ar')->nullable();
+            $table->string('slug_ar')->nullable()->unique();
             $table->text('description_ar')->nullable();
             // general fields
             $table->string('website')->nullable();
