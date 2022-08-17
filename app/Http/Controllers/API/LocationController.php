@@ -29,7 +29,7 @@ class LocationController extends BaseController
     public function store(Request $request):JsonResponse
     {
         $request->validate([
-            'title_en' => 'required'
+            'title_en' => 'required|unique:locations'
         ]);
         $location = new Location();
         $location->title_en = $request->title_en;

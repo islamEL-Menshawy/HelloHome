@@ -31,7 +31,7 @@ class TypeController extends BaseController
     public function store(Request $request):JsonResponse
     {
         $request->validate([
-            'title_en' => 'required'
+            'title_en' => 'required|unique:types',
         ]);
         $type = new Type();
         $type->title_en = $request->title_en;
