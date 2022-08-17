@@ -20,7 +20,7 @@ class CompoundCollection extends JsonResource
             "slug_en"=> $this->slug_en,
             "description_en"=> $this->description_en,
             "website"=> $this->website,
-            "image"=> env('APP_URL')."/uploads". $this->image->image_path,
+            "image"=> new ImageCollection($this->image),
             "updated_at"=> $this->updated_at,
             "created_at"=> $this->created_at
         ];

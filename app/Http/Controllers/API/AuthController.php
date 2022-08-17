@@ -20,7 +20,7 @@ class AuthController extends BaseController
     public function signin(Request $request)
     {
         $data = $this->authService->login($request);
-        if ($data->status){
+        if ($data['status']){
             return $this->sendResponse($data, 'User signed in');
         }else{
             return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);

@@ -26,7 +26,7 @@ class UnitsCollection extends JsonResource
             'compound' => $this->compound ,
             'type' => $this->type ,
             'location' => $this->location ,
-            'images' => $this->images ,
+            'images' => ImageCollection::collection($this->images) ,
             'amenities' => $this->amenities ,
             'updated_at'=> $this->updated_at,
             'created_at'=> $this->created_at

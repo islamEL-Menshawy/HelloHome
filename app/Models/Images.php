@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Images extends Model
 {
@@ -16,7 +17,7 @@ class Images extends Model
     /**
      * Get the user that owns the phone.
      */
-    public function compound()
+    public function compound(): BelongsTo
     {
         return $this->belongsTo(Compound::class);
     }
