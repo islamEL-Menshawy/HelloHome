@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\GlobalController;
 use App\Http\Controllers\API\TypeController;
 use App\Http\Controllers\API\LocationController;
 use App\Http\Controllers\API\CompoundController;
@@ -44,3 +45,5 @@ Route::apiResource('amenities', AmenitiesController::class);
 Route::post('amenities/update-image/{id}', [AmenitiesController::class, 'updateImage']);
 Route::delete('unit/delete-image', [UnitsController::class, 'destroyImage']);
 Route::apiResource('unit', UnitsController::class);
+
+Route::put('update-status/{id}/{model}', [GlobalController::class, 'switchStatus']);
