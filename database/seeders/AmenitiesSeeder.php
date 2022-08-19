@@ -18,36 +18,28 @@ class AmenitiesSeeder extends Seeder
         $data = [
             [
                 'title_en' => "Wifi",
-                'slug_en' => Str::slug('Wifi'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('Wifi')
             ],[
                 'title_en' => "Lake View",
-                'slug_en' => Str::slug('Lake View'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('Lake View')
             ],[
                 'title_en' => "Security",
-                'slug_en' => Str::slug('Security'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('Security')
             ],[
                 'title_en' => "TV with standard cable",
-                'slug_en' => Str::slug('TV with standard cable'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('TV with standard cable')
             ],[
                 'title_en' => "Kitchen",
-                'slug_en' => Str::slug('Kitchen'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('Kitchen')
             ],[
                 'title_en' => "TV with standard",
-                'slug_en' => Str::slug('TV with standard'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('TV with standard')
             ],[
                 'title_en' => "Security cameras",
-                'slug_en' => Str::slug('Security cameras'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('Security cameras')
             ],[
                 'title_en' => "Air conditioning",
-                'slug_en' => Str::slug('Air conditioning'),
-                'image_id'=> 1
+                'slug_en' => Str::slug('Air conditioning')
             ]
         ];
 

@@ -126,13 +126,19 @@ class AmenitiesController extends BaseController
     {
         try {
             $amenity = Amenitie::findOrFail($id);
-            $this->fileService->deleteFileByPath($amenity->image->image_path);
-            $image = Images::findOrFail($amenity->image_id);
+            $data = $amenity;
+
             $amenity->delete();
-            $image->delete();
+
+            if ($data->image_id != null){
+                $this->fileService->deleteFileByPath($amenity->image->image_path);
+                $image = Images::findOrFail($amenity->image_id);
+                $image->delete();
+            }
+
             return $this->sendResponse("","Amenity deleted successfully") ;
         }catch (\Exception $exception ){
-            return $this->sendError('Amenity not found', 404);
+            return $this->sendError('Amenity not found', $exception->getMessage());
         }
     }
 }

@@ -20,7 +20,7 @@ class Compound extends Model
       'website',
       'image_id'
     ];
-    protected $appends = ['number_of_unites','lastUpdate'];
+    protected $appends = ['number_of_unites','last_modify'];
 
 
     public function getLastUpdateAttribute(): string
