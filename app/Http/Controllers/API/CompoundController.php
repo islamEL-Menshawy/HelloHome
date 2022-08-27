@@ -134,13 +134,18 @@ class CompoundController extends BaseController
     {
         try {
             $compound = Compound::findOrFail($id);
-            $this->fileService->deleteFileByPath($compound->image->image_path);
-            $image = Images::findOrFail($compound->image_id);
+            $data = $compound;
+
             $compound->delete();
-            $image->delete();
+
+            if ($data->image_id != null){
+                $this->fileService->deleteFileByPath($compound->image->image_path);
+                $image = Images::findOrFail($compound->image_id);
+                $image->delete();
+            }
             return $this->sendResponse("","compound deleted successfully") ;
         }catch (\Exception $exception ){
-            return $this->sendError('Compound not found', 404);
+            return $this->sendError('Compound not found', $exception->getMessage());
         }
     }
 }

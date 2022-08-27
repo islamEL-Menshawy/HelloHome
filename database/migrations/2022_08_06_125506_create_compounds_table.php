@@ -26,7 +26,7 @@ class CreateCompoundsTable extends Migration
             // general fields
             $table->boolean('isActive')->default(true);
             $table->string('website')->nullable();
-            $table->foreignId('image_id')->constrained('images');
+            $table->foreignId('image_id')->nullable()->constrained('images');
             $table->timestamps();
         });
     }

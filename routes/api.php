@@ -7,6 +7,7 @@ use App\Http\Controllers\API\LocationController;
 use App\Http\Controllers\API\CompoundController;
 use App\Http\Controllers\API\AmenitiesController;
 use App\Http\Controllers\API\UnitsController;
+use App\Http\Controllers\API\SliderController;
 
 
 use Illuminate\Http\Request;
@@ -45,5 +46,7 @@ Route::apiResource('amenities', AmenitiesController::class);
 Route::post('amenities/update-image/{id}', [AmenitiesController::class, 'updateImage']);
 Route::delete('unit/delete-image', [UnitsController::class, 'destroyImage']);
 Route::apiResource('unit', UnitsController::class);
+Route::apiResource('slider', SliderController::class);
+Route::post('slider/update-image/{id}', [SliderController::class, 'updateImage']);
 
 Route::put('update-status/{id}/{model}', [GlobalController::class, 'switchStatus']);

@@ -112,7 +112,7 @@ class AmenitiesController extends BaseController
             $image->save();
             return $this->sendResponse("","Amenity image updated successfully") ;
         }catch (\Exception $exception ){
-            return $this->sendError('Amenity not found', 404);
+            return $this->sendError('Amenity not found', $exception->getMessage());
         }
     }
 

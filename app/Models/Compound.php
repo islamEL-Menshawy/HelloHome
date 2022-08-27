@@ -23,11 +23,9 @@ class Compound extends Model
     protected $appends = ['number_of_unites','last_modify'];
 
 
-    public function getLastUpdateAttribute(): string
+    public function getLastModifyAttribute(): string
     {
-//        if (!empty($this->created_at) && !empty($this->updated_at)) {
-            return $this->updated_at->diffForHumans();
-//        }
+        return $this->updated_at->diffForHumans();
     }
 
     public function getNumberOfUnitesAttribute(): int
