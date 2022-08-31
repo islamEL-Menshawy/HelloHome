@@ -22,7 +22,9 @@ class Unites extends Model
       'location_log',
       'compound_id',
       'type_id',
-      'location_id'
+      'location_id',
+      'video_link',
+      'location_link'
     ];
 
 //    protected $appends = ['last_modify'];

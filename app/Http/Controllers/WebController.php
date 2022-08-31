@@ -57,7 +57,9 @@ class WebController extends Controller
         }
 
         $unites = $unites->get();
-        return $unites;
+
+        return view('search');
+//        return $unites;
     }
 
 

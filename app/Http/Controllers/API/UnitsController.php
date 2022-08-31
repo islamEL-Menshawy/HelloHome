@@ -55,6 +55,7 @@ class UnitsController extends BaseController
             'type_id'=>'required|numeric',
             'location_id'=>'required|numeric'
         ]);
+
         $coordinates = $this->helperService->getCoordinates($request->location);
         if ($request->is_youtube){
             $video_path = $this->helperService->getVideoKey($request->video_path);
@@ -66,6 +67,8 @@ class UnitsController extends BaseController
         $unit->bathroom_number = $request->bathroom_number;
         $unit->area = $request->area;
         $unit->price = $request->price;
+        $unit->location_link = $request->location;
+        $unit->video_link = $request->video_path;
         $unit->is_youtube = $request->is_youtube;
         $unit->video_path = $video_path;
         $unit->location_lat = $coordinates[0]['latitude'];
@@ -100,7 +103,7 @@ class UnitsController extends BaseController
             $saved = Unites::findOrFail($id);
             return $this->sendResponse(new UnitsCollection($saved),'');
         }catch (\Exception $e){
-            return $this->sendError('Unit not found', 404);
+            return $this->sendError('Unit not found', $e->getMessage());
         }
     }
 
@@ -124,6 +127,12 @@ class UnitsController extends BaseController
             'type_id'=>'required|numeric',
             'location_id'=>'required|numeric'
         ]);
+        $coordinates = $this->helperService->getCoordinates($request->location);
+        if ($request->is_youtube){
+            $video_path = $this->helperService->getVideoKey($request->video_path);
+        }else{
+            $video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
+        }
         try {
             $unit = Unites::findOrFail($id);
             $unit->bed_number = $request->bed_number;
@@ -131,16 +140,18 @@ class UnitsController extends BaseController
             $unit->area = $request->area;
             $unit->price = $request->price;
             $unit->is_youtube = $request->is_youtube;
-            if ($request->video_path != null){
+            $unit->location_link = $request->location;
+            $unit->video_link = $request->video_path;
+            if ($request->video_link != null){
                 if ($request->is_youtube){
-                    $unit->video_path = $this->helperService->getVideoKey($request->video_path);
+                    $unit->video_path = $this->helperService->getVideoKey($request->video_link);
                 }else{
                     $this->fileService->deleteFileByPath($unit->video_path);
                     $unit->video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
                 }
             }
-            if ($request->location != null){
-                $coordinates = $this->helperService->getCoordinates($request->location);
+            if ($request->location_link != null){
+                $coordinates = $this->helperService->getCoordinates($request->location_link);
                 $unit->location_lat = $coordinates[0]['latitude'];
                 $unit->location_log = $coordinates[0]['longitude'];
             }
