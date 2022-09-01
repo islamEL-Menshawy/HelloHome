@@ -169,6 +169,25 @@ class UnitsController extends BaseController
 
     }
 
+    public function updateImage(Request $request, int $id){
+        try{
+            $unit = Unites::findOrFail($id);
+            $paths = $this->fileService->uploadMultiFiles($request->images, "unit_num".$unit->id,$this->MODEL_NAME);
+            $imageList = array();
+            foreach ($paths as $path){
+                $image = new Images();
+                $image->image_path = $path;
+                $image->save();
+                $imageList[] = $image->id;
+            }
+            $unit->images()->attach($imageList);
+            return $this->sendResponse(new UnitsCollection($unit) ,'Image Uploaded');
+
+        }catch (\Exception $e){
+
+        }
+    }
+
     public function destroyImage(Request $request){
         try {
             $unite = Unites::findOrFail($request->unit_id);

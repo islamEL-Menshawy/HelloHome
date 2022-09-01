@@ -39,13 +39,19 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::apiResource('type', TypeController::class);
+
 Route::apiResource('location', LocationController::class);
+
 Route::apiResource('compound', CompoundController::class);
 Route::post('compound/update-image/{id}', [CompoundController::class, 'updateImage']);
+
 Route::apiResource('amenities', AmenitiesController::class);
 Route::post('amenities/update-image/{id}', [AmenitiesController::class, 'updateImage']);
-Route::delete('unit/delete-image', [UnitsController::class, 'destroyImage']);
+
+Route::put('unit/delete-image', [UnitsController::class, 'destroyImage']);
 Route::apiResource('unit', UnitsController::class);
+Route::post('unit/update-image/{id}', [UnitsController::class, 'updateImage']);
+
 Route::apiResource('slider', SliderController::class);
 Route::post('slider/update-image/{id}', [SliderController::class, 'updateImage']);
 
