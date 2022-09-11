@@ -1,19 +1,19 @@
 @extends('partial.app')
-@section('title', 'Contact Us')
+@section('title', $page_attributes->page_title)
 @section('content')
     <div class=" container contact ">
         <div id="12" class="contact-mainimg w-100">
 
             <div class="image position-relative">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="{{ asset('assets/App_Images/contact-img.png') }}">
-                    <source media="(min-width: 10px)" srcset="{{ asset('assets/App_Images/contact-imgmop.png') }}">
-                    <img class="img-fluid lazy" src="{{ asset('assets/App_Images/contact-img.png') }}" >
+                    <source media="(min-width: 768px)" srcset="{{ asset( $attributes['main_image']) }}">
+                    <source media="(min-width: 10px)" srcset="{{ asset($attributes['main_image']) }}">
+                    <img class="img-fluid lazy" src="{{ asset($attributes['main_image']) }}" >
                 </picture>
 
 
                 <div class="row container justify-content-center main-text gx-0">
-                    <h1 class="my-3 text-center  col-md-9">ACONTACT US</h1>
+                    <h1 class="my-3 text-center  col-md-9">{{ $attributes['contact_page_title'] }}</h1>
                 </div>
             </div>
 
@@ -23,11 +23,9 @@
 
         <div class="row justify-content-between gx-0">
             <div class="col-lg-9 col-md-10 col-12 text-center mx-auto mt-md-5 mb-md-74 my-3 our-mission">
-                <h2 class="title mb-4">HOW CAN WE HELP YOU?</h2>
+                <h2 class="title mb-4">{{ $attributes['contact_section_1_title'] }}</h2>
 
-                <p class="pref mb-4">We’re here to help our people, our clients, and our communities achieve their
-                    ambitions. So let us know what you’re interested in, or what you’re looking for, and we’ll get back
-                    to you shortly</p>
+                <p class="pref mb-4">{{ $attributes['contact_section_1_text'] }}</p>
 
             </div>
             <form class=" col-md-6 order-2 order-md-1 row justify-content-between form-content gx-0">
@@ -64,17 +62,16 @@
 
                 <div class="col-md-6 col-12 location order-1">
 
-                    <p class="pref mb-4">Villa 117, Shiekh Said Tantawy St, District 1, 5thSettlement, New Cairo, Cairo,
-                        Egypt</p>
+                    <p class="pref mb-4">{{ $attributes['contact_address'] }}</p>
 
                 </div>
                 <div class="col-md-6 col-12 contact-info order-md-2 order-3 mb-4">
 
 
                     <ul class="list-unstyled">
-                        <li>+2 2 5636 494</li>
-                        <li> +20 120 200 0043</li>
-                        <li>info@hhegypt.com</li>
+                        <li>{{ $attributes['contact_phone_1'] }}</li>
+                        <li>{{ $attributes['contact_phone_2'] }}</li>
+                        <li>{{ $attributes['contact_email'] }}</li>
                     </ul>
 
                 </div>

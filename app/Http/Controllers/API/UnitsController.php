@@ -127,14 +127,18 @@ class UnitsController extends BaseController
             'type_id'=>'required|numeric',
             'location_id'=>'required|numeric'
         ]);
-        $coordinates = $this->helperService->getCoordinates($request->location);
-        if ($request->is_youtube){
-            $video_path = $this->helperService->getVideoKey($request->video_path);
-        }else{
-            $video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
-        }
         try {
             $unit = Unites::findOrFail($id);
+            $coordinates = $this->helperService->getCoordinates($request->location);
+            $unit->location_lat = $coordinates[0]['latitude'];
+            $unit->location_log = $coordinates[0]['longitude'];
+            if ($request->is_youtube){
+                $video_path = $this->helperService->getVideoKey($request->video_path);
+                $unit->video_path = $video_path;
+            }else{
+                $video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
+                $unit->video_path = $video_path;
+            }
             $unit->bed_number = $request->bed_number;
             $unit->bathroom_number = $request->bathroom_number;
             $unit->area = $request->area;
@@ -142,19 +146,6 @@ class UnitsController extends BaseController
             $unit->is_youtube = $request->is_youtube;
             $unit->location_link = $request->location;
             $unit->video_link = $request->video_path;
-            if ($request->video_link != null){
-                if ($request->is_youtube){
-                    $unit->video_path = $this->helperService->getVideoKey($request->video_link);
-                }else{
-                    $this->fileService->deleteFileByPath($unit->video_path);
-                    $unit->video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
-                }
-            }
-            if ($request->location_link != null){
-                $coordinates = $this->helperService->getCoordinates($request->location_link);
-                $unit->location_lat = $coordinates[0]['latitude'];
-                $unit->location_log = $coordinates[0]['longitude'];
-            }
             $unit->compound_id = $request->compound_id;
             $unit->type_id = $request->type_id;
             $unit->location_id = $request->location_id;

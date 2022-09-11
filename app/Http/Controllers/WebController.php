@@ -5,6 +5,7 @@ use App\Models\Slider;
 use App\Models\Type;
 use App\Models\Compound;
 use App\Models\Location;
+use App\Models\Page;
 
 use App\Models\Unites;
 use Illuminate\Http\Request;
@@ -22,22 +23,73 @@ class WebController extends Controller
         $compounds = Compound::where('isActive' , true)->get();
         $locations = Location::where('isActive' , true)->get();
         $slider = Slider::where('is_active', true)->get();
+
+        $page_attributes = Page::find(1);
+        $attributes = array();
+        foreach ($page_attributes->attributes as $attribute){
+            $key = $attribute->title;
+            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
+            $attributes += [$key=>$value];
+        }
         $data = [
             'types'     => $types,
             'compounds' => $compounds,
             'locations' => $locations,
-            'slider'    => $slider
+            'slider'    => $slider,
+            'page_attributes' => $page_attributes,
+            'attributes' => $attributes
+
         ];
         return view('welcome', $data);
     }
     public function about(){
-        return view('about');
+        $page_attributes = Page::find(2);
+        $attributes = array();
+
+        foreach ($page_attributes->attributes as $attribute){
+            $key = $attribute->title;
+            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
+            $attributes += [$key=>$value];
+        }
+        $data = [
+            'page_attributes' => $page_attributes,
+            'attributes' => $attributes
+
+        ];
+        return view('about', $data);
     }
     public function contactUs(){
-        return view('contact-us');
+        $page_attributes = Page::find(4);
+        $attributes = array();
+
+        foreach ($page_attributes->attributes as $attribute){
+            $key = $attribute->title;
+            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
+            $attributes += [$key=>$value];
+        }
+        $data = [
+            'page_attributes' => $page_attributes,
+            'attributes' => $attributes
+
+        ];
+//        return $attributes;
+        return view('contact-us', $data);
     }
     public function service(){
-        return view('service');
+        $page_attributes = Page::find(3);
+        $attributes = array();
+
+        foreach ($page_attributes->attributes as $attribute){
+            $key = $attribute->title;
+            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
+            $attributes += [$key=>$value];
+        }
+        $data = [
+            'page_attributes' => $page_attributes,
+            'attributes' => $attributes
+
+        ];
+        return view('service',$data);
     }
 
     public function search(Request $request){

@@ -1,5 +1,5 @@
 @extends('partial.app')
-@section('title', 'Home')
+@section('title', $page_attributes->page_title)
 @section('content')
     <div class="container">
         <div id="12" class="home-slidr w-100">
@@ -90,7 +90,7 @@
 
 
         <div class="our-home my-30">
-            <h2 class="sec-titleHome text-md-center my-4">Explore Our Home Collection</h2>
+            <h2 class="sec-titleHome text-md-center my-4">{{ $attributes['compound_slider_title'] }}</h2>
 
             <!-- Slider main container -->
             <div class="home-slider-brands">
@@ -116,38 +116,37 @@
             <div class="row sections mt-md-74 mt-4 justify-content-between gx-0">
                 <div class="col-md-6 col-12 my-4 img-49-sm Guests-section position-relative">
                     <div class="Guests-Lay">
-                        <img class="img-fluid w-100" src="{{asset('assets/App_Images/Guests.png')}}"
+                        <img class="img-fluid w-100" src="{{asset($attributes['section_one_image'])}}"
                               alt="Guests Services" alt="Guests Services">
-                        <a href="./services.html#1" class="Guests-go d-block"><span>Guests Services</span> </a>
+                        <a href="{{ $attributes['section_one_link'] }}" class="Guests-go d-block"><span>{{ $attributes['section_one_title'] }}</span> </a>
                         <div class="Guests-title p-3">
-                            <h3 class="title">FIND YOUR NEW HOME</h3>
-                            <p class="pref">Choosing a rental home over a luxury hotel</p>
+                            <h3 class="title">{{ $attributes['section_one_text_one'] }}</h3>
+                            <p class="pref">{{ $attributes['section_one_text_two'] }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 co-12 my-4 img-49-sm owners-section position-relative row gx-0">
-                    <a href="./services.html#2" class="owners-go d-block">Homes Owners Services </a>
+                <div style="background-color: {{ $attributes['section_two_color'] }};" class="col-md-6 co-12 my-4 img-49-sm owners-section position-relative row gx-0">
+                    <a href="{{ $attributes['section_two_link'] }}" class="owners-go d-block">{{ $attributes['section_two_title'] }}</a>
 
                     <div class="owners-services-title col-12 px-3 pt-3 row gx-0 d-flex align-self-end">
 
-                        <h3 class="title col-12">MANAGE MY HOME !</h3>
-                        <p class="pref col-12">Great returns & complete peace of mind</p>
+                        <h3 class="title col-12">{{ $attributes['section_two_text_one'] }}</h3>
+                        <p class="pref col-12">{{ $attributes['section_two_text_two'] }}</p>
                     </div>
                     <div class="col-12 d-flex">
-                        <img class="lazy img-fluid w-100" src="{{ asset('assets/App_Images/OwnersServices.png') }}"
+                        <img class="lazy img-fluid w-100" src="{{ asset( $attributes['section_two_image'] ) }}"
                              alt="Guests Services" alt="Guests Services">
 
                     </div>
                 </div>
-                <div class="col-12 text-center mt-md-74 mt-4 home-mission">
+                <div style="background-color: {{ $attributes['section_three_color'] }};" class="col-12 text-center mt-md-74 mt-4 home-mission">
                     <div class="py-md-5 py-4 col-md-8 col-10 mx-auto">
-                        <h2 class="title">HELLOHOME IS ON A MISSION</h2>
-                        <p class="pref my-4">To change the way you rent forever & to make it easier,<br /> faster and more
-                            human.
+                        <h2 class="title">{{ $attributes['section_three_text_one'] }}</h2>
+                        <p class="pref my-4"> {{ $attributes['section_three_text_two']  }}
                         </p>
                         <button type="button" class="btn hlm-btn btn-outline-light px-4 ">Learn more</button>
                     </div>
-                    <img class="img-fluid w-100" src="{{asset('assets/App_Images/hel-mission.png')}}"
+                    <img class="img-fluid w-100" src="{{asset($attributes['section_three_image'])}}"
                          alt="" title="">
 
                     <!-- <img class="img-fluid w-100" src="App_Images/hel-mission.png" alt="HELLOHOME IS ON A MISSION"
