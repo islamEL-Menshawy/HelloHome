@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-flexable d-flex justify-content-between align-items-center">
             <div class="navbar-logo">
-                <a href="index.html"><img src="{{ asset('assets/App_Images/Cl-Logo-w.png') }}" class="img-fluid" alt="" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/App_Images/Cl-Logo-w.png') }}" class="img-fluid" alt="" /></a>
             </div>
             <div class="navbar-links d-flex">
                 <a href="tel:01234567891" class="navbar-toggle-btn navbar-call-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/phone.svg') }}" alt="Hamburger" /></a>
@@ -10,10 +10,10 @@
                 <button class="navbar-toggle-btn navbar-close-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/close.png') }}" alt="Close" /></button>
                 <div class="navbar-links-content">
                     <div class="navbar-links-box">
-                        <a href="index.html">Explore Homes <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
-                        <a href="about.html">About <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
-                        <a href="services.html">Services <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
-                        <a href="contact-us.html">Contact Us <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('explore_homes') }}">Explore Homes <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('about') }}">About <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('service') }}">Services <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('contact-us') }}">Contact Us <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
                     </div>
                     <div class="navbar-footer">
                         <div class="nf-title">News & Offers</div>

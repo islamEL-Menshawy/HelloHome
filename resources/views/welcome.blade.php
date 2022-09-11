@@ -10,27 +10,16 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-
-                        <div class="swiper-slide">
-                            <div class="home-header-slide">
-                                <img src="{{ asset('assets/App_Images/shutterstock_1853535754.png') }}" alt="Home" />
-                                <div class="home-heading text-uppercase text-center">
-                                    Discover A Home You'll
-                                    <br /> Love To live
+                        @foreach($slider as $slide)
+                            <div class="swiper-slide">
+                                <div class="home-header-slide">
+                                    <img src="{{ asset('uploads' .$slide->image->image_path) }}" alt="Home" />
+                                    <div class="home-heading text-uppercase text-center">
+                                        {{ $slide->first_text }} <br /> {{ $slide->second_text }}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="home-header-slide">
-                                <img src="{{ asset('assets/App_Images/shutterstock_1853535754.png') }}" alt="Home" />
-                                <div class="home-heading text-uppercase text-center">
-                                    Discover A Home You'll
-                                    <br /> Love To live
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -39,7 +28,8 @@
         <!-- Filters -->
         <div class="filters-container">
             <div class="">
-                <div class="filters-flexable d-flex">
+                <form action="{{ route('search') }}" method="GET">
+                    <div class="filters-flexable d-flex">
                     <div class="filters-title d-flex align-items-center justify-content-center">
                         <img src="{{ asset('assets/App_Images/filter-icon.png') }}" alt="Filters Icon" />
                         <span class="">Filters</span>
@@ -47,39 +37,41 @@
                     <div class="filters-selectbox-container">
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Locations</span>
-                            <select class="single-selectbox" name="select" placeholder="New Cairo">
-                                <option value="1">New Cairo</option>
-                                <option value="2">El Sheikh Zayed</option>
-                                <option value="3">New Capital</option>
-                                <option value="4">Nasr City</option>
+                            <select class="single-selectbox" name="location">
+                                <option selected value="all">Select Location</option>
+                                @foreach($locations as $location)
+                                    <option value="{{ $location->slug_en }}">{{ $location->title_en }}</option>
+                                @endforeach
+
                             </select>
                         </div>
 
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Compound</span>
-                            <select class="single-selectbox" name="select" placeholder="Mivida">
-                                <option value="1">Mivida</option>
-                                <option value="2">LakeView</option>
-                                <option value="3">Marassi</option>
-                                <option value="4">Cairo Festival City</option>
+                            <select class="single-selectbox" name="compound" >
+                                <option selected value="all">Select Compound</option>
+                                @foreach($compounds as $compound)
+                                    <option value="{{ $compound->slug_en }}">{{ $compound->title_en }}</option>
+                                @endforeach
                             </select>
                         </div>
 
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Property Type</span>
-                            <select class="single-selectbox" name="select" placeholder="Apartment" >
-                                <option value="1">Apartment</option>
-                                <option value="2">Villa</option>
-                                <option value="3">Studio</option>
-                                <option value="4">Twin House</option>
+                            <select class="single-selectbox" name="type" >
+                                <option selected value="all">Select Type</option>
+                                @foreach($types as $type)
+                                    <option value="{{ $type->slug_en }}">{{ $type->title_en }}</option>
+                                @endforeach
                             </select>
                         </div>
 
                         <div class="filter-card filter-search-btn d-flex justify-content-center align-items-center">
-                            <a class=" d-flex justify-content-center align-items-center" href="search.html"><img src="{{ asset('assets/App_Images/SearchIcon.png') }}" alt="Search" /> Search</a>
+                            <button type="submit" class=" d-flex justify-content-center align-items-center"><img src="{{ asset('assets/App_Images/SearchIcon.png') }}" alt="Search" /> Search</button>
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
         <!-- Filters -->
@@ -93,8 +85,9 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide"><img class=" img-fluid w-100" src="{{ asset('assets/App_Images/aria1.png') }}"></div>
-                        <div class="swiper-slide"><img class=" img-fluid w-100" src="{{ asset('assets/App_Images/aria2.png') }}"></div>
+                        @foreach($compounds as $compound)
+                            <a href="{{ route('compound', $compound->slug_en) }}"><div class="swiper-slide"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"></div></a>
+                        @endforeach
                     </div>
                 </div>
                 <div class="home-brands-arrows">

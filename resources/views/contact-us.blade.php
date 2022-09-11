@@ -1,17 +1,19 @@
 @extends('partial.app')
 @section('title', 'Contact Us')
-
-
 @section('content')
     <div class=" container contact ">
         <div id="12" class="contact-mainimg w-100">
 
             <div class="image position-relative">
-                <img class="lazy img-fluid w-100" src="{{ asset('assets/App_images/contact-img.png') }}"
-                     data-src="" />
-                <div class="row container justify-content-center main-text gx-0">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{ asset('assets/App_Images/contact-img.png') }}">
+                    <source media="(min-width: 10px)" srcset="{{ asset('assets/App_Images/contact-imgmop.png') }}">
+                    <img class="img-fluid lazy" src="{{ asset('assets/App_Images/contact-img.png') }}" >
+                </picture>
 
-                    <h1 class="my-3 text-center  col-md-9">CONTACT US</h1>
+
+                <div class="row container justify-content-center main-text gx-0">
+                    <h1 class="my-3 text-center  col-md-9">ACONTACT US</h1>
                 </div>
             </div>
 
@@ -28,9 +30,9 @@
                     to you shortly</p>
 
             </div>
-            <form class=" col-md-5 order-2 order-md-1 row justify-content-between form-content gx-0">
+            <form class=" col-md-6 order-2 order-md-1 row justify-content-between form-content gx-0">
                 <div class="col-12 row d-flex justify-content-between bef-contact align-items-center">
-                    <p class="col-md-auto">Send us A Message</p>
+                    <p class="col-md-auto send-msg-head">Send us A Message</p>
                     <p class="col smal">For all other inquiries, please complete the form below.</p>
                 </div>
                 <div class=" mb-4 form-group col-6 img-49">
@@ -50,7 +52,7 @@
                     <input class="w-100" id="phone" type="tel" name="phone" />
                 </div>
                 <div class=" mb-4 form-group col-12">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" placeholder="Write your message" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <d-v class="col-12">
                     <button type="button"
@@ -76,7 +78,7 @@
                     </ul>
 
                 </div>
-                <div class="col-12 order-md-2 order-md-3 order-2 mb-4">
+                <div class="col-12 order-md-2 order-md-3 order-2 mb-4 d-flex">
                     <a href="#" class="go-direc">Get Direction</a>
 
                 </div>
@@ -92,6 +94,7 @@
 
 
     </div>
+
     <script type='text/javascript'
             src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop'
             async='async'></script>

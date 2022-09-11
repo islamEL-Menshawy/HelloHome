@@ -56,10 +56,63 @@ class WebController extends Controller
             $unites = $unites->where('location_id', $location->id);
         }
 
+        $types = Type::where('isActive' , true)->get();
+        $compounds = Compound::where('isActive' , true)->get();
+        $locations = Location::where('isActive' , true)->get();
         $unites = $unites->get();
+        $data = [
+            'types'     => $types,
+            'compounds' => $compounds,
+            'locations' => $locations,
+            'unites' => $unites
+        ];
 
-        return view('search');
+
+
+        return view('search', $data);
 //        return $unites;
+    }
+
+
+    public function compound($compound){
+        try{
+            $compound = Compound::where('slug_en' , $compound)->first();
+            if ($compound == null){
+                abort(404);
+            }
+            $data = [
+                'compound' => $compound
+            ];
+            return view('compound', $data);
+        }catch (\Exception $ex){
+            abort(404);
+        }
+    }
+
+    public function explore_homes(){
+        $types = Type::where('isActive' , true)->get();
+        $compounds = Compound::where('isActive' , true)->get();
+        $locations = Location::where('isActive' , true)->get();
+
+        $data = [
+            'types'     => $types,
+            'compounds' => $compounds,
+            'locations' => $locations
+        ];
+        return view('explore_homes', $data);
+    }
+
+    public function unit_details($compound, $unit_id){
+        $unit = Unites::find($unit_id);
+        $compound = Compound::where('slug_en', $compound)->first();
+        if ($unit == null || $compound == null){
+            abort(404);
+        }
+        $data = [
+            'unit' => $unit,
+            'compound' => $compound
+        ];
+        return view('unit', $data);
     }
 
 

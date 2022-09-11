@@ -2,22 +2,22 @@
     <div class="container position-relative px-md-0 px-4 ">
         <nav class="navbar navbar-expand navbar-light ">
             <div class=" d-flex justify-content-between row gx-0 align-items-center px-md-1 ">
-                <a class="col-lg-3 col-12 order-1 footer-logo" href="#">
+                <a class="col-lg-3 col-12 order-1 footer-logo" href="{{route('home')}}">
                     <img src="{{ asset('assets/App_Images/Footer-Logo.png') }}" class="img-fluid h-auto" alt="">
                 </a>
                 <ul
                     class="footer-nav-links order-2 navbar-nav mb-2 mb-lg-0 col-lg-6 col-12 d-flex justify-content-lg-center justify-content-between">
                     <li class="nav-item mx-lg-3 mx-0 py-lg-0 py-2">
-                        <a class="nav-link active" aria-current="page" href="#"> Homes</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('home')}}"> Homes</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-0 py-lg-0 py-2">
-                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('about')}}">About</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-0 py-lg-0 py-2">
-                        <a class="nav-link active" aria-current="page" href="#">Services</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('service')}}">Services</a>
                     </li>
                     <li class="nav-item mx-lg-3 mx-0 py-lg-0 py-2">
-                        <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('contact-us')}}">Contact Us</a>
                     </li>
                 </ul>
                 <ul

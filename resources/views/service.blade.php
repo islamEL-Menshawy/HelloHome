@@ -2,15 +2,27 @@
 @section('title', 'Service')
 
 @section('content')
+
+
     <div class=" container servce ">
         <div id="12" class="servce-mainimg w-100">
 
-            <div class="image position-relative">
-                <img class="lazy img-fluid w-100" src="{{asset('assets/App_images/service.png')}}"    />
+            <div class="services-header-img image position-relative">
+
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{ asset('assets/App_Images/service.png') }}">
+                    <source media="(min-width: 10px)" srcset="{{ asset('assets/App_Images/servicemop.png') }}">
+
+
+                    <div class="gradient-easing"></div>
+                    <img class="img-fluid lazy" src="{{ asset('assets/App_Images/service.png') }}" alt="@item.PictureCaption" title="@item.StoryTitle">
+                </picture>
+
+
                 <div class="row container justify-content-center main-text gx-0">
                     <p class="sup-text my-3 text-center col-md-9">Our Services</p>
 
-                    <h1 class="my-3 text-center  col-md-9">ARENTING A NEW HOME IS THE START OF SOMETHING GREAT.</h1>
+                    <h1 class="my-3 text-center  col-md-9">ARENTING A NEW HOME IS THE START <br /> OF SOMETHING GREAT.</h1>
                 </div>
             </div>
 
@@ -26,13 +38,13 @@
 
                 <a href="#2" class=" w-100 col-md-6 img-49-sm col-12 mb-4"> <button type="button"
                                                                                     class="btn btn-outline-secondary w-100 text-center mainOwner-but">Homes
-                        Owner</button></a>
+                        Owner Services</button></a>
             </div>
             <div id="1" class=" col-lg-9 col-md-10 col-12 text-center mx-auto mt-md-5 mb-md-4 my-3 our-mission">
-                <h2 class="title mb-4">Guests Services</h2>
+                <h2 class="title mb-2">Guests Services</h2>
 
-                <p class="pref mb-4">Hotel Apartments & Villas for Rent</p>
-                <p class="pref mb-2">Our homes are where we choose to live and where precious memories are made for a
+                <p class="pref serv-sub-title mb-3">Properties Managment</p>
+                <p class="pref mb-2">Our homes are where we choose to live and where precious<br /> memories are made for a
                     lifetime.</p>
 
             </div>
@@ -42,7 +54,7 @@
 
             <div class="col-12 row Guests-sec justify-content-between gx-0 mb-md-74 my-4">
                 <div class="col-12 d-lg-none d-block">
-                    <img class="img-fluid" src="{{asset('assets/App_Images/Grustsbackblock.png')}}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/App_Images/Grustsbackblock.png') }}" alt="">
                 </div>
 
                 <div class="col-lg-5 img-49-ds col-12 d-flex align-items-center guets-se px-5 p-4 row gx-0">
@@ -72,16 +84,16 @@
             </div>
             <div class="col-12 row experince-sec justify-content-between gx-0  my-5 mb-74">
                 <div class="col-md-6 img-49-sm col-12">
-                    <img class="lazy img-fluid w-100" src="{{asset('assets/App_Images/tree1.png')}}"
+                    <img class="lazy img-fluid w-100" src="{{ asset('assets/App_Images/tree1.png') }}" data-src=""
                          alt="Guests Services" alt="Guests Services">
 
                 </div>
 
                 <div class="col-md-6 img-49-sm col-12 d-flex align-items-center p-3 row pr-md-39">
-                    <h3 class="col-12">
+                    <h3 class="aue-text">
                         ABOUT YOUR EXPERIENCE
                     </h3>
-                    <p class="pref col-12">
+                    <p class="pref aue-para col-12">
                         Your experience is professionally managed to bring the quality and consistency of a hotel,
                         combined with the comforts of home, to deliver a unique experience that allows our guests the
                         ability to enjoy the best of both worlds.
@@ -95,10 +107,10 @@
             <div class="row justify-content-between pt-5">
                 <div class="col-lg-6 img-49-md order-lg-1 order-2 text-center">
                     <p class="layer-gray text-center">ENJOY THE FINEST HOMES AND SERVICE ALL AROUND THE ALL OVER EGYPT</p>
-                    <img class="img-fluid" src="{{asset('assets/App_Images/layer-gray.png')}}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/App_Images/layer-gray.png') }}" alt="">
                 </div>
                 <div class="col-lg-6 img-49-md order-lg-2 order-1 mb-lg-0 mb-5 text-center">
-                    <img class="img-fluid" src="{{asset('assets/App_Images/layer-gray2.png')}}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/App_Images/layer-gray2.png') }}" alt="">
 
                 </div>
             </div>
@@ -123,11 +135,11 @@
 
             <div class="col-12 row neway-sec justify-content-between gx-0 my-5 mb-md-74">
                 <div class="col-lg-6 img-49-ds col-12">
-                    <img class="lazy img-fluid w-100" src="{{asset('assets/App_Images/neway.png')}}"
+                    <img class="lazy img-fluid w-100" src="{{ asset('assets/App_Images/neway.png') }}"
                          alt="Guests Services" alt="Guests Services">
 
                 </div>
-                <div class="col-lg-6 img-49-ds col-12 d-flex align-items-center p-3 row gx-0">
+                <div class="hos-details col-lg-6 img-49-ds col-12 d-flex align-items-center p-3 row gx-0">
                     <h3 class="col-11">We provide peace-of-mind,
                     </h3>
                     <p class="pref col-11">convenience and flexibility to homeowners looking to make the best use out of
@@ -174,9 +186,9 @@
                             ATTENTION TO DETAIL, WE TAKE CARE OF EVERYTHING</h3>
 
                     </div>
-                    <div class=" col-12">
-                        <img class="lazy img-fluid w-100 col-12" src="{{asset('assets/App_Images/emplo.png')}}"
-                                alt="Guests Services" alt="Guests Services">
+                    <div class="wiga-img col-12">
+                        <img class="lazy img-fluid w-100 col-12" src="{{ asset('assets/App_Images/emplo.png') }}"
+                             alt="Guests Services" alt="Guests Services">
 
 
                     </div>
@@ -209,14 +221,14 @@
                     class="col-lg-8 col-12 my-lg-2 my-4  position-relative tree-text row gx-0 px-3 px-md-21 order-lg-1 order-2">
                     <h3 class=" justify-content-center align-items-center p-4">WITH GREAT
                         ATTENTION TO DETAIL, WE TAKE CARE OF EVERYTHING</h3>
-                    <hr>
+                    <!-- <hr> -->
                     <p class="pref">We tailor a plan specific to your goals while offering a guar- anteed income
                         resulting in a clear and concise objective.</p>
 
                 </div>
                 <div class="col-lg-4 img-33-ds  my-lg-2 col-12 position-relative row gx-0 tree-dv order-lg-2 order-1">
-                    <img class="lazy img-fluid w-100 col-12" src="{{asset('assets/App_Images/tree.png')}}"
-                            alt="Guests Services" alt="Guests Services">
+                    <img class="lazy img-fluid w-100 col-12" src="{{ asset('assets/App_Images/tree.png') }}"
+                          alt="Guests Services" alt="Guests Services">
                 </div>
 
 
