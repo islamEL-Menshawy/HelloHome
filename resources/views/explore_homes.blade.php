@@ -31,7 +31,7 @@
                         <div class="filters-selectbox-container">
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Locations</span>
-                            <select class="single-selectbox" name="location">
+                            <select class="single-selectbox slim-select slim-select-1" name="location">
                                 <option selected value="all">Select Location</option>
                                 @foreach($locations as $location)
                                     <option value="{{ $location->slug_en }}">{{ $location->title_en }}</option>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Compound</span>
-                            <select class="single-selectbox" name="compound" >
+                            <select class="single-selectbox slim-select slim-select-2" name="compound" >
                                 <option selected value="all">Select Compound</option>
                                 @foreach($compounds as $compound)
                                     <option value="{{ $compound->slug_en }}">{{ $compound->title_en }}</option>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Property Type</span>
-                            <select class="single-selectbox" name="type" >
+                            <select class="single-selectbox slim-select slim-select-3" name="type" >
                                 <option selected value="all">Select Type</option>
                                 @foreach($types as $type)
                                     <option value="{{ $type->slug_en }}">{{ $type->title_en }}</option>
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="filter-card filter-search-btn d-flex justify-content-center align-items-center">
-                            <button class=" d-flex justify-content-center align-items-center" ><img src="{{asset('assets/App_Images/SearchIcon.png')}}" alt="Search" /> Search</button>
+                            <button type="submit" class="btn d-flex justify-content-center align-items-center"><img src="{{asset('assets/App_Images/SearchIcon.png')}}" alt="Search" /> Search</button>
                         </div>
                     </div>
 

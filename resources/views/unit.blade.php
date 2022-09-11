@@ -1,6 +1,13 @@
 @extends('partial.app')
 @section('title', 'Unit Details')
 @section('content')
+    <!-- PreLoader -->
+    <div id="preloader" class="preloader">
+        <div class="overlay">
+            <img  src="{{ asset('assets/App_Images/loader.svg') }}" class="preloader-icon img-fluid" />
+        </div>
+    </div>
+    <!-- PreLoader -->
     <div class=" container details">
 
         <div class=" details-slider justify-content-md-between justify-content-center mb-2">
@@ -50,10 +57,10 @@
 
             <div class="lightbox-contaner  justify-content-center align-items-center">
                 <div class="lightbox-item d-flex align-items-center justify-content-between">
-                    <i id="closee" class="fas fa-times border-0"> close</i>
-                    <i id="preve" class=" m-3 fas fa-arrow-left"></i>
-                    <i id="nexte" class="m-3 fas fa-arrow-right"></i>
-                    <p class="counters"><span id="curentt">-</span>/ <span id="tottal">tottal</span></p>
+                    <i id="closee" class="fas fa-times border-0"> <span>Close</span></i>
+                    <i id="preve" class="icon-chevron m-3 fas fa-chevron-left"></i>
+                    <i id="nexte" class="icon-chevron m-3 fas fa-chevron-right"></i>
+                    <p class="counters"><span id="curentt">-</span> / <span id="tottal">tottal</span></p>
 
                 </div>
             </div>
@@ -153,12 +160,20 @@
                         </div>
 
                         <div class="about-dev d-flex">
-                            <div class="about-dev-img"><img src="{{asset('uploads'.$unit->compound->image->image_path)}}" alt=""></div>
+                            <div class="about-dev-img"><img style="height: 150px;" src="{{asset('uploads'.$unit->compound->image->image_path)}}" alt=""></div>
                             <div class="about-dev-details">
                                 <h3>
                                     About Developer
                                 </h3>
-                                <p class="">{{ $unit->compound->description_en }}</p>
+
+                                <div class="read-more-parent">
+                                    <span class="read-more-content" data-length="200">{{ $unit->compound->description_en }}</span>
+                                    <button class="read-more-btn"> ...Read More</button>
+                                </div>
+
+
+
+
                                 <a class="about-dev-url" href="{{ $unit->compound->website }}" target="_blank">{{ $unit->compound->website }}</a>
                             </div>
                         </div>
@@ -188,12 +203,14 @@
                     <div class="justify-content-between loc-video">
                         <div class="">
                             <p class="head mb-3">Where you’ll be</p>
-                            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=cairo,egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embedmapgenerator.com/">embed google maps in website</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+                            <div class="mapouter"><div class="gmap_canvas">
+                                    <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=cairo,egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embedmapgenerator.com/">embed google maps in website</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style>
+                            </div>
                         </div>
                     </div>
 
                     <div class="vp-video">
-                        <div class="d-flex mb-3 align-items-center">
+                        <div class="wat-vid-title d-flex mb-3 align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30.294" height="19.089" viewBox="0 0 30.294 19.089">
                                 <path id="video-camera" d="M29.98,1.7a.642.642,0,0,0-.635-.012l-6.951,3.8V3.209A3.213,3.213,0,0,0,19.184,0H3.209A3.213,3.213,0,0,0,0,3.209V15.88a3.213,3.213,0,0,0,3.209,3.209H19.184a3.213,3.213,0,0,0,3.209-3.209V13.644l6.951,3.8a.642.642,0,0,0,.949-.563V2.254A.642.642,0,0,0,29.98,1.7ZM21.109,15.88a1.927,1.927,0,0,1-1.925,1.925H3.209A1.928,1.928,0,0,1,1.284,15.88V3.209A1.928,1.928,0,0,1,3.209,1.284H19.184A1.928,1.928,0,0,1,21.11,3.209Zm7.9-.086-6.617-3.613V6.949L29.01,3.336Zm0,0" fill="#707070"/>
                             </svg>
@@ -201,8 +218,16 @@
                             <p class="head mb-0 ms-2">
                                 Watch the video</p>
                         </div>
-                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-                        </iframe>
+                        @if($unit->is_youtube)
+                            <iframe class="embed-iframe-vid" width="100%" height="400" src="https://www.youtube.com/embed/{{ $unit->video_path }}?autoplay=1&mute=1"></iframe>
+                        @else
+                            <div class="vp-static-video">
+                                <video autoplay="" loop="" muted="">
+                                    <source src="https://cdn.emaarmisr.com/wp-content/uploads/2021/04/Belle-Vie-TEXT-TOP.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        @endif
                     </div>
 
 
@@ -221,33 +246,35 @@
                     <div class="areas-grid">
                         <!-- ******** Start Row ******** -->
                         @foreach($compound->unites as $unit)
-                            <a href="{{route('unit_details', $unit->compound->slug_en, $unit->id)}}">
                                 <div class="area-card">
                             <!-- Images -->
                             <div class="slider advsear ">
-                                @foreach($unit->images as $image)
-                                    <div>
-                                        <div class="image position-relative">
-                                            <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
+                                @foreach($unit->images->slice(0,4) as $image)
+                                    <a href="{{route('unit_details', ['compound'=>$unit->compound->slug_en,'unit_id'=> $unit->id])}}">
+                                        <div>
+                                            <div class="image position-relative">
+                                                <img style="height: 200px" class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 @endforeach
                             </div>
                             <!-- Images -->
 
                             <!-- Details -->
-                            <div class="d-flex justify-content-between col-12">
-                                <div class="text-gallery col-md-5 col-6 img-49 ps-0 ">
-                                    <span>Location</span>
-                                    <p>{{ $unit->location->title_en }}</p>
+                            <a href="{{route('unit_details', ['compound'=>$unit->compound->slug_en,'unit_id'=> $unit->id])}}">
+                                <div class="d-flex justify-content-between col-12">
+                                    <div class="text-gallery col-md-5 col-6 img-49 ps-0 ">
+                                        <span>Location</span>
+                                        <p>{{ $unit->location->title_en }}</p>
+                                    </div>
+                                    <div class="text-gallery col-md-5 col-6 img-49 ps-0">
+                                        <span>Property Type</span>
+                                        <p>{{ $unit->type->title_en }}</p>
+                                    </div>
                                 </div>
-                                <div class="text-gallery col-md-5 col-6 img-49 ps-0">
-                                    <span>Property Type</span>
-                                    <p>{{ $unit->type->title_en }}</p>
-                                </div>
-                            </div>
-                        </div>
                             </a>
+                        </div>
                         <!-- ******** End Row ******** -->
                         @endforeach
 

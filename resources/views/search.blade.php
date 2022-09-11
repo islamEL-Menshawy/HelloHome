@@ -27,7 +27,6 @@
         <!-- Filters -->
         <div class="filters-container">
             <div class="">
-                <h3 class="filters-main-title text-center">Explore 100+ Hotel Apartments & Villas in Egypt</h3>
                 <form action="{{route('search')}}" method="get">
                     <div class="filters-flexable d-flex">
                     <div class="filters-title d-flex align-items-center justify-content-center">
@@ -37,7 +36,7 @@
                     <div class="filters-selectbox-container">
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Locations</span>
-                            <select class="single-selectbox" name="location">
+                            <select class="single-selectbox slim-select slim-select-1" name="location">
                                 <option selected value="all">Select Location</option>
                                 @foreach($locations as $location)
                                     <option value="{{ $location->slug_en }}">{{ $location->title_en }}</option>
@@ -47,7 +46,7 @@
                         </div>
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Compound</span>
-                            <select class="single-selectbox" name="compound" >
+                            <select class="single-selectbox slim-select slim-select-2" name="compound" >
                                 <option selected value="all">Select Compound</option>
                                 @foreach($compounds as $compound)
                                     <option value="{{ $compound->slug_en }}">{{ $compound->title_en }}</option>
@@ -56,7 +55,7 @@
                         </div>
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Property Type</span>
-                            <select class="single-selectbox" name="type" >
+                            <select class="single-selectbox slim-select slim-select-3" name="type" >
                                 <option selected value="all">Select Type</option>
                                 @foreach($types as $type)
                                     <option value="{{ $type->slug_en }}">{{ $type->title_en }}</option>
@@ -65,33 +64,40 @@
                         </div>
 
                         <div class="filter-card filter-search-btn d-flex justify-content-center align-items-center">
-                            <button class=" d-flex justify-content-center align-items-center" ><img src="{{asset('assets/App_Images/SearchIcon.png')}}" alt="Search" /> Search</button>
+                            <button type="submit" class="btn d-flex justify-content-center align-items-center"><img src="{{asset('assets/App_Images/SearchIcon.png')}}" alt="Search" /> Search</button>
                         </div>
                     </div>
                 </div>
                 </form>
             </div>
         </div>
-        <div class="advanced-search-container">
-            <div class="container">
-            <!-- Areas Slider -->
-            <div class="areas-container">
-                <div class="areas-grid">
+
+        <!-- Areas Slider -->
+        <span id="tottal" class="d-none"></span>
+        <div class="areas-container">
+            <div class="areas-grid">
+                @foreach($unites as $unit)
                     <!-- ******** Start Row ******** -->
-                    @foreach($unites as $unit)
-                        <div class="area-card">
-                            <!-- Images -->
-                            <div class=" slider advsear ">
-                                @foreach($unit->images as $image)
+
+                    <div class="area-card">
+                        <!-- Images -->
+
+                        <div class=" slider advsear ">
+                            @foreach($unit->images->slice(0 ,4) as $image)
+                                <a href="{{route('unit_details', ['compound' => $unit->compound->slug_en, 'unit_id'=> $unit->id])}}">
                                 <div>
                                     <div class="image position-relative">
-                                        <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
+                                        <img style="height: 200px" class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
                                     </div>
                                 </div>
-                                @endforeach
-                            </div>
-                            <!-- Images -->
-                            <!-- Details -->
+                                </a>
+                            @endforeach
+
+                        </div>
+                        <!-- Images -->
+
+                        <!-- Details -->
+                        <a href="{{route('unit_details', ['compound' => $unit->compound->slug_en, 'unit_id'=> $unit->id])}}">
                             <div class="row container justify-content-between col-12">
                                 <div class="text-gallery col-md-5 col-6 img-49 ps-0 ">
                                     <span>Location</span>
@@ -102,20 +108,22 @@
                                     <p>{{ $unit->type->title_en }}</p>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+                        </a>
+                    </div>
                     <!-- ******** End Row ******** -->
-                </div>
+                @endforeach
+
             </div>
+        </div>
+
+
         <!-- Filters -->
         <div class="our-home my-30">
             <h2 class="sec-titleHome my-4">Explore Our Home Collection</h2>
             <div class="brands-container">
                 <div class="brands-grid">
                     @foreach($compounds as $compound)
-                        <a href="advanced-search.html"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"> </a>
+                        <a href="{{ route('compound', $compound->slug_en) }}"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"> </a>
                     @endforeach
                 </div>
             </div>

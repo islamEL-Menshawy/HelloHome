@@ -12,13 +12,14 @@
     <!-- Bing Search meta tags -->
     <meta name="msvalidate.01" content="" />
 
-    <title>{{ config('app.name')}} - @yield('title')</title>
+    <title>HelloHome - @yield('title')</title>
     <meta name="title" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="icon" type="imge/x-icon" sizes="16x16" href="{{ asset('assets/App_Images/Cl-Logo-w.png') }}">
+    <link rel="icon" type="imge/x-icon" sizes="16x16" href="{{ asset('assets/') }}App_Images/Cl-Logo-w.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!-- Swiper Js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css"></link>
     <link rel="stylesheet" href="{{ asset('assets/content/Css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/content/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/content/css/shared-ltr.css') }}">
@@ -29,23 +30,17 @@
         select {
             width: 100%;
         }
-        .single-selectbox {
-            border: none;
-            margin: 0 0.7rem !important;
-            width: calc(100% - 1rem);
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 3px;
-        }
     </style>
 </head>
 
 <body class="bg-white">
+
 @include('partial.header')
 @yield('content')
 @include('partial.footer')
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Swiper Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
 <script src="{{ asset('assets/js/multi-select.js') }}"></script>
 
 <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
@@ -63,6 +58,7 @@
         loop: false,
         slidesPerView: 1,
         spaceBetween: 10,
+        autoplay: true,
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
@@ -107,7 +103,33 @@
         }
     });
 
+    new SlimSelect({
+        select: '.slim-select-1',
+        selected: true, // Optional - default is false
+        disabled: false,
+        showSearch: false,
+    });
+
+    new SlimSelect({
+        select: '.slim-select-2',
+        selected: true, // Optional - default is false
+        disabled: false,
+        showSearch: false,
+    });
+
+    new SlimSelect({
+        select: '.slim-select-3',
+        selected: true, // Optional - default is false
+        disabled: false,
+        showSearch: false,
+    });
+
 </script>
 
 </body>
 </html>
+
+
+
+
+
