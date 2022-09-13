@@ -38,7 +38,7 @@
                             </g>
                         </svg>
                         Save</a>
-                    <a href="" class="mx-2 share-to d-flex align-items-center">
+                    <button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn mx-2 share-to d-flex align-items-center">
                         <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="14.826" height="16.163"
                              viewBox="0 0 14.826 16.163">
                             <g id="export" transform="translate(-68.891 0)">
@@ -51,19 +51,58 @@
                             </g>
                         </svg>
                         Share
-                    </a>
+                    </button>
                 </div>
             </div>
 
             <div class="lightbox-contaner  justify-content-center align-items-center">
                 <div class="lightbox-item d-flex align-items-center justify-content-between">
                     <i id="closee" class="fas fa-times border-0"> <span>Close</span></i>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="share-btn btn">
+                        <img src="{{ asset('assets/App_Images/share.svg') }}" alt="" />
+                    </button>
                     <i id="preve" class="icon-chevron m-3 fas fa-chevron-left"></i>
                     <i id="nexte" class="icon-chevron m-3 fas fa-chevron-right"></i>
                     <p class="counters"><span id="curentt">-</span> / <span id="tottal">tottal</span></p>
-
                 </div>
             </div>
+
+            <!-- Modal Open Share Container -->
+            <div class="modal modal-share-container fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-b-title">Share this place with friends and family</div>
+                            <div class="modal-b-it d-flex align-items-center">
+                                <img src="{{ asset('assets/App_Images/Grustsbackblock.png') }}" alt="" />
+                                <div class="modal-b-it-title">Luxury suite overlooking the Wadden Sea, Harlingen</div>
+                            </div>
+                            <div class="modal-grid">
+                                <button onclick="CopyTextFunction()" id="copyUrlBrowser" class="btn share-linked-card">
+                                    <img src="{{ asset('assets/App_Images/copy.svg') }}" class="img-fluid" alt="" />
+                                    Copy Link
+                                </button>
+                                <a href="mailto:test@test.com&subject=this is mail" class="btn share-linked-card">
+                                    <img src="{{ asset('assets/App_Images/email.svg') }}" class="img-fluid" alt="" />
+                                    Email
+                                </a>
+                                <button class="btn share-linked-card">
+                                    <img src="{{ asset('assets/App_Images/messenger.svg') }}" class="img-fluid" alt="" />
+                                    Messenger
+                                </button>
+                                <button class="btn share-linked-card">
+                                    <img src="{{ asset('assets/App_Images/facebook-1.svg') }}" class="img-fluid" alt="" />
+                                    Facebook
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Open Share Container -->
 
 
 
@@ -92,17 +131,88 @@
                         </div>
 
                         <div class="details-larg-button reg-ask-btns d-flex justify-content-between">
-                            <a href="#1">
-                                <button type="button" class="btn btn-outline-secondary w-100 text-center Register-but border-0">
+                            <div class="ra-btn">
+                                <button id="openContactContainer" type="button" class="btn btn-outline-secondary w-100 text-center Register-but border-0">
                                     REGISTER INTEREST
                                 </button>
-                            </a>
+                            </div>
 
-                            <a href="#2">
-                                <button type="button" class="btn btn-outline-secondary w-100 text-center Ask-but border-0">
-                                    <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW
+
+                            <div id="toggleContactContainer" class="contact-form project-contact-form">
+                              <div class="cform-title d-flex align-items-center justify-content-between">
+                                <div class="title">Register Interest</div>
+                                <button id="closeContactContainer" class="close-contact opacity-hover btn">
+                                    <i id="closee" class="fas fa-times border-0"></i>
                                 </button>
-                            </a>
+                              </div>
+
+                              <form class="form-row">
+                                <div class="col-lg-12">
+                                  <div class="cform-group">
+                                    <input type="text" placeholder="Full Name" />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                  <div class="cform-group">
+                                    <input type="email" placeholder="Email" />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                  <div class="cform-group d-flex">
+                                    <div class="cform-selecbox">
+                                      <div class="selectbox-slim selectbox-tel-keys">
+                                        <select id="tel-keys">
+                                          <option value="+20">+20</option>
+                                          <option value="+21">+21</option>
+                                          <option value="+22">+22</option>
+                                          <option value="+23">+23</option>
+                                          <option value="+24">+24</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <input type="tel" placeholder="Phone (Optional)" />
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                  <div class="cform-group">
+                                    <textarea rows="3" placeholder="I’m interested in Sale - Apartment New Cairo."></textarea>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                  <div class="cform-action">
+                                    <div class="button-default width-fluid bt-black">
+                                      <button>Send Now</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                  <div class="checkbox-group d-flex align-items-center">
+                                    <div class="fake-checkbox">
+                                      <input id="agreeTermsConditions" type="checkbox" class="input-checkbox" />
+                                      <div class="fake-cb-child">
+                                        <span></span>
+                                      </div>
+                                    </div>
+                                    <label class="checkbox-text" for="agreeTermsConditions">I agree to Terms of use and
+                                      Privacy
+                                      Policy
+                                    </label>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+
+
+                            <div  class="ra-btn">
+                                <a href="https://wa.me/201282113051?text=This is Hello Home" target="_blank" class="btn btn-outline-secondary w-100 text-center Ask-but border-0">
+                                    <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -160,7 +270,9 @@
                         </div>
 
                         <div class="about-dev d-flex">
-                            <div class="about-dev-img"><img style="height: 150px;" src="{{asset('uploads'.$unit->compound->image->image_path)}}" alt=""></div>
+                            <div class="about-dev-img">
+                                <img class="img-fluid" src="{{asset('uploads'.$unit->compound->image->image_path)}}" alt="" />
+                            </div>
                             <div class="about-dev-details">
                                 <h3>
                                     About Developer
@@ -203,9 +315,10 @@
                     <div class="justify-content-between loc-video">
                         <div class="">
                             <p class="head mb-3">Where you’ll be</p>
-                            <div class="mapouter"><div class="gmap_canvas">
+                            <!-- <div class="mapouter"><div class="gmap_canvas">
                                     <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=cairo,egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embedmapgenerator.com/">embed google maps in website</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style>
-                            </div>
+                            </div> -->
+                            <div id="map"></div>
                         </div>
                     </div>
 
@@ -253,7 +366,7 @@
                                     <a href="{{route('unit_details', ['compound'=>$unit->compound->slug_en,'unit_id'=> $unit->id])}}">
                                         <div>
                                             <div class="image position-relative">
-                                                <img style="height: 200px" class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
+                                                <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
                                             </div>
                                         </div>
                                     </a>

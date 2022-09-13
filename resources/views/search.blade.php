@@ -87,7 +87,7 @@
                                 <a href="{{route('unit_details', ['compound' => $unit->compound->slug_en, 'unit_id'=> $unit->id])}}">
                                 <div>
                                     <div class="image position-relative">
-                                        <img style="height: 200px" class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
+                                        <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
                                     </div>
                                 </div>
                                 </a>

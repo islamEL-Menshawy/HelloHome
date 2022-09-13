@@ -41,6 +41,9 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Swiper Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"        defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script> 
 <script src="{{ asset('assets/js/multi-select.js') }}"></script>
 
 <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
@@ -123,6 +126,25 @@
         disabled: false,
         showSearch: false,
     });
+
+</script>
+
+<script type="text/javascript">
+    function CopyTextFunction() {
+                // const params = new URLSearchParams(window.location.search);
+                // params.get('ID')
+                var copyText = document.location.href;
+                //alert(copyText);
+                // alert(copyText);
+                navigator.clipboard
+                  .writeText(copyText)
+                  .then(() => {
+                      alert("successfully copied");
+                  })
+                  .catch(() => {
+                      alert("something went wrong");
+                  });
+            }
 
 </script>
 

@@ -115,18 +115,18 @@
 
             <div class="row sections mt-md-74 mt-4 justify-content-between gx-0">
                 <div class="col-md-6 col-12 my-4 img-49-sm Guests-section position-relative">
-                    <div class="Guests-Lay">
+                    <a href="{{ $attributes['section_one_link'] }}" class="Guests-Lay">
                         <img class="img-fluid w-100" src="{{asset($attributes['section_one_image'])}}"
                               alt="Guests Services" alt="Guests Services">
-                        <a href="{{ $attributes['section_one_link'] }}" class="Guests-go d-block"><span>{{ $attributes['section_one_title'] }}</span> </a>
+                        <div class="Guests-go d-block"><span>{{ $attributes['section_one_title'] }}</span> </div>
                         <div class="Guests-title p-3">
                             <h3 class="title">{{ $attributes['section_one_text_one'] }}</h3>
                             <p class="pref">{{ $attributes['section_one_text_two'] }}</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div style="background-color: {{ $attributes['section_two_color'] }};" class="col-md-6 co-12 my-4 img-49-sm owners-section position-relative row gx-0">
-                    <a href="{{ $attributes['section_two_link'] }}" class="owners-go d-block">{{ $attributes['section_two_title'] }}</a>
+                <a href="{{ $attributes['section_two_link'] }}" style="background-color: {{ $attributes['section_two_color'] }};" class="col-md-6 co-12 my-4 img-49-sm owners-section position-relative row gx-0">
+                    <div class="owners-go d-block">{{ $attributes['section_two_title'] }}</div>
 
                     <div class="owners-services-title col-12 px-3 pt-3 row gx-0 d-flex align-self-end">
 
@@ -138,7 +138,7 @@
                              alt="Guests Services" alt="Guests Services">
 
                     </div>
-                </div>
+                </a>
                 <div style="background-color: {{ $attributes['section_three_color'] }};" class="col-12 text-center mt-md-74 mt-4 home-mission">
                     <div class="py-md-5 py-4 col-md-8 col-10 mx-auto">
                         <h2 class="title">{{ $attributes['section_three_text_one'] }}</h2>
