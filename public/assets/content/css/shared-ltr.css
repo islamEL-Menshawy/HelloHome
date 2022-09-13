@@ -5114,6 +5114,7 @@ body {
 .marquee div a:after {
   content: "/";
   padding: 0 1vw;
+  display: none;
 }
 a:link {
   text-decoration:none;
