@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-flexable d-flex justify-content-between align-items-center">
             <div class="navbar-logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('assets/App_Images/Cl-Logo-w.png') }}" class="img-fluid" alt="" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/App_Images/logo.png') }}" class="img-fluid" alt="" /></a>
             </div>
             <div class="navbar-links d-flex">
                 <a href="tel:01234567891" class="navbar-toggle-btn navbar-call-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/phone.svg') }}" alt="Hamburger" /></a>

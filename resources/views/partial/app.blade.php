@@ -11,12 +11,15 @@
 
     <!-- Bing Search meta tags -->
     <meta name="msvalidate.01" content="" />
+    <!-- Project Shortcut Icon -->
+      <link rel="shortcut icon" href="{{ asset('assets/App_Images/heart-logo.png') }}" type="image/x-icon" />
+      <link rel="icon" href="{{ asset('assets/App_Images/heart-logo.png') }}" type="image/x-icon" />
 
     <title>HelloHome - @yield('title')</title>
     <meta name="title" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="icon" type="imge/x-icon" sizes="16x16" href="{{ asset('assets/') }}App_Images/Cl-Logo-w.png">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!-- Swiper Js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css"></link>
@@ -42,8 +45,12 @@
 <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Swiper Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"        defer>
-</script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn_HgrPw1nlEQr3tyYsdAL0yfbbRIGeGc&callback=initMap&v=weekly"        defer>
+</script> -->
+ <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn_HgrPw1nlEQr3tyYsdAL0yfbbRIGeGc&callback=initMap&v=weekly"
+      defer
+    ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script> 
 <script src="{{ asset('assets/js/multi-select.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}"></script>
@@ -52,6 +59,35 @@
 
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/first.js') }}"></script>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 29.9418829, lng: 31.0226543 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            // title:"Hello World!",
+            icon: {
+                url: "https://res.cloudinary.com/aramco-sa/image/upload/c_scale,h_28/v1663098563/heart-logo_zquyjl.png",
+                scale: 12,
+                fillColor: "#080",
+                fillOpacity: 0.4,
+                strokeWeight: 0.4
+            },
+        });
+
+    }
+
+    window.initMap = initMap;
+</script>
 
 <script>
     const swiper1 = new Swiper('.swiper.swiper-home-header', {

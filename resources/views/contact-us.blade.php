@@ -54,7 +54,7 @@
                 </div>
                 <d-v class="col-12">
                     <button type="button"
-                            class="btn btn-success w-100 px-md-0 px-2 mb-3 d-flex  align-items-center justify-content-center contact-submit">Search</button>
+                            class="btn btn-success w-100 px-md-0 px-2 mb-3 d-flex  align-items-center justify-content-center contact-submit">Send Now</button>
 
                 </d-v>
             </form>
