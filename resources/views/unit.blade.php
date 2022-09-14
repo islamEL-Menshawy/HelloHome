@@ -338,16 +338,16 @@
                             <p class="head mb-0 ms-2">
                                 Watch the video</p>
                         </div>
-{{--                        @if($unit->is_youtube)--}}
-{{--                            <iframe class="embed-iframe-vid" width="100%" height="400" src="https://www.youtube.com/embed/{{ $unit->video_path }}?autoplay=1&mute=1"></iframe>--}}
-{{--                        @else--}}
-{{--                            <div class="vp-static-video">--}}
-{{--                                <video autoplay="" loop="" muted="">--}}
-{{--                                    <source src="https://cdn.emaarmisr.com/wp-content/uploads/2021/04/Belle-Vie-TEXT-TOP.mp4" type="video/mp4">--}}
-{{--                                    Your browser does not support the video tag.--}}
-{{--                                </video>--}}
-{{--                            </div>--}}
-{{--                        @endif--}}
+                        @if($unit->is_youtube)
+                            <iframe class="embed-iframe-vid" width="100%" height="400" src="https://www.youtube.com/embed/{{ $unit->video_path }}?autoplay=1&mute=1"></iframe>
+                        @else
+                            <div class="vp-static-video">
+                                <video autoplay="" loop="" muted="">
+                                    <source src="https://cdn.emaarmisr.com/wp-content/uploads/2021/04/Belle-Vie-TEXT-TOP.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        @endif
                     </div>
 
 
