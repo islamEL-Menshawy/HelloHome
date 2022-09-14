@@ -4778,6 +4778,9 @@ body {
   height: 412px;
   border-radius: 25px;
 }
+.home-slidr img {
+  object-fit: cover;
+}
 .home-slidr video {
   object-fit: cover;
 }
@@ -5400,6 +5403,7 @@ div.multiselect-dropdown {
   width: 100%;
   height: 412px;
   border-radius: 25px;
+  object-fit: cover;
 }
 .about .about-mainimg .sup-text {
   position: absolute;
@@ -5531,6 +5535,7 @@ div.multiselect-dropdown {
   width: 100%;
   height: 412px;
   border-radius: 25px;
+  object-fit: cover;
 }
 .servce .servce-mainimg .main-text {
   position: absolute;
