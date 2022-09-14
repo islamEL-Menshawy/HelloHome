@@ -151,6 +151,7 @@
         selected: true, // Optional - default is false
         disabled: false,
         showSearch: false,
+        showContent: 'down'
     });
 
     new SlimSelect({
@@ -158,6 +159,7 @@
         selected: true, // Optional - default is false
         disabled: false,
         showSearch: false,
+        showContent: 'down'
     });
 
     new SlimSelect({
@@ -165,6 +167,7 @@
         selected: true, // Optional - default is false
         disabled: false,
         showSearch: false,
+        showContent: 'down'
     });
 
 </script>
