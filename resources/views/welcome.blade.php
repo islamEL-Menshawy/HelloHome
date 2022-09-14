@@ -101,7 +101,7 @@
                         <div class="marquee__inner" behavior="scroll" direction="right" loop="loop">
                             @foreach($compounds->slice(0, 7) as $compound)
                                 <div class="slide-marquee">
-                                    <a href="#" target="_blank"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"></a>
+                                    <a href="{{ route('compound', $compound->slug_en) }}" target="_blank"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"></a>
                                 </div>
                             @endforeach
                         </div>
@@ -109,7 +109,7 @@
                         <div class="marquee__inner" behavior="scroll" direction="right" loop="loop">
                             @foreach($compounds->slice(0, 7) as $compound)
                                 <div class="slide-marquee">
-                                    <a href="#" target="_blank"><img class="img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"></a>
+                                    <a href="{{ route('compound', $compound->slug_en) }}" target="_blank"><img class="img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"></a>
                                 </div>
                             @endforeach
                         </div>

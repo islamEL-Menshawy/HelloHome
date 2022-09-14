@@ -54,8 +54,8 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn_HgrPw1nlEQr3tyYsdAL0yfbbRIGeGc&callback=initMap&v=weekly"
       defer
     ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 <script src="{{ asset('assets/js/multi-select.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}"></script>
 
@@ -68,13 +68,16 @@
 <script>
     // Initialize and add the map
     function initMap() {
+        const tagData = document.getElementById("map");
+        console.log(tagData.getAttribute("data-lat"));
         // The location of Uluru
-        const uluru = { lat: 29.9418829, lng: 31.0226543 };
+        const uluru = { lat: parseFloat(tagData.getAttribute("data-lat")), lng: parseFloat(tagData.getAttribute("data-lng")) };
         // The map, centered at Uluru
         const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
-            center: uluru,
+            zoom: 15,
+            center: uluru
         });
+
         // The marker, positioned at Uluru
         const marker = new google.maps.Marker({
             position: uluru,

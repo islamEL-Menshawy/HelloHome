@@ -325,7 +325,7 @@
                             <!-- <div class="mapouter"><div class="gmap_canvas">
                                     <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=cairo,egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embedmapgenerator.com/">embed google maps in website</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style>
                             </div> -->
-                            <div id="map"></div>
+                            <div id="map" data-lat="{{ $unit->location_lat }}" data-lng="{{ $unit->location_log }}"></div>
                         </div>
                     </div>
 
@@ -338,16 +338,16 @@
                             <p class="head mb-0 ms-2">
                                 Watch the video</p>
                         </div>
-                        @if($unit->is_youtube)
-                            <iframe class="embed-iframe-vid" width="100%" height="400" src="https://www.youtube.com/embed/{{ $unit->video_path }}?autoplay=1&mute=1"></iframe>
-                        @else
-                            <div class="vp-static-video">
-                                <video autoplay="" loop="" muted="">
-                                    <source src="https://cdn.emaarmisr.com/wp-content/uploads/2021/04/Belle-Vie-TEXT-TOP.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        @endif
+{{--                        @if($unit->is_youtube)--}}
+{{--                            <iframe class="embed-iframe-vid" width="100%" height="400" src="https://www.youtube.com/embed/{{ $unit->video_path }}?autoplay=1&mute=1"></iframe>--}}
+{{--                        @else--}}
+{{--                            <div class="vp-static-video">--}}
+{{--                                <video autoplay="" loop="" muted="">--}}
+{{--                                    <source src="https://cdn.emaarmisr.com/wp-content/uploads/2021/04/Belle-Vie-TEXT-TOP.mp4" type="video/mp4">--}}
+{{--                                    Your browser does not support the video tag.--}}
+{{--                                </video>--}}
+{{--                            </div>--}}
+{{--                        @endif--}}
                     </div>
 
 
