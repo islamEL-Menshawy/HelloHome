@@ -143,7 +143,7 @@
 
                     </div>
                 </a>
-                <div style="background-color: {{ $attributes['section_three_color'] }};" class="col-12 text-center mt-md-74 mt-4 home-mission">
+                <div style="background-color: {{ $attributes['section_three_color'] }};" class="col-12 text-center mt-md-74 mt-4 home-mission mb-5">
                     <div class="py-md-5 py-4 col-md-8 col-10 mx-auto">
                         <h2 class="title">{{ $attributes['section_three_text_one'] }}</h2>
                         <p class="pref my-4"> {{ $attributes['section_three_text_two']  }}

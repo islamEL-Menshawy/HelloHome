@@ -23,16 +23,19 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!-- Swiper Js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css"></link>
-    <link rel="stylesheet" href="{{ asset('assets/content/Css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/content/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/content/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/content/css/shared-ltr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/content/css/intlTelInput.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick-theme.css') }}">
+
 
     <style>
         select {
             width: 100%;
         }
+        .iti__flag {background-image: url("{{ asset('assets/App_Images/flags.png') }}");}
     </style>
 </head>
 
@@ -52,10 +55,12 @@
       defer
     ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script> 
 <script src="{{ asset('assets/js/multi-select.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}"></script>
 
 <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/phoneform.js') }}"></script>
 
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/first.js') }}"></script>
@@ -181,6 +186,14 @@
                   });
             }
 
+</script>
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
 </script>
 
 </body>

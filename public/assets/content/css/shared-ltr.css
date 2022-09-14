@@ -7052,7 +7052,7 @@ footer nav .navbar-nav .nav-link:hover {
     border-radius: 30px;
   }
   .home-slidr img {
-    transform: scaleX(1.8);
+    object-fit: cover;
   }
   .home-heading {
     font-size: 21px;
