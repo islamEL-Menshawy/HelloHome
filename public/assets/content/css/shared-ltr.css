@@ -5108,6 +5108,12 @@ body {
   height: 100% !important;
   width: auto !important;
 }
+.slide-mar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .marquee div {
   font-size: 5vw;
   padding: 0 ;
@@ -6879,6 +6885,7 @@ height: 53px;
 .offers-home-header {
   margin-bottom: 25px !important;
 }
+
 .hfg-card {
   display: flex;
   align-items: center;
