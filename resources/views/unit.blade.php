@@ -349,12 +349,8 @@
                             </div>
                         @endif
                     </div>
-
-
                 </div>
             </div>
-
-
             <div class="advanc-slider w-100 row gx-0 justify-content-between  mb-74">
                 <div class="col-12 my-4">
                     <h3 class="Similar pb-4">Similar Homes</h3>

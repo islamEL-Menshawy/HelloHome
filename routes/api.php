@@ -8,6 +8,7 @@ use App\Http\Controllers\API\CompoundController;
 use App\Http\Controllers\API\AmenitiesController;
 use App\Http\Controllers\API\UnitsController;
 use App\Http\Controllers\API\SliderController;
+use App\Http\Controllers\API\ContentController;
 
 
 use Illuminate\Http\Request;
@@ -56,3 +57,7 @@ Route::apiResource('slider', SliderController::class);
 Route::post('slider/update-image/{id}', [SliderController::class, 'updateImage']);
 
 Route::put('update-status/{id}/{model}', [GlobalController::class, 'switchStatus']);
+
+//content api's
+
+Route::get('content/get/{page}',[ContentController::class, 'getContent']);
