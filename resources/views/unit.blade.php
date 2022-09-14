@@ -110,13 +110,20 @@
             <div class="view-product-container">
                 <div class="vp-grid">
                     <!-- Slider Main View -->
-                    <div class="slider slider-for vp-slider">
-                        @foreach($unit->images as $image)
-                            <div class="">
-                                <h3><img class="img-fluid rounded-12" style="width: 100%;" src="{{ asset('uploads'.$image->image_path) }}" alt="">
-                                </h3>
-                            </div>
-                        @endforeach
+                    <div class="slider-vp-container">
+                        <div class="slider slider-for vp-slider">
+                            @foreach($unit->images as $image)
+                                <div class="">
+                                    <h3><img class="img-fluid rounded-12" style="width: 100%;" src="{{ asset('uploads'.$image->image_path) }}" alt="">
+                                    </h3>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="slick-counter-arrows d-flex align-items-center">
+                            <div class="sca-prev"><i class="icon-chevron fas fa-chevron-left"></i></div>
+                            <div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>
+                            <div class="sca-next"><i class="icon-chevron fas fa-chevron-right"></i></div>
+                        </div>
                     </div>
 
                     <!-- Slider Other Images View -->

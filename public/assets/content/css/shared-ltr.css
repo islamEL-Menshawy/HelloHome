@@ -6591,8 +6591,38 @@ height: 53px;
   /* The width is the width of the web page */
   border-radius: 12px
 }
-
-/* Contact Form  */
+.slider-vp-container {
+  position: relative;
+}
+.slick-counter-arrows {
+    position: absolute;
+    z-index: 100;
+    bottom: 30px;
+    right: 41px;
+}
+.slick-counter-arrows {
+  color: #fff;
+}
+.slick-counter {
+  font-family: "Dubai-Medium";
+      font-weight: 500;
+    font-size: 22px;
+    margin: 0 11px;
+    width: 70px;
+    text-align: center;
+}
+.slick-counter-arrows .icon-chevron {
+      font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+    color: #e1e1e1;
+}
+.slick-counter-arrows .icon-chevron:hover {
+  color: #fff;
+}
+.slick-counter-arrows .icon-chevron:active {
+  opacity: 0.5;
+}
 
 .project-contact-form {
   position: absolute;
