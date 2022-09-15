@@ -61,3 +61,5 @@ Route::put('update-status/{id}/{model}', [GlobalController::class, 'switchStatus
 //content api's
 
 Route::get('content/get/{page}',[ContentController::class, 'getContent']);
+Route::put('content/update',[ContentController::class, 'updateContent']);
+Route::post('content/update-image',[ContentController::class, 'updateContentImage']);
