@@ -32,7 +32,7 @@
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Locations</span>
                             <select class="single-selectbox slim-select slim-select-1" name="location">
-                                <option selected value="all">Select Location</option>
+                                <option selected value="all">Location</option>
                                 @foreach($locations as $location)
                                     <option value="{{ $location->slug_en }}">{{ $location->title_en }}</option>
                                 @endforeach
@@ -42,7 +42,7 @@
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Compound</span>
                             <select class="single-selectbox slim-select slim-select-2" name="compound" >
-                                <option selected value="all">Select Compound</option>
+                                <option selected value="all">Compound</option>
                                 @foreach($compounds as $compound)
                                     <option value="{{ $compound->slug_en }}">{{ $compound->title_en }}</option>
                                 @endforeach
@@ -51,7 +51,7 @@
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">Property Type</span>
                             <select class="single-selectbox slim-select slim-select-3" name="type" >
-                                <option selected value="all">Select Type</option>
+                                <option selected value="all">Type</option>
                                 @foreach($types as $type)
                                     <option value="{{ $type->slug_en }}">{{ $type->title_en }}</option>
                                 @endforeach
