@@ -40,7 +40,7 @@ class AmenitiesController extends BaseController
     {
         $request->validate([
             'title_en'=>'required|string|unique:amenities',
-            'amenity_image'=>'required'
+            'amenity_image'=>'required|file'
         ]);
         $slug = Str::slug($request->title_en);
         $image_path = $this->fileService->uploadFile($request->file('amenity_image'), $slug, $this->MODEL_NAME);

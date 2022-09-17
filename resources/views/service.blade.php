@@ -54,7 +54,7 @@
                     <img class="img-fluid" src="{{ asset($attributes['service_section_6_image']) }}" alt="">
                 </div>
 
-                <div class="col-lg-5 img-49-ds col-12 d-flex align-items-center guets-se px-5 p-4 row gx-0">
+                <div style="background-color: {{ $attributes['service_section_4_color'] }}" class="col-lg-5 img-49-ds col-12 d-flex align-items-center guets-se px-5 p-4 row gx-0">
 
                     <p class="pref col-12">
                         {{ $attributes['service_section_4_text_1'] }}
@@ -76,7 +76,7 @@
             </div>
             <div class="col-12 row experince-sec justify-content-between gx-0  my-5 mb-74">
                 <div class="col-md-6 img-49-sm col-12">
-                    <img class="lazy img-fluid w-100" src="{{ asset($attributes['service_section_9_image']) }}" data-src=""
+                    <img class="lazy img-fluid w-100" src="{{ asset($attributes['service_section_6_image']) }}" data-src=""
                          alt="Guests Services" alt="Guests Services">
 
                 </div>
@@ -120,7 +120,7 @@
 
 
 
-            <div class="col-12 row neway-sec justify-content-between gx-0 my-5 mb-md-74">
+            <div style="background-color: {{ $attributes['service_section_9_color'] }}" class="col-12 row neway-sec justify-content-between gx-0 my-5 mb-md-74">
                 <div class="col-lg-6 img-49-ds col-12">
                     <img class="lazy img-fluid w-100" src="{{ asset($attributes['service_section_9_image']) }}"
                          alt="Guests Services" alt="Guests Services">
@@ -193,7 +193,7 @@
 
 
             <div class="col-12 mx-auto mt-md-5 mb-md-74 my-3 row section-tree justify-content-between gx-0">
-                <div
+                <div style="background-color: {{ $attributes['service_section_15_color'] }}"
                     class="col-lg-8 col-12 my-lg-2 my-4  position-relative tree-text row gx-0 px-3 px-md-21 order-lg-1 order-2">
                     <h3 class=" justify-content-center align-items-center p-4">{{ $attributes['service_section_15_title'] }}</h3>
                     <!-- <hr> -->

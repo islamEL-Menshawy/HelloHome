@@ -43,18 +43,21 @@ class UnitsController extends BaseController
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'bed_number'=>'required|numeric',
             'bathroom_number'=>'required|numeric',
             'area'=>'required|numeric',
             'price'=>'required|numeric',
             'is_youtube'=>'required',
-            'video_path'=>'required',
-            'location'=>'required|string',
+            'video_path'=>"required|string",
+            'location'=>"required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/",
             'compound_id'=>'required|numeric',
             'type_id'=>'required|numeric',
             'location_id'=>'required|numeric'
         ]);
+
+
 
         $coordinates = $this->helperService->getCoordinates($request->location);
         if ($request->is_youtube){
@@ -77,17 +80,20 @@ class UnitsController extends BaseController
         $unit->type_id = $request->type_id;
         $unit->location_id = $request->location_id;
         $unit->save();
-        $unit->amenities()->attach($request->aminites);
-
-        $paths = $this->fileService->uploadMultiFiles($request->images, "unit_num".$unit->id,$this->MODEL_NAME);
-        $imageList = array();
-        foreach ($paths as $path){
-            $image = new Images();
-            $image->image_path = $path;
-            $image->save();
-            $imageList[] = $image->id;
+        if ($request->aminites){
+            $unit->amenities()->attach($request->aminites);
         }
-        $unit->images()->attach($imageList);
+        if ($request->images){
+            $paths = $this->fileService->uploadMultiFiles($request->images, "unit_num".$unit->id,$this->MODEL_NAME);
+            $imageList = array();
+            foreach ($paths as $path){
+                $image = new Images();
+                $image->image_path = $path;
+                $image->save();
+                $imageList[] = $image->id;
+            }
+            $unit->images()->attach($imageList);
+        }
         return $this->sendResponse(new UnitsCollection($unit) ,'unite created');
     }
 
