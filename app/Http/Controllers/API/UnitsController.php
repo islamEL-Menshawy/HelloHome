@@ -63,7 +63,7 @@ class UnitsController extends BaseController
             ]);
         }else{
             $request->validate([
-                'video_path'=>"mimes:mp4|max:1000"
+                'video_path'=>"max:10000"
             ]);
         }
 
