@@ -71,7 +71,7 @@ class UnitsController extends BaseController
         if ($request->is_youtube){
             $video_path = $this->helperService->getVideoKey($request->video_path);
         }else{
-            $video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
+            $video_path = $this->fileService->uploadFile($request->file('video_path'), 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
         }
         $unit = new Unites();
         $unit->bed_number = $request->bed_number;
