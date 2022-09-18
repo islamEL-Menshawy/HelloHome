@@ -343,7 +343,7 @@
                         @else
                             <div class="vp-static-video">
                                 <video autoplay="" loop="" muted="">
-                                    <source src="https://cdn.emaarmisr.com/wp-content/uploads/2021/04/Belle-Vie-TEXT-TOP.mp4" type="video/mp4">
+                                    <source src="{{ $unit->video_path }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>

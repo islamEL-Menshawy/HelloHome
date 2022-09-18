@@ -14,12 +14,17 @@ class UnitsCollection extends JsonResource
      */
     public function toArray($request): array
     {
+        if($this->is_youtube){
+            $path = $this->video_path;
+        }else{
+            $path = getenv('APP_URL') . $this->video_path;
+        }
         return [
             'id' => $this->id,
             'bathroom_number' => $this->bathroom_number ,
             'area' => $this->area ,
             'bed_number' => $this->bed_number,
-            'is_youtube' => $this->is_youtube ,
+            'is_youtube' => $path ,
             'price' => $this->price ,
             'video_path' => $this->video_path ,
             'location_lat' => $this->location_lat ,

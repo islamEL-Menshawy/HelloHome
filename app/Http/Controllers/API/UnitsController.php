@@ -50,14 +50,22 @@ class UnitsController extends BaseController
             'area'=>'required|numeric',
             'price'=>'required|numeric',
             'is_youtube'=>'required',
-            'video_path'=>"required|string",
+            'video_path'=>"required",
             'location'=>"required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/",
             'compound_id'=>'required|numeric',
             'type_id'=>'required|numeric',
             'location_id'=>'required|numeric'
         ]);
 
-
+        if ($request->is_youtube){
+            $request->validate([
+                'video_path'=>"string"
+            ]);
+        }else{
+            $request->validate([
+                'video_path'=>"mimes:mp4|max:1000"
+            ]);
+        }
 
         $coordinates = $this->helperService->getCoordinates($request->location);
         if ($request->is_youtube){
