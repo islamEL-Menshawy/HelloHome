@@ -42,6 +42,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  padding-bottom: 0 !important;
+}
 
 body::-webkit-scrollbar {
   width: 10px;
@@ -6357,6 +6360,9 @@ div.multiselect-dropdown {
 }
 .details .about-dev img {
   border-radius: 17px;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 .details .about-dev h3 {
   font-family: "Dubai-Regular";
@@ -6484,6 +6490,7 @@ height: 53px;
   justify-content: center;
   border:  1px solid #707070;
   border-radius: 17px;
+  padding: 12px 0;
 }
 .about-dev-details {
   width: calc(100% - 130px);
@@ -7422,7 +7429,8 @@ footer nav .navbar-nav .nav-link:hover {
   }
   .slide-marquee {
     width: 140px;
-    height: 68px;
+    height: 80px;
+    padding: 7px 0 !important;
   }
   /* Home */
 
