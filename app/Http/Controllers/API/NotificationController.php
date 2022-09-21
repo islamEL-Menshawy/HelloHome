@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Models\Newsletter;
 use App\Models\UnitIntrest;
+use App\Models\ContactUs;
 
 class NotificationController extends BaseController
 {
@@ -42,4 +43,28 @@ class NotificationController extends BaseController
             return $this->sendResponse([], 'Thanks for your interesting');
         }
     }
+
+    public function contact_us(Request $request){
+        $request->validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'email' => 'email',
+            'phone_code' => 'required',
+            'phone_number' => 'required',
+            'massage' => 'string'
+        ]);
+
+        $record = new ContactUs();
+        $record->firstName = $request->firstName;
+        $record->lastName = $request->lastName;
+        $record->email = $request->email;
+        $record->phone_code = $request->phone_code;
+        $record->phone_number = $request->phone_number;
+        $record->massage = $request->massage;
+        if ($record->save()){
+            return $this->sendResponse([], 'Thanks for contacting us');
+        }
+    }
+
+
 }
