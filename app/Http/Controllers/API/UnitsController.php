@@ -48,7 +48,7 @@ class UnitsController extends BaseController
             'bed_number'=>'required|numeric',
             'bathroom_number'=>'required|numeric',
             'area'=>'required|numeric',
-            'price'=>'required|numeric',
+            'price'=>'required|string',
             'is_youtube'=>'required',
             'video_path'=>"required",
             'location'=>"required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/",

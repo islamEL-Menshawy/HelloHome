@@ -19,7 +19,7 @@ class CreateUnitesTable extends Migration
             $table->integer('bathroom_number');
             $table->integer('area');
             $table->boolean('is_youtube');
-            $table->integer('price');
+            $table->string('price');
             $table->string('video_path');
             $table->string('location_lat');
             $table->string('location_log');
