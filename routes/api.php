@@ -65,3 +65,4 @@ Route::middleware('auth:sanctum')->group(function () {
 
 
 Route::post('subscribe', [NotificationController::class, 'newsletter']);
+Route::post('unit-interest', [NotificationController::class, 'unitInterest']);
