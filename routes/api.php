@@ -9,6 +9,7 @@ use App\Http\Controllers\API\AmenitiesController;
 use App\Http\Controllers\API\UnitsController;
 use App\Http\Controllers\API\SliderController;
 use App\Http\Controllers\API\ContentController;
+use App\Http\Controllers\API\NotificationController;
 
 
 use Illuminate\Http\Request;
@@ -61,3 +62,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('content/get/{page}',[ContentController::class, 'getContent']);
 
 });
+
+
+Route::post('subscribe', [NotificationController::class, 'newsletter']);
