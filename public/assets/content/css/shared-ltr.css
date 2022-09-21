@@ -4378,6 +4378,7 @@ a img {
   z-index: 10000000;
   width: 100%;
   height: 100%;
+  display: none;
 }
 .preloader .overlay {
   background-color: rgba(0, 0, 0, 0.8);
@@ -6062,10 +6063,14 @@ div.multiselect-dropdown {
 }
 .details .optian-details .total-salary span {
   font-family: "Dubai-Regular";
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1rem;
   overflow: visible;
-  color: #606060;
+  color: #a19f9f;
+}
+.currency-text {
+  margin-left: 5px;
+  margin-right: 15px;
 }
 .details .optian-details .save-to {
   font-family: "Dubai-Regular";
@@ -6855,6 +6860,8 @@ height: 53px;
   display: inline-block;
   width: auto;
   z-index: 100 !important;
+  width: 48px;
+  height: 48px;
 }
 /* Whatsapp */
 
@@ -7035,6 +7042,12 @@ footer .fot-footer {
   color: #fff !important;
   padding-left: 0;
   padding-right: 0;
+}
+.footer-logo {
+  padding-top: 12px;
+}
+.footer-logo img {
+  width: 170px;
 }
 .foot-des-link {
   color: #fff;
@@ -7638,7 +7651,22 @@ footer nav .navbar-nav .nav-link:hover {
     gap: 15px;
   }
   .bc-pss {
-    display: none !important;
+    display: block !important;
+    margin-bottom: 10px;
+  }
+  .share-to {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .share-to svg {
+        width: 18px;
+    height: 14px;
+  }
+  .optian-details {
+    justify-content: end;
+  }
+  .bc-pss .col-auto {
+    /*display: none;*/
   }
   .proto {
     font-weight: 600;
@@ -7678,7 +7706,7 @@ footer nav .navbar-nav .nav-link:hover {
   }
   .ad-card {
     margin-right: 5px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .area-details {
     padding-bottom: 0;

@@ -25,19 +25,7 @@
 
 
                 <div class="d-flex optian-details align-items-center">
-                    <p class="total-salary mb-0 me-2">{{ $unit->price }}EGP <span> Month </span></p>
-                    <a href="" class="mx-2 save-to d-flex align-items-center"><svg class="me-1"
-                                                                                   xmlns="http://www.w3.org/2000/svg" width="17.858" height="16.412"
-                                                                                   viewBox="0 0 17.858 16.412">
-                            <g id="heart" transform="translate(0.25 0.25)">
-                                <g id="Group_816" data-name="Group 816" transform="translate(0 0)">
-                                    <path id="Path_1249" data-name="Path 1249"
-                                          d="M12.838,21.333c-1.925,0-3.516,1.788-4.159,2.632-.643-.844-2.233-2.632-4.159-2.632C2.028,21.333,0,23.625,0,26.441A5.336,5.336,0,0,0,1.677,30.39a.357.357,0,0,0,.057.074l6.689,6.676a.361.361,0,0,0,.511,0l6.912-6.909.071-.069c.057-.053.112-.107.175-.177a.352.352,0,0,0,.064-.086,5.46,5.46,0,0,0,1.2-3.456C17.358,23.625,15.33,21.333,12.838,21.333Zm2.717,8.157a.337.337,0,0,0-.027.037c-.034.039-.071.073-.108.108L8.679,36.372,2.328,30.034a.363.363,0,0,0-.084-.108A4.6,4.6,0,0,1,.723,26.441c0-2.418,1.7-4.385,3.8-4.385,2.07,0,3.837,2.7,3.855,2.727a.376.376,0,0,0,.608,0c.018-.027,1.784-2.727,3.855-2.727,2.094,0,3.8,1.967,3.8,4.385A4.73,4.73,0,0,1,15.555,29.49Z"
-                                          transform="translate(0 -21.333)" stroke="#000" stroke-width="0.5" />
-                                </g>
-                            </g>
-                        </svg>
-                        Save</a>
+                    <p class="total-salary mb-0 me-4">{{ $unit->price }} <span class="currency-text">EGP</span> <span> Monthly </span></p>
                     <button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn mx-2 share-to d-flex align-items-center">
                         <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="14.826" height="16.163"
                              viewBox="0 0 14.826 16.163">
@@ -78,16 +66,16 @@
                             <div class="modal-b-title">Share this place with friends and family</div>
                             <div class="modal-b-it d-flex align-items-center">
                                 <img src="{{ asset('assets/App_Images/Grustsbackblock.png') }}" alt="" />
-                                <div class="modal-b-it-title">Luxury suite overlooking the Wadden Sea, Harlingen</div>
+                                <div class="modal-b-it-title">Luxury Collection</div>
                             </div>
                             <div class="modal-grid">
                                 <button onclick="CopyTextFunction()" id="copyUrlBrowser" class="btn share-linked-card">
                                     <img src="{{ asset('assets/App_Images/copy.svg') }}" class="img-fluid" alt="" />
                                     Copy Link
                                 </button>
-                                <a href="mailto:test@test.com&subject=this is mail" class="btn share-linked-card">
-                                    <img src="{{ asset('assets/App_Images/email.svg') }}" class="img-fluid" alt="" />
-                                    Email
+                                <a href="https://wa.me/201282145124?text=This is HelloHome" target="_blank" class="btn share-linked-card">
+                                    <img src="{{ asset('assets/App_Images/whatsapp.svg') }}" class="img-fluid" alt="" />
+                                    Whatsapp
                                 </a>
                                 <button class="btn share-linked-card">
                                     <img src="{{ asset('assets/App_Images/messenger.svg') }}" class="img-fluid" alt="" />

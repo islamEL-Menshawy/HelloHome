@@ -30,10 +30,10 @@ $(function () {
 });
 
 // Hideen Preloader After Page Loadded
-$(window).on('load', function() {
-  $('body, html').css('overflow', 'visible');
-  $('#preloader').fadeOut(1000);
-});
+// $(window).on('load', function() {
+//   $('body, html').css('overflow', 'visible');
+//   $('#preloader').fadeOut(1000);
+// });
 
 // Initialize and add the map
 // function initMap() {
@@ -315,7 +315,7 @@ $(document).ready(function () {
     fade: true,
     rtl: dir,
     centerMode: true,
-    asNavFor: '.slider-nav',
+    // asNavFor: '.slider-nav',
     prevArrow: $('.sca-prev'),
     nextArrow: $('.sca-next'),    
   })
