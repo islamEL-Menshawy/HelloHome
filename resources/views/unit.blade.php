@@ -322,9 +322,6 @@
                     <div class="justify-content-between loc-video">
                         <div class="">
                             <p class="head mb-3">Where you’ll be</p>
-                            <!-- <div class="mapouter"><div class="gmap_canvas">
-                                    <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=cairo,egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embedmapgenerator.com/">embed google maps in website</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style>
-                            </div> -->
                             <div id="map" data-lat="{{ $unit->location_lat }}" data-lng="{{ $unit->location_log }}"></div>
                         </div>
                     </div>
@@ -398,9 +395,9 @@
                 </div>
 
             </div>
-            <script type='text/javascript'
-                    src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop'
-                    async='async'></script>
+{{--            <script type='text/javascript'--}}
+{{--                    src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop'--}}
+{{--                    async='async'></script>--}}
         </div>
     </div>
 @endsection

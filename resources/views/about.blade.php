@@ -92,7 +92,5 @@
     </div>
 
     </div>
-    <script type='text/javascript'
-            src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop'
-            async='async'></script>
+
 @endsection

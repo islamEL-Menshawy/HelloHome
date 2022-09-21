@@ -76,18 +76,11 @@
 
                 </div>
                 <div class="col-12 order-md-2 order-md-3 order-2 mb-4 d-flex">
-                    <a href="#" class="go-direc">Get Direction</a>
+                    <a href="{{ $config['location'] }}" class="go-direc">Get Direction</a>
 
                 </div>
             </div>
         </div>
-        
-
-
     </div>
 
-    <script type='text/javascript'
-            src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop'
-            async='async'></script>
-    </div>
 @endsection

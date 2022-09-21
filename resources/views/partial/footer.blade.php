@@ -26,22 +26,22 @@
                         <p class="nav-link active py-0 my-0 followdash px-0">Follow Us</p>
                     </li>
                     <li class="nav-item mx-lg-2 mx-0 py-lg-0 py-2">
-                        <a class="foot-social-link" href="https://www.facebook.com" target="_blank">
+                        <a class="foot-social-link" href="{{ $config['facebook'] }}" target="_blank">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                     </li>
                     <li class="nav-item mx-lg-2 mx-0 py-lg-0 py-2">
-                        <a class="foot-social-link" href="https://www.youtube.com" target="_blank">
+                        <a class="foot-social-link" href="{{ $config['youtube'] }}" target="_blank">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </li>
                     <li class="nav-item mx-lg-2 mx-0 py-lg-0 py-2">
-                        <a class="foot-social-link" href="https://www.instagram.com" target="_blank">
+                        <a class="foot-social-link" href="{{ $config['instegram'] }}" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                     <li class="nav-item mx-lg-2 mx-0 py-lg-0 py-2">
-                        <a class="foot-social-link" href="https://www.linkedinin.com" target="_blank">
+                        <a class="foot-social-link" href="{{ $config['linkedin'] }}" target="_blank">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </li>

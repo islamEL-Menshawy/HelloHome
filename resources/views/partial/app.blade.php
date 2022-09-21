@@ -43,6 +43,9 @@
 
 @include('partial.header')
 @yield('content')
+<script type='text/javascript'
+        src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop'
+        async='async'></script>
 @include('partial.footer')
 
 <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
