@@ -54,10 +54,10 @@
 
                     <div
                         class=" col-12 order-lg-3 order-2 input-group mb-3 bg-transparent Subscribe-input border p-0 w-100">
-                        <input type="text" class="form-control border-0 bg-transparent pb-2"
-                               placeholder="Your email here" aria-label="Recipient's username"
-                               aria-describedby="button-addon2">
-                        <button class="btn foot-btn-subscribe btn-outline-secondary border-0 bg-transparent"type="button" id="button-addon2">
+                        <input id="subscribeInput" type="email" class="form-control border-0 bg-transparent pb-2"
+                               placeholder="Your email here" required>
+                               <input type="hidden" id="_token" value="{{ csrf_token() }}">
+                        <button id="subscribeBtn" class="btn foot-btn-subscribe btn-outline-secondary border-0 bg-transparent"type="button" id="button-addon2">
                             <span>Subscribe</span>
 
                         </button>

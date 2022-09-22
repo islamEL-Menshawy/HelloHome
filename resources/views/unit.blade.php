@@ -142,15 +142,16 @@
                               </div>
 
                               <form class="form-row">
+                                <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                                 <div class="col-lg-12">
                                   <div class="cform-group">
-                                    <input type="text" placeholder="Full Name" />
+                                    <input id="fullName" name="fullName" type="text" placeholder="Full Name" />
                                   </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                   <div class="cform-group">
-                                    <input type="email" placeholder="Email" />
+                                    <input id="email" name="email" type="email" placeholder="Email" />
                                   </div>
                                 </div>
 
@@ -158,7 +159,7 @@
                                   <div class="cform-group d-flex">
                                     <div class="cform-selecbox">
                                       <div class="selectbox-slim selectbox-tel-keys">
-                                        <select id="tel-keys">
+                                        <select id="tel-keys" name="phone_code">
                                           <option value="+20">+20</option>
                                           <option value="+21">+21</option>
                                           <option value="+22">+22</option>
@@ -167,20 +168,20 @@
                                         </select>
                                       </div>
                                     </div>
-                                    <input type="tel" placeholder="Phone (Optional)" />
+                                    <input id="phone_number" name="phone_number" type="tel" placeholder="Phone (Optional)" />
                                   </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                   <div class="cform-group">
-                                    <textarea rows="3" placeholder="I’m interested in Sale - Apartment New Cairo."></textarea>
+                                    <textarea id="massage" name="massage" rows="3" placeholder="I’m interested in Sale - Apartment New Cairo."></textarea>
                                   </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                   <div class="cform-action">
                                     <div class="button-default width-fluid bt-black">
-                                      <button>Send Now</button>
+                                      <button id="intrestsBtn">Send Now</button>
                                     </div>
                                   </div>
                                 </div>

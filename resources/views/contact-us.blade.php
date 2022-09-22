@@ -28,32 +28,33 @@
                 <p class="pref mb-4">{{ $attributes['contact_section_1_text'] }}</p>
 
             </div>
-            <form class=" col-md-6 order-2 order-md-1 row justify-content-between form-content gx-0">
+            <form id="contactUsForm" class=" col-md-6 order-2 order-md-1 row justify-content-between form-content gx-0">
                 <div class="col-12 row d-flex justify-content-between bef-contact align-items-center">
                     <p class="col-md-auto send-msg-head">Send us A Message</p>
                     <p class="col smal">For all other inquiries, please complete the form below.</p>
                 </div>
                 <div class=" mb-4 form-group col-6 img-49">
 
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name">
                 </div>
                 <div class=" mb-4 form-group col-6 img-49">
 
-                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Last Name">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name">
                 </div>
                 <div class=" mb-4 form-group col-12 img-100">
 
-                    <input type="email" class="form-control" id="exampleFormControlInput3"
-                           placeholder="name@example.com">
+                    <input type="email" name="email" class="form-control" placeholder="name@example.com">
                 </div>
                 <div class=" mb-4 form-group col-12 img-100" onsubmit="process(event)">
-                    <input class="w-100" id="phone" type="tel" name="phone" />
+                    <input class="w-100" id="phone" type="tel" name="phone_number" />
+                    <input class="w-100" type="hidden" name="phone_code" value="20" />
                 </div>
                 <div class=" mb-4 form-group col-12">
-                    <textarea class="form-control" placeholder="Write your message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea name="massage" class="form-control" placeholder="Write your message" rows="3"></textarea>
                 </div>
+                <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                 <d-v class="col-12">
-                    <button type="button"
+                    <button id="contactUsBtn" type="button"
                             class="btn btn-success w-100 px-md-0 px-2 mb-3 d-flex  align-items-center justify-content-center contact-submit">Send Now</button>
 
                 </d-v>

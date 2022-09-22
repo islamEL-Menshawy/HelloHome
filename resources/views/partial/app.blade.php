@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, ">
     <meta name="rating" content="general">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
     <!-- Bing Search meta tags -->
@@ -29,6 +30,7 @@
     <link rel="stylesheet" href="{{ asset('assets/content/css/intlTelInput.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick-theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/toast.css') }}">
 
 
     <style>
@@ -64,9 +66,11 @@
 
 <script src="{{ asset('assets/js/slick.min.js') }}"></script>
 <script src="{{ asset('assets/js/phoneform.js') }}"></script>
+<script src="{{ asset('assets/js/toast.js') }}"></script>
 
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/first.js') }}"></script>
+<script src="{{ asset('assets/js/ajax-requests.js') }}"></script>
 
 <script>
     // Initialize and add the map
