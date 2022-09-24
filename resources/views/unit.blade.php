@@ -25,7 +25,7 @@
 
 
                 <div class="d-flex optian-details align-items-center">
-                    <p class="total-salary mb-0 me-4">{{ $unit->price }} <span class="currency-text">EGP</span> <span> Monthly </span></p>
+                    <p class="total-salary mb-0 me-4">{{ $unit->price }}</p>
                     <button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn mx-2 share-to d-flex align-items-center">
                         <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="14.826" height="16.163"
                              viewBox="0 0 14.826 16.163">

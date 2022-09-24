@@ -60,7 +60,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('content/update',[ContentController::class, 'updateContent']);
     Route::post('content/update-image',[ContentController::class, 'updateContentImage']);
     Route::get('content/get/{page}',[ContentController::class, 'getContent']);
-
+    Route::get('content/data/{model}',[ContentController::class, 'getAllData']);
 });
 
 

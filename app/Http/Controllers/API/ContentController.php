@@ -4,7 +4,10 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
 use App\Http\Resources\ContentCollection;
+use App\Models\ContactUs;
 use App\Models\Images;
+use App\Models\Newsletter;
+use App\Models\UnitIntrest;
 use Illuminate\Http\Request;
 use App\Models\Page;
 use App\Models\Attribut;
@@ -43,6 +46,22 @@ class ContentController extends BaseController
         return $this->sendResponse(getenv('APP_URL').$image->image_path,"Image updated successfully") ;
     }
 
+    public function getAllData($model){
+        $data = null;
+        switch ($model){
+            case 'newsletter':
+                $data = Newsletter::all();
+                break;
+            case 'contact':
+                $data = ContactUs::all();
+                break;
+            case 'unit':
+                $data = UnitIntrest::all();
+                break;
+        }
+        return $this->sendResponse($data, "");
+    }
+
 
     public function uploadFile($file, string $fileName, string $path): string
     {
@@ -63,5 +82,7 @@ class ContentController extends BaseController
             return false;
         }
     }
+
+
 
 }
