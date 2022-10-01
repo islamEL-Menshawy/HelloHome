@@ -77,11 +77,12 @@
                                     <img src="{{ asset('assets/App_Images/whatsapp.svg') }}" class="img-fluid" alt="" />
                                     Whatsapp
                                 </a>
-                                <button class="btn share-linked-card">
+                                <a  href="javascript:;" onclick="messengerShare()" class="btn share-linked-card">
                                     <img src="{{ asset('assets/App_Images/messenger.svg') }}" class="img-fluid" alt="" />
                                     Messenger
-                                </button>
-                                <button class="btn share-linked-card">
+                                </a>
+
+                                <button id="shareFacebook" class="btn share-linked-card">
                                     <img src="{{ asset('assets/App_Images/facebook-1.svg') }}" class="img-fluid" alt="" />
                                     Facebook
                                 </button>

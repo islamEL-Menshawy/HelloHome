@@ -9,6 +9,10 @@
     <meta name="rating" content="general">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Facebook -->
+    <meta property="og:title" content="this is title">
+    <meta property="og:image" content="your_image_url">
+
 
     <!-- Bing Search meta tags -->
     <meta name="msvalidate.01" content="" />
@@ -46,7 +50,7 @@
 @include('partial.header')
 @yield('content')
 <script type='text/javascript'
-        src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop'
+        src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop&url=test.com'
         async='async'></script>
 @include('partial.footer')
 
@@ -71,6 +75,8 @@
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/first.js') }}"></script>
 <script src="{{ asset('assets/js/ajax-requests.js') }}"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0&appId=629322731899614&autoLogAppEvents=1" nonce="ywRETNx8"></script>
+
 
 <script>
     // Initialize and add the map
@@ -207,6 +213,44 @@
         utilsScript:
             "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
+</script>
+
+<script type="text/javascript">
+    // Share Facebook Link
+    $("#shareFacebook").on('click', function () {
+        var url = window.location.href;
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    });
+
+</script>
+
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+    FB.init({
+        appId: '629322731899614',
+        xfbml: true,
+        version: 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+};
+function isMobile() {
+    const toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+function messengerShare() {
+    var url = window.location.href;
+    if (isMobile()) {
+        window.location.href = "fb-messenger://share/?link=" + url;
+    } else {
+        FB.ui({
+            method: 'send',
+            link: url,
+            redirect_uri: url
+        });
+    }
+}
 </script>
 
 </body>
