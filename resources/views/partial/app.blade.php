@@ -49,9 +49,14 @@
 
 @include('partial.header')
 @yield('content')
-<script type='text/javascript'
+<!-- <script type='text/javascript'
         src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop&url=test.com'
-        async='async'></script>
+        async='async'></script> -->
+        <div id="whatsappBtn" class="whatsapp-btn">
+            <a href="https://wa.me/201282145124?text=This is a HelloHome" target="_blank">
+                <img src="{{ asset('assets/App_Images/whatsapp.svg') }}" class="img-fluid" alt="" />
+            </a>
+        </div>
 @include('partial.footer')
 
 <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>

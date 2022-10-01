@@ -7071,6 +7071,25 @@ footer nav .navbar-nav .nav-link:hover {
   margin: 0 !important;
   width: 175px;
 }
+.whatsapp-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #080;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 57px;
+  height: 57px;
+  background-color: #25d366;
+  border-radius: 0 7px 7px 0;
+}
+.whatsapp-btn img {
+  width: 37px;
+  height: 37px;
+}
 
 
 /*------------ Page ------------*/
