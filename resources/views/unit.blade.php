@@ -205,9 +205,12 @@
 
 
                             <div  class="ra-btn">
-                                <a href="https://wa.me/201282113051?text=This is Hello Home" target="_blank" class="btn btn-outline-secondary w-100 text-center Ask-but border-0">
+                                <a href="tel:{{ $unit->phone_number }}" target="_blank" class="btn btn-outline-secondary w-100 text-center Ask-but border-0">
                                     <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW
                                 </a>
+{{--                                <a href="https://wa.me/201282113051?text=This is Hello Home" target="_blank" class="btn btn-outline-secondary w-100 text-center Ask-but border-0">--}}
+{{--                                    <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW--}}
+{{--                                </a>--}}
                             </div>
                         </div>
                     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Models\Newsletter;
 use App\Models\UnitIntrest;
@@ -64,6 +65,17 @@ class NotificationController extends BaseController
         if ($record->save()){
             return $this->sendResponse([], 'Thanks for contacting us');
         }
+    }
+
+    public function delete_notification(int $id ,string $type): JsonResponse
+    {
+        if ($type == 'unit'){
+            $notification = UnitIntrest::find($id);
+        }else{
+            $notification = ContactUs::find($id);
+        }
+        $notification->delete();
+        return $this->sendResponse([], 'Notification deleted successfully');
     }
 
 

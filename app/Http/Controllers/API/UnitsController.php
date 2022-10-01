@@ -74,6 +74,8 @@ class UnitsController extends BaseController
             $video_path = $this->fileService->uploadFile($request->file('video_path'), 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
         }
         $unit = new Unites();
+        $unit->title = $request->title;
+        $unit->description = $request->description;
         $unit->bed_number = $request->bed_number;
         $unit->bathroom_number = $request->bathroom_number;
         $unit->area = $request->area;
@@ -81,6 +83,8 @@ class UnitsController extends BaseController
         $unit->location_link = $request->location;
         $unit->video_link = $request->video_path;
         $unit->is_youtube = $request->is_youtube;
+        $unit->order = $request->order;
+        $unit->phone_number = $request->phone_number;
         $unit->video_path = $video_path;
         $unit->location_lat = $coordinates[0]['latitude'];
         $unit->location_log = $coordinates[0]['longitude'];
@@ -135,7 +139,7 @@ class UnitsController extends BaseController
             'bed_number'=>'required|numeric',
             'bathroom_number'=>'required|numeric',
             'area'=>'required|numeric',
-            'price'=>'required|numeric',
+            'price'=>'required|string',
             'is_youtube'=>'required',
             'compound_id'=>'required|numeric',
             'type_id'=>'required|numeric',
@@ -153,11 +157,15 @@ class UnitsController extends BaseController
                 $video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
                 $unit->video_path = $video_path;
             }
+            $unit->title = $request->title;
+            $unit->description = $request->description;
             $unit->bed_number = $request->bed_number;
             $unit->bathroom_number = $request->bathroom_number;
             $unit->area = $request->area;
             $unit->price = $request->price;
             $unit->is_youtube = $request->is_youtube;
+            $unit->order = $request->order;
+            $unit->phone_number = $request->phone_number;
             $unit->location_link = $request->location;
             $unit->video_link = $request->video_path;
             $unit->compound_id = $request->compound_id;

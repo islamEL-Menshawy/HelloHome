@@ -21,11 +21,15 @@ class UnitsCollection extends JsonResource
         }
         return [
             'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
             'bathroom_number' => $this->bathroom_number ,
             'area' => $this->area ,
             'bed_number' => $this->bed_number,
             'is_youtube' => $path ,
             'price' => $this->price ,
+            'phone_number' => $this->phone_number ,
+            'order' => $this->order ,
             'video_path' => $this->video_path ,
             'location_lat' => $this->location_lat ,
             'location_log' => $this->location_log ,

@@ -18,7 +18,8 @@ class Compound extends Model
       'slug_ar',
       'description_ar',
       'website',
-      'image_id'
+      'image_id',
+        'location'
     ];
     protected $appends = ['number_of_unites','last_modify'];
 

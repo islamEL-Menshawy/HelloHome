@@ -42,7 +42,8 @@ class CompoundController extends BaseController
             'title_en'=>'required|string|unique:compounds',
             'description_en'=>'required|string',
             'website'=>'required|url',
-            'compound_image'=>'required'
+            'compound_image'=>'required',
+            'location' => 'required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/'
         ]);
         $slug = Str::slug($request->title_en);
         $image_path = $this->fileService->uploadFile($request->file('compound_image'), $slug, "compound");
@@ -54,6 +55,8 @@ class CompoundController extends BaseController
         $compound->slug_en = $slug;
         $compound->description_en = $request->description_en;
         $compound->website = $request->website;
+        $compound->order = $request->order;
+        $compound->location = $request->location;
         $compound->image_id = $image->id;
         $compound->save();
         return $this->sendResponse(new CompoundCollection($compound),"compound created successfully") ;
@@ -87,7 +90,8 @@ class CompoundController extends BaseController
         $request->validate([
             'title_en'=>'required|string',
             'description_en'=>'required|string',
-            'website'=>'required|url'
+            'website'=>'required|url',
+            'location' => 'required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/'
         ]);
         try {
             $slug = Str::slug($request->title_en);
@@ -96,6 +100,8 @@ class CompoundController extends BaseController
             $compound->slug_en = $slug;
             $compound->description_en = $request->description_en;
             $compound->website = $request->website;
+            $compound->order = $request->order;
+            $compound->location = $request->location;
             $compound->save();
             $image = Images::findOrFail($compound->image_id);
             $newPath = $this->fileService->renameFileByPath($image->image_path, "/compound/". $compound->slug_en);

@@ -27,7 +27,7 @@
             <div class="areas-container">
                 <div class="areas-grid">
                     <!-- ******** Start Row ******** -->
-                    @foreach($compound->unites as $unit)
+                    @foreach($units as $unit)
                         <div class="area-card">
                         <!-- Images -->
                         <div class="slider advsear ">

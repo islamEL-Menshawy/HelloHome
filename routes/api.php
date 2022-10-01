@@ -61,6 +61,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('content/update-image',[ContentController::class, 'updateContentImage']);
     Route::get('content/get/{page}',[ContentController::class, 'getContent']);
     Route::get('content/data/{model}',[ContentController::class, 'getAllData']);
+    Route::delete('content/delete/{id}/{type}',[NotificationController::class, 'delete_notification']);
 });
 
 

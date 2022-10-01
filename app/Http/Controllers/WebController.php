@@ -20,7 +20,7 @@ class WebController extends Controller
 
     public function index(){
         $types = Type::where('isActive' , true)->get();
-        $compounds = Compound::where('isActive' , true)->get();
+        $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
         $locations = Location::where('isActive' , true)->get();
         $slider = Slider::where('is_active', true)->get();
 
@@ -109,7 +109,7 @@ class WebController extends Controller
         }
 
         $types = Type::where('isActive' , true)->get();
-        $compounds = Compound::where('isActive' , true)->get();
+        $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
         $locations = Location::where('isActive' , true)->get();
         $unites = $unites->get();
         $data = [
@@ -129,11 +129,13 @@ class WebController extends Controller
     public function compound($compound){
         try{
             $compound = Compound::where('slug_en' , $compound)->first();
+            $units = Unites::where('compound_id', $compound->id)->orderBy('order', 'ASC')->get();
             if ($compound == null){
                 abort(404);
             }
             $data = [
-                'compound' => $compound
+                'compound' => $compound,
+                'units' => $units
             ];
             return view('compound', $data);
         }catch (\Exception $ex){
@@ -143,7 +145,7 @@ class WebController extends Controller
 
     public function explore_homes(){
         $types = Type::where('isActive' , true)->get();
-        $compounds = Compound::where('isActive' , true)->get();
+        $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
         $locations = Location::where('isActive' , true)->get();
 
         $data = [
