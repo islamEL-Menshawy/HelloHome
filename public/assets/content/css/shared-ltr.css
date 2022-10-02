@@ -7841,6 +7841,30 @@ footer nav .navbar-nav .nav-link:hover {
     font-size: 15px;
   }
   /* View Product */
+  .breadcrumb li a,
+  .breadcrumb li.active {
+    font-size: 1.2rem;
+  }
+  .details .optian-details .total-salary {
+    font-size: 18px;
+  }
+  .details .optian-details .share-to {
+    font-size:  16px
+  }
+  .unit-title {
+    max-width: 100% !important;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .unit-det-title {
+    margin-top: 12px;
+  }
+  .udp-2 .unit-det-title {
+    display: none;
+  }
+  .unit-det-point:last-of-type {
+    margin-bottom: 0 !important;
+  }
 }
 
 @media screen and (max-width: 992px) {
