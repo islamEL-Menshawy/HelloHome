@@ -14,8 +14,8 @@
     <meta property="og:type" content="Compound" />
     <meta property="og:image" content="{{ asset('assets/App_Images/detilsmal2.png') }}" />
     <meta property="og:url" content="https://www.HelloHome-test.com" />
-    <meta property="og:image:width" content="300px" /> 
-    <meta property="og:image:height" content="300px" />
+    <meta property="og:image:width" content="300" /> 
+    <meta property="og:image:height" content="300" />
 
 
     <!-- Bing Search meta tags -->
