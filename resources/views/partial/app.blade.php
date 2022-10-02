@@ -10,8 +10,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Facebook -->
-    <meta property="og:title" content="Title Here">
-    <meta property="og:image" content="{{ asset('assets/App_Images/logo.png') }}">
+    <meta property="og:title" content="Title Here" />
+    <meta property="og:type" content="Compound" />
+    <meta property="og:image" content="{{ asset('assets/App_Images/logo.png') }}" />
+    <meta property="og:image" href="{{ asset('assets/App_Images/logo.png') }}" />
+    <meta property="og:url" content="https://www.HelloHome-test.com" />
 
 
     <!-- Bing Search meta tags -->
