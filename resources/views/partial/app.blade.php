@@ -12,8 +12,10 @@
     <!-- Facebook -->
     <meta property="og:title" content="Title Here" />
     <meta property="og:type" content="Compound" />
-    <meta property="og:image:url" content="{{ asset('assets/App_Images/detilsmal2.png') }}" />
+    <meta property="og:image" content="{{ asset('assets/App_Images/detilsmal2.png') }}" />
     <meta property="og:url" content="https://www.HelloHome-test.com" />
+    <meta property="og:image:width" content="200" /> 
+    <meta property="og:image:height" content="200" />
 
 
     <!-- Bing Search meta tags -->
