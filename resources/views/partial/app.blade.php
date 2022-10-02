@@ -12,7 +12,7 @@
     <!-- Facebook -->
     <meta property="og:title" content="Title Here" />
     <meta property="og:type" content="Compound" />
-    <meta property="og:image" content="{{ asset('assets/App_Images/logo.png') }}" />
+    <meta property="og:image" content="{{ asset('assets/App_Images/detilsmal2.png') }}" />
     <meta property="og:url" content="https://www.HelloHome-test.com" />
 
 
