@@ -10,8 +10,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Facebook -->
-    <meta property="og:title" content="this is title">
-    <meta property="og:image" content="your_image_url">
+    <meta property="og:title" content="Title Here">
+    <meta property="og:image" content="{{ asset('assets/App_Images/logo.png') }}">
 
 
     <!-- Bing Search meta tags -->
