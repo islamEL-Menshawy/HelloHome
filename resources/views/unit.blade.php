@@ -11,21 +11,22 @@
     <div class=" container details">
 
         <div class=" details-slider justify-content-md-between justify-content-center mb-2">
+            <div class="col-auto">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                     aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">{{ $unit->location->title_en }}</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('compound', $unit->compound->slug_en) }}">{{ $unit->compound->title_en }}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ $unit->type->title_en }}</li>
+                    </ol>
+                </nav>
+            </div>
             <div class="bc-pss d-flex justify-content-between align-items-center">
-                <div class="col-auto">
-                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
-                         aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">{{ $unit->location->title_en }}</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('compound', $unit->compound->slug_en) }}">{{ $unit->compound->title_en }}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ $unit->type->title_en }}</li>
-                        </ol>
-                    </nav>
-                </div>
 
+                <div class="unit-title">Lipowe Wzgórze Limanowa - Summer</div>
 
                 <div class="d-flex optian-details align-items-center">
-                    <p class="total-salary mb-0 me-4">{{ $unit->price }}</p>
+                    <p class="total-salary mb-0 me-5">{{ $unit->price }}</p>
                     <button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn mx-2 share-to d-flex align-items-center">
                         <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="14.826" height="16.163"
                              viewBox="0 0 14.826 16.163">
@@ -73,10 +74,10 @@
                                     <img src="{{ asset('assets/App_Images/copy.svg') }}" class="img-fluid" alt="" />
                                     Copy Link
                                 </button>
-                                <a href="https://wa.me/201282145124?text=This is HelloHome" target="_blank" class="btn share-linked-card">
+                                <button class="btn share-linked-card wap-btn">
                                     <img src="{{ asset('assets/App_Images/whatsapp.svg') }}" class="img-fluid" alt="" />
                                     Whatsapp
-                                </a>
+                                </button>
                                 <a  href="javascript:;" onclick="messengerShare()" class="btn share-linked-card">
                                     <img src="{{ asset('assets/App_Images/messenger.svg') }}" class="img-fluid" alt="" />
                                     Messenger
@@ -205,13 +206,21 @@
                             </div>
 
 
-                            <div  class="ra-btn">
-                                <a href="tel:{{ $unit->phone_number }}" target="_blank" class="btn btn-outline-secondary w-100 text-center Ask-but border-0">
-                                    <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW
-                                </a>
-{{--                                <a href="https://wa.me/201282113051?text=This is Hello Home" target="_blank" class="btn btn-outline-secondary w-100 text-center Ask-but border-0">--}}
-{{--                                    <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW--}}
-{{--                                </a>--}}
+                            <div class="ra-btn">
+                                <div class="Ask-but">
+                                    <a href="tel:{{ $unit->phone_number }}" class="btn btn-outline-secondary w-100 text-center border-0">
+                                        <div class="num-hover-visible">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW
+                                            </div>
+                                        </div>
+                                        <div class="num-hover-hidden">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                {{ $unit->phone_number }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

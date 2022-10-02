@@ -4919,13 +4919,16 @@ body {
   background-size: 19px;
   top: 21px;
 }
-
+.breadcrumb li {
+  text-transform: capitalize;
+}
 .breadcrumb li a {
   font-family: "Dubai-Medium";
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 1.5rem;
   overflow: visible;
-  color: #7E7E7E;
+  color: #454545;
+  text-transform: capitalize;
 }
 
 .breadcrumb li.active {
@@ -6056,7 +6059,7 @@ div.multiselect-dropdown {
 }
 .details .optian-details .total-salary {
   font-family: "Dubai-Regular";
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5rem;
   overflow: visible;
   color: #52BA64;
@@ -6085,6 +6088,7 @@ div.multiselect-dropdown {
   line-height: 1rem;
   overflow: visible;
   color: #606060;
+  padding: 0;
 }
 .details .slider-for-contint {
   position: relative;
@@ -6458,6 +6462,31 @@ line-height: 1rem;
 overflow: visible;
 color: #fff;
 height: 53px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 6px;
+}
+.reg-ask-btns .Ask-but .btn {
+  color: #fff;
+  font-size: 1.2rem;
+  height: 100%;
+}
+.reg-ask-btns .Ask-but .btn:hover,
+.reg-ask-btns .Ask-but .btn:active {
+  background:  none;
+  box-shadow: none;
+  outline: none;
+  border:  none;
+}
+.num-hover-hidden {
+  display: none;
+}
+.reg-ask-btns .Ask-but .btn:hover .num-hover-hidden {
+  display: block;
+}
+.reg-ask-btns .Ask-but .btn:hover .num-hover-visible {
+  display: none;
 }
 .slick-slide.slick-current.slick-active div,
 .slick-slide.slick-current.slick-active div + .slick-slide.slick-active div {
@@ -6848,6 +6877,16 @@ height: 53px;
 }
 .mss-btn .icon-sm {
   font-size: 26px !important;
+}
+.unit-title {
+      font-weight: 600;
+    font-size: 21px;
+    max-width: 48.5%;
+    line-height: 1;
+}
+
+.bc-pss {
+  margin-bottom: 13px;
 }
 /* Contact Form  */
 

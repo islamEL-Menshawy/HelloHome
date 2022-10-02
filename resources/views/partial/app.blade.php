@@ -10,12 +10,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Facebook -->
+    <meta property="fb:app_id" content="629322731899614" />
     <meta property="og:title" content="Title Here" />
+    <meta property="og:description" content="This Is Description" />
     <meta property="og:type" content="Compound" />
-    <meta property="og:image" content="{{ asset('assets/App_Images/detilsmal2.png') }}" />
+    <meta property="og:image" content="{{ asset('assets/App_Images/detilsbig.png') }}" />
     <meta property="og:url" content="https://www.HelloHome-test.com" />
-    <meta property="og:image:width" content="300" /> 
-    <meta property="og:image:height" content="300" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="855" />
 
 
     <!-- Bing Search meta tags -->
@@ -57,9 +59,9 @@
         src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop&url=test.com'
         async='async'></script> -->
         <div id="whatsappBtn" class="whatsapp-btn">
-            <a href="https://wa.me/201282145124?text=This is a HelloHome" target="_blank">
+            <div class="wap-btn">
                 <img src="{{ asset('assets/App_Images/whatsapp.svg') }}" class="img-fluid" alt="" />
-            </a>
+            </div>
         </div>
 @include('partial.footer')
 
@@ -260,6 +262,14 @@ function messengerShare() {
         });
     }
 }
+</script>
+
+<script type="text/javascript">
+    $(".wap-btn").on('click', function () {
+        var url = window.location.href;
+        var text = 'https://wa.me/send?text=Check out this home on HelloHome! ' + url;
+        window.open(text,'_blank');
+    });
 </script>
 
 </body>
