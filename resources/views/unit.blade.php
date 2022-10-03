@@ -420,4 +420,14 @@
 {{--                    async='async'></script>--}}
         </div>
     </div>
+    <div id="whatsappBtnUnit" class="whatsapp-btn">
+        <div class="whatsapp-unit">
+            <img src="{{ asset('assets/App_Images/whatsapp.svg') }}" class="img-fluid" alt="" />
+        </div>
+    </div>
+    <style type="text/css">
+        #whatsappBtn {
+            display: none !important;
+        }
+    </style>
 @endsection

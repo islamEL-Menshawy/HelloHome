@@ -6062,10 +6062,10 @@ div.multiselect-dropdown {
 }
 .details .optian-details .total-salary {
   font-family: "Dubai-Regular";
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.5rem;
   overflow: visible;
-  color: #52BA64;
+  color: #27dd47;
 }
 .details .optian-details .total-salary span {
   font-family: "Dubai-Regular";
@@ -6929,6 +6929,19 @@ border-radius: 6px;
   height: 48px;
 }
 /* Whatsapp */
+
+.slider,
+.swiper {
+  opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+}
+.slider.slick-initialized,
+.swiper.swiper-initialized {
+  visibility: visible;
+    opacity: 1;  
+}
 
 /* Areas */
 .areas-grid {

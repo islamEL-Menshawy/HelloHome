@@ -134,6 +134,10 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        lazy: {
+            loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
+            loadPrevNextAmount: 1 //or, if you wish, preload the next 2 images
+          },
     });
 
     const swiper2 = new Swiper('.swiper.swiper-home-brands', {
@@ -270,6 +274,13 @@ function messengerShare() {
         var text = 'https://wa.me/send?text=Check out this home on HelloHome! ' + url;
         window.open(text,'_blank');
     });
+
+    $(".whatsapp-unit").on('click', function () {
+        var url = window.location.href;
+        var text = 'https://wa.me/201222212766?&text=' + url;
+        window.open(text,'_blank');
+    });
+
 </script>
 
 </body>
