@@ -6062,7 +6062,7 @@ div.multiselect-dropdown {
 }
 .details .optian-details .total-salary {
   font-family: "Dubai-Regular";
-  font-size: 1.3rem;
+  font-size: 20px;
   line-height: 1.5rem;
   overflow: visible;
   color: #52BA64;
@@ -6578,6 +6578,13 @@ border-radius: 6px;
 }
 .modal-share-container {
   border-radius: 12px !important;
+}
+.price-share-flexable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 288px;
+  max-width: 100%;
 }
 .modal-header,
 .modal-body {
@@ -7865,6 +7872,9 @@ footer nav .navbar-nav .nav-link:hover {
   .unit-det-point:last-of-type {
     margin-bottom: 0 !important;
   }
+  .price-share-flexable {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -7883,6 +7893,9 @@ footer nav .navbar-nav .nav-link:hover {
   }
   .filters-title span {
     margin-left: 10px;
+  }
+  .price-share-flexable {
+    width: auto;
   }
   
 }
@@ -8147,7 +8160,12 @@ footer nav .navbar-nav .nav-link:hover {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  
+  .price-share-flexable {
+    width: 289px;
+  }
+  .details .optian-details .total-salary {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 1400px) {

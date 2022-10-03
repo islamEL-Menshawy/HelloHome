@@ -59,9 +59,9 @@
         src='https://platform-api.sharethis.com/js/sharethis.js#property=63030dc8de1069001998acc6&product=sop&url=test.com'
         async='async'></script> -->
         <div id="whatsappBtn" class="whatsapp-btn">
-            <div class="wap-btn">
+            <a href="https://wa.me/201222212766?&text=Check out this home on HelloHome!" target="_blank">
                 <img src="{{ asset('assets/App_Images/whatsapp.svg') }}" class="img-fluid" alt="" />
-            </div>
+            </a>
         </div>
 @include('partial.footer')
 
