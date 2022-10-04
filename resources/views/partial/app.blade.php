@@ -9,15 +9,7 @@
     <meta name="rating" content="general">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Facebook -->
-    <meta property="fb:app_id" content="629322731899614" />
-    <meta property="og:title" content="Title Here" />
-    <meta property="og:description" content="This Is Description" />
-    <meta property="og:type" content="Compound" />
-    <meta property="og:image" content="{{ asset('assets/App_Images/detilsbig.png') }}" />
-    <meta property="og:url" content="https://www.HelloHome-test.com" />
-    <meta property="og:image:width" content="1280" />
-    <meta property="og:image:height" content="855" />
+    @yield('seo-tags')
 
 
     <!-- Bing Search meta tags -->

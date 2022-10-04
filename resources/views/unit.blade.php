@@ -1,5 +1,16 @@
 @extends('partial.app')
-@section('title', 'Unit Details')
+@section('title', $unit->title)
+@section('seo-tags')
+    <!-- Facebook -->
+    <meta property="fb:app_id" content="629322731899614" />
+    <meta property="og:title" content="{{ $unit->title }}" />
+    <meta property="og:description" content="{{ $unit->description }}" />
+    <meta property="og:type" content="Compound" />
+    <meta property="og:image" content="{{ asset('assets/App_Images/detilsbig.png') }}" />
+    <meta property="og:url" content="{{getenv('APP_URL')}}" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="855" />
+@endsection
 @section('content')
     <!-- PreLoader -->
     <div id="preloader" class="preloader">
@@ -23,7 +34,7 @@
             </div>
             <div class="bc-pss d-flex justify-content-between align-items-center">
 
-                <div class="unit-title">Lipowe Wzgórze Limanowa - Summer</div>
+                <div class="unit-title">{{ $unit->title }}</div>
 
                 <div class="d-flex price-share-flexable optian-details align-items-center">
                     <p class="total-salary mb-0 me-2">{{ $unit->price }}</p>
@@ -351,20 +362,9 @@
 
                     <div class="unit-details-points">
                         <div class="unit-det-title">Things to know</div>
-                        <div class="unit-det-point">Check-in: 4:00 PM - 10:00 PM</div>
-                        <div class="unit-det-point">Checkout: 10:00 AM</div>
-                        <div class="unit-det-point">Not suitable for infants (under 2 years)</div>
-                        <div class="unit-det-point">No smoking</div>
-                        <div class="unit-det-point">No parties or events</div>
-                    </div>
-
-                    <div class="unit-details-points udp-2">
-                        <div class="unit-det-title white-color">Things to know</div>
-                        <div class="unit-det-point">Check-in: 4:00 PM - 10:00 PM</div>
-                        <div class="unit-det-point">Checkout: 10:00 AM</div>
-                        <div class="unit-det-point">Not suitable for infants (under 2 years)</div>
-                        <div class="unit-det-point">No smoking</div>
-                        <div class="unit-det-point">No parties or events</div>
+                        @foreach($description as $item)
+                            <div class="unit-det-point">{{ $item }}</div>
+                        @endforeach
                     </div>
                 </div>
             </div>

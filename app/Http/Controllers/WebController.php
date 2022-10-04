@@ -8,6 +8,7 @@ use App\Models\Location;
 use App\Models\Page;
 
 use App\Models\Unites;
+use App\Models\Vistor;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
@@ -19,28 +20,34 @@ class WebController extends Controller
     }
 
     public function index(){
-        $types = Type::where('isActive' , true)->get();
-        $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
-        $locations = Location::where('isActive' , true)->get();
-        $slider = Slider::where('is_active', true)->get();
+        try{
+            Vistor::saveVisitor();
+            $types = Type::where('isActive' , true)->get();
+            $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
+            $locations = Location::where('isActive' , true)->get();
+            $slider = Slider::where('is_active', true)->get();
 
-        $page_attributes = Page::find(1);
-        $attributes = array();
-        foreach ($page_attributes->attributes as $attribute){
-            $key = $attribute->title;
-            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
-            $attributes += [$key=>$value];
+            $page_attributes = Page::find(1);
+            $attributes = array();
+            foreach ($page_attributes->attributes as $attribute){
+                $key = $attribute->title;
+                $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
+                $attributes += [$key=>$value];
+            }
+            $data = [
+                'types'     => $types,
+                'compounds' => $compounds,
+                'locations' => $locations,
+                'slider'    => $slider,
+                'page_attributes' => $page_attributes,
+                'attributes' => $attributes
+
+            ];
+            return view('welcome', $data);
+        }catch (\Exception $e){
+            die(404);
         }
-        $data = [
-            'types'     => $types,
-            'compounds' => $compounds,
-            'locations' => $locations,
-            'slider'    => $slider,
-            'page_attributes' => $page_attributes,
-            'attributes' => $attributes
 
-        ];
-        return view('welcome', $data);
     }
     public function about(){
         $page_attributes = Page::find(2);
@@ -162,9 +169,16 @@ class WebController extends Controller
         if ($unit == null || $compound == null){
             abort(404);
         }
+        if(empty($unit->description)){
+            $description = [];
+        }else{
+            $data = explode('.', $unit->description );
+            $description =array_slice($data, 0, count($data)-1);
+        }
         $data = [
             'unit' => $unit,
-            'compound' => $compound
+            'compound' => $compound,
+            'description' => $description
         ];
         return view('unit', $data);
     }
