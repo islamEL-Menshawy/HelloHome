@@ -351,20 +351,20 @@
 
                     <div class="unit-details-points">
                         <div class="unit-det-title">Things to know</div>
-                        <div class="unit-det-point">Check-in: 4:00 PM - 10:00 PM</div>
-                        <div class="unit-det-point">Checkout: 10:00 AM</div>
-                        <div class="unit-det-point">Not suitable for infants (under 2 years)</div>
-                        <div class="unit-det-point">No smoking</div>
-                        <div class="unit-det-point">No parties or events</div>
+                        <div class="unit-det-point">- Check-in: 4:00 PM - 10:00 PM</div>
+                        <div class="unit-det-point">- Checkout: 10:00 AM</div>
+                        <div class="unit-det-point">- Not suitable for infants (under 2 years)</div>
+                        <div class="unit-det-point">- No smoking</div>
+                        <div class="unit-det-point">- No parties or events</div>
                     </div>
 
                     <div class="unit-details-points udp-2">
                         <div class="unit-det-title white-color">Things to know</div>
-                        <div class="unit-det-point">Check-in: 4:00 PM - 10:00 PM</div>
-                        <div class="unit-det-point">Checkout: 10:00 AM</div>
-                        <div class="unit-det-point">Not suitable for infants (under 2 years)</div>
-                        <div class="unit-det-point">No smoking</div>
-                        <div class="unit-det-point">No parties or events</div>
+                        <div class="unit-det-point">- Check-in: 4:00 PM - 10:00 PM</div>
+                        <div class="unit-det-point">- Checkout: 10:00 AM</div>
+                        <div class="unit-det-point">- Not suitable for infants (under 2 years)</div>
+                        <div class="unit-det-point">- No smoking</div>
+                        <div class="unit-det-point">- No parties or events</div>
                     </div>
                 </div>
             </div>
