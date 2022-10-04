@@ -6659,7 +6659,7 @@ border-radius: 6px;
 }
 .slick-counter-arrows {
     position: absolute;
-    z-index: 100;
+    z-index: 5;
     bottom: 30px;
     right: 22px;
 }
