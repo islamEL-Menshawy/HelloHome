@@ -40,8 +40,6 @@ class SliderController extends BaseController
     public function store(Request $request): JsonResponse
     {
         $request->validate([
-            'first_text'=>'string',
-            'second_text'=>'string',
             'is_image'=>'required',
             'slide_image'=>'required'
         ]);
@@ -88,8 +86,6 @@ class SliderController extends BaseController
     public function update(Request $request,int $id)
     {
         $request->validate([
-            'first_text'=>'string',
-            'second_text'=>'string',
             'is_image'=>'required',
         ]);
         try {
