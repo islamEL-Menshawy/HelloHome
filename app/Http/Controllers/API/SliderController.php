@@ -40,8 +40,8 @@ class SliderController extends BaseController
     public function store(Request $request): JsonResponse
     {
         $request->validate([
-            'first_text'=>'required|string',
-            'second_text'=>'required|string',
+            'first_text'=>'string',
+            'second_text'=>'string',
             'is_image'=>'required',
             'slide_image'=>'required'
         ]);
@@ -88,8 +88,8 @@ class SliderController extends BaseController
     public function update(Request $request,int $id)
     {
         $request->validate([
-            'first_text'=>'required|string',
-            'second_text'=>'required|string',
+            'first_text'=>'string',
+            'second_text'=>'string',
             'is_image'=>'required',
         ]);
         try {
@@ -97,6 +97,7 @@ class SliderController extends BaseController
             $slider = Slider::findOrFail($id);
             $slider->first_text = $request->first_text;
             $slider->second_text = $request->second_text;
+            $slider->is_image = $request->is_image;
             $slider->save();
             $image = Images::findOrFail($slider->image_id);
             $newPath = $this->fileService->renameFileByPath($image->image_path, "/slider/". $slug);
