@@ -12,22 +12,25 @@ $('.navbar-close-btn').on('click', function () {
 });
 
 $(function () {
-  // Read More Function
-  $(".read-more-btn").on("click", function () {
-    var content = $(this)
-      .parents(".read-more-parent")
-      .find(".read-more-content");
-    content.text(content.attr("data-text"));
-    $(this).css("display", "none");
+    $(".read-more-btn").on("click", function () {
+      var content = $(this)
+        .parents(".read-more-parent")
+        .find(".read-more-content");
+      content.text(content.attr("data-text"));
+      $(this).css("display", "none");
+    });
+  
+    $(".read-more-content").each(function () {
+      var length = $(this).attr("data-length");
+      var len = $(this).text().length;
+      if (length > len) {
+        $(this).next('.read-more-btn').css("display", "none");
+      }
+      var strToInt = parseInt(length);
+      $(this).attr("data-text", $(this).text());
+      $(this).text($(this).text().substr(0, strToInt));
+    });
   });
-
-  $(".read-more-content").each(function () {
-    var length = $(this).attr("data-length");
-    var strToInt = parseInt(length);
-    $(this).attr("data-text", $(this).text());
-    $(this).text($(this).text().substr(0, strToInt));
-  });
-});
 
 // Hideen Preloader After Page Loadded
 // $(window).on('load', function() {
