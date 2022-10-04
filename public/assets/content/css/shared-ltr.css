@@ -6065,7 +6065,7 @@ div.multiselect-dropdown {
   font-size: 22px;
   line-height: 1.5rem;
   overflow: visible;
-  color: #27dd47;
+  color: #438d54;
 }
 .details .optian-details .total-salary span {
   font-family: "Dubai-Regular";
@@ -6659,9 +6659,9 @@ border-radius: 6px;
 }
 .slick-counter-arrows {
     position: absolute;
-    z-index: 100;
+    z-index: 5;
     bottom: 30px;
-    right: 41px;
+    right: 22px;
 }
 .slick-counter-arrows {
   color: #fff;
@@ -6670,7 +6670,7 @@ border-radius: 6px;
   font-family: "Dubai-Medium";
       font-weight: 500;
     font-size: 22px;
-    margin: 0 11px;
+    margin: 0 3px;
     width: 70px;
     text-align: center;
 }
@@ -7168,7 +7168,9 @@ footer nav .navbar-nav .nav-link:hover {
   width: 37px;
   height: 37px;
 }
-
+.whatsapp-unit {
+  cursor: pointer;
+}
 
 /*------------ Page ------------*/
 /*------------ Global Media Queries ------------*/
@@ -7760,7 +7762,7 @@ footer nav .navbar-nav .nav-link:hover {
     height: 14px;
   }
   .optian-details {
-    justify-content: end;
+    justify-content: space-between;
   }
   .bc-pss .col-auto {
     /*display: none;*/
@@ -7874,7 +7876,7 @@ footer nav .navbar-nav .nav-link:hover {
   .unit-title {
     max-width: 100% !important;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
   }
   .unit-det-title {
     margin-top: 12px;
@@ -7887,6 +7889,9 @@ footer nav .navbar-nav .nav-link:hover {
   }
   .price-share-flexable {
     width: 100%;
+  }
+  .navbar-toggle-btn img {
+    height: 28px;
   }
 }
 

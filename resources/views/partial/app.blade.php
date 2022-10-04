@@ -269,7 +269,8 @@ function messengerShare() {
 
     $(".whatsapp-unit").on('click', function () {
         var url = window.location.href;
-        var text = 'https://wa.me/201222212766?&text=' + url;
+        var title = $(".unit-title").text();
+        var text = 'https://wa.me/201222212766?&text=' + url + ' ' + title;
         window.open(text,'_blank');
     });
 
