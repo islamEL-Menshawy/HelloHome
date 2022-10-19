@@ -7185,6 +7185,9 @@ footer nav .navbar-nav .nav-link:hover {
   }
 }
 @media screen and (max-width: 575px) {
+  .marquee:hover .marquee__inner {
+    animation-play-state: running !important;
+  }
   .navbar.navbar-expand-lg {
     position: fixed;
     left: 0;
