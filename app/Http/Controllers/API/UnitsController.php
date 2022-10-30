@@ -76,6 +76,7 @@ class UnitsController extends BaseController
         $unit = new Unites();
         $unit->title = $request->title;
         $unit->description = $request->description;
+        $unit->description_left = $request->description_left;
         $unit->bed_number = $request->bed_number;
         $unit->bathroom_number = $request->bathroom_number;
         $unit->area = $request->area;
@@ -159,6 +160,7 @@ class UnitsController extends BaseController
             }
             $unit->title = $request->title;
             $unit->description = $request->description;
+            $unit->description_left = $request->description_left;
             $unit->bed_number = $request->bed_number;
             $unit->bathroom_number = $request->bathroom_number;
             $unit->area = $request->area;

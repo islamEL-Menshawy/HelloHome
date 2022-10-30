@@ -23,6 +23,7 @@ class UnitsCollection extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
+            'description_left' => $this->description_left,
             'bathroom_number' => $this->bathroom_number ,
             'area' => $this->area ,
             'bed_number' => $this->bed_number,
