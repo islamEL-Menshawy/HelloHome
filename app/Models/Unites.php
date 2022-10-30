@@ -12,23 +12,24 @@ class Unites extends Model
     use HasFactory;
 
     protected $fillable = [
-      'bed_number',
-      'bathroom_number',
-      'area',
-      'is_youtube',
-      'price',
-      'video_path',
-      'location_lat',
-      'location_log',
-      'order',
+        'bed_number',
+        'bathroom_number',
+        'area',
+        'is_youtube',
+        'price',
+        'video_path',
+        'location_lat',
+        'location_log',
+        'order',
         'phone_number',
         'title',
         'description',
-      'compound_id',
-      'type_id',
-      'location_id',
-      'video_link',
-      'location_link'
+        'description_left',
+        'compound_id',
+        'type_id',
+        'location_id',
+        'video_link',
+        'location_link'
     ];
 
 //    protected $appends = ['last_modify'];

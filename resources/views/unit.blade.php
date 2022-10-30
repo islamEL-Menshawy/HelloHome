@@ -35,7 +35,6 @@
             <div class="bc-pss d-flex justify-content-between align-items-center">
 
                 <div class="unit-title">{{ $unit->title }}</div>
-
                 <div class="d-flex price-share-flexable optian-details align-items-center">
                     <p class="total-salary mb-0 me-2">{{ $unit->price }}</p>
                     <button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn mx-2 share-to d-flex align-items-center">
@@ -359,16 +358,17 @@
                             </div>
                         @endif
                     </div>
-
                     <div class="unit-details-points">
                         <div class="unit-det-title">Things to know</div>
                         @foreach($description as $item)
                             <div class="unit-det-point">{{ $item }}</div>
                         @endforeach
                     </div>
-
                     <div class="unit-details-points udp-2">
                         <div class="unit-det-title white-color">Things to know</div>
+                        @foreach($description_left as $item)
+                            <div class="unit-det-point">{{ $item }}</div>
+                        @endforeach
                     </div>
                 </div>
             </div>

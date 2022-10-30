@@ -175,10 +175,17 @@ class WebController extends Controller
             $data = explode('.', $unit->description );
             $description =array_slice($data, 0, count($data)-1);
         }
+        if(empty($unit->description_left)){
+            $description_left = [];
+        }else{
+            $data = explode('.', $unit->description_left );
+            $description_left =array_slice($data, 0, count($data)-1);
+        }
         $data = [
             'unit' => $unit,
             'compound' => $compound,
-            'description' => $description
+            'description' => $description,
+            'description_left' => $description_left
         ];
         return view('unit', $data);
     }
