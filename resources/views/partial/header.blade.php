@@ -29,10 +29,10 @@
                         <div class="nf-socialmedida d-flex justify-content-between align-items-center">
                             <div class="nfs-title">Follow Us On</div>
                             <div class="nfs-social">
-                                <a class="foot-social-link" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a class="foot-social-link" href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                                <a class="foot-social-link" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                <a class="foot-social-link" href="https://www.linkedinin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a class="foot-social-link" href="{{ $config['facebook'] }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="foot-social-link" href="{{ $config['youtube'] }}" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                <a class="foot-social-link" href="{{ $config['instegram'] }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a class="foot-social-link" href="{{ $config['linkedin'] }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="nf-copyright">

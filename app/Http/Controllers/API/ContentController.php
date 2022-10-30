@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
-use App\Http\Resources\ContentCollection;
 use App\Models\ContactUs;
 use App\Models\Images;
 use App\Models\Newsletter;
