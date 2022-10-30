@@ -34,8 +34,7 @@
                 </h3>
                 <p class="pref mb-4">{{ $attributes['section_1_text_1'] }}</p>
                 <p class="pref mb-4">{{ $attributes['section_1_text_2'] }}</p>
-                <a href="{{ asset('assets/App_Images/download.doc') }}" download target="_blank" class="btn btn-outline-secondary dl-pro-btn">Download Our Profile</a>
-
+                <a href="{{ asset($attributes['about_section_download_profile']) }}" download target="_blank" class="btn btn-outline-secondary dl-pro-btn">Download Our Profile</a>
             </div>
             <div class="col-lg-9 col-md-10 col-12 text-center mx-auto mt-md-5 mb-md-74 my-3 section-1">
                 <span class="smallQus mb-4">{{ $attributes['section_2_q'] }}</span>

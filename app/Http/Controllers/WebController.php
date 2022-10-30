@@ -26,7 +26,6 @@ class WebController extends Controller
             $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
             $locations = Location::where('isActive' , true)->get();
             $slider = Slider::where('is_active', true)->get();
-
             $page_attributes = Page::find(1);
             $attributes = array();
             foreach ($page_attributes->attributes as $attribute){
@@ -79,7 +78,6 @@ class WebController extends Controller
             'attributes' => $attributes
 
         ];
-//        return $attributes;
         return view('contact-us', $data);
     }
     public function service(){
@@ -125,11 +123,7 @@ class WebController extends Controller
             'locations' => $locations,
             'unites' => $unites
         ];
-
-
-
         return view('search', $data);
-//        return $unites;
     }
 
 
