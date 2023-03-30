@@ -26,9 +26,9 @@
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
                      aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">{{ $unit->location->title_en }}</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('compound', $unit->compound->slug_en) }}">{{ $unit->compound->title_en }}</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">{{ $unit->type->title_en }}</li>
+                        <li class="breadcrumb-item"><a href="#">{{ $unit->location['title_'. app()->getLocale()] }}</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('compound', $unit->compound->slug_en) }}">{{ $unit->compound['title_'. app()->getLocale()] }}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ $unit->type['title_'. app()->getLocale()] }}</li>
                     </ol>
                 </nav>
             </div>
@@ -49,7 +49,7 @@
                                       transform="translate(-87.89)" />
                             </g>
                         </svg>
-                        Share
+                        {{ __('msg.share') }}
                     </button>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="modal-b-title">Share this place with friends and family</div>
+                            <div class="modal-b-title">{{ __('msg.share_with_family') }}</div>
                             <div class="modal-b-it d-flex align-items-center">
                                 <img src="{{ asset('assets/App_Images/Grustsbackblock.png') }}" alt="" />
                                 <div class="modal-b-it-title">Luxury Collection</div>
@@ -140,14 +140,14 @@
                         <div class="details-larg-button reg-ask-btns d-flex justify-content-between">
                             <div class="ra-btn">
                                 <button id="openContactContainer" type="button" class="btn btn-outline-secondary w-100 text-center Register-but border-0">
-                                    REGISTER INTEREST
+                                    {{ __('msg.register_interest') }}
                                 </button>
                             </div>
 
 
                             <div id="toggleContactContainer" class="contact-form project-contact-form">
                               <div class="cform-title d-flex align-items-center justify-content-between">
-                                <div class="title">Register Interest</div>
+                                <div class="title">{{ __('msg.register_interest') }}</div>
                                 <button id="closeContactContainer" class="close-contact opacity-hover btn">
                                     <i id="closee" class="fas fa-times border-0"></i>
                                 </button>
@@ -157,13 +157,13 @@
                                 <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                                 <div class="col-lg-12">
                                   <div class="cform-group">
-                                    <input id="fullName" name="fullName" type="text" placeholder="Full Name" />
+                                    <input id="fullName" name="fullName" type="text" placeholder="{{ __('msg.full_name') }}" />
                                   </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                   <div class="cform-group">
-                                    <input id="email" name="email" type="email" placeholder="Email" />
+                                    <input id="email" name="email" type="email" placeholder="{{ __('msg.email') }}" />
                                   </div>
                                 </div>
 
@@ -180,20 +180,20 @@
                                         </select>
                                       </div>
                                     </div>
-                                    <input id="phone_number" name="phone_number" type="tel" placeholder="Phone (Optional)" />
+                                    <input id="phone_number" name="phone_number" type="tel" placeholder="{{ __('msg.phone') }}" />
                                   </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                   <div class="cform-group">
-                                    <textarea id="massage" name="massage" rows="3" placeholder="I’m interested in Sale - Apartment New Cairo."></textarea>
+                                    <textarea id="massage" name="massage" rows="3" placeholder="{{ __('msg.interested_sale') }}"></textarea>
                                   </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                   <div class="cform-action">
                                     <div class="button-default width-fluid bt-black">
-                                      <button id="intrestsBtn">Send Now</button>
+                                      <button id="intrestsBtn">{{ __('msg.send_now') }}</button>
                                     </div>
                                   </div>
                                 </div>
@@ -206,9 +206,7 @@
                                         <span></span>
                                       </div>
                                     </div>
-                                    <label class="checkbox-text" for="agreeTermsConditions">I agree to Terms of use and
-                                      Privacy
-                                      Policy
+                                    <label class="checkbox-text" for="agreeTermsConditions">{{ __('msg.agree_policy') }}
                                     </label>
                                   </div>
                                 </div>
@@ -221,7 +219,7 @@
                                     <a href="tel:{{ $unit->phone_number }}" class="btn btn-outline-secondary w-100 text-center border-0">
                                         <div class="num-hover-visible">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" /> ASK NOW
+                                                <img class="img-fluid" src="{{asset('assets/App_Images/phone-2.svg')}}" alt="" />{{ __('msg.ask_now') }}
                                             </div>
                                         </div>
                                         <div class="num-hover-hidden">
@@ -242,11 +240,11 @@
         </div>
         <div class="offers-home">
             <div class="product-details">
-                <div class="proto text-uppercase">Property Type</div>
+                <div class="proto text-uppercase">{{ __('msg.property_type') }}</div>
                 <div class="pd-grid">
                     <div class="apartment-d">
                         <div class="area-details d-flex justify-content-between">
-                            <p class="proto-name-app pt-1 col-auto">{{ $unit->type->title_en }}</p>
+                            <p class="proto-name-app pt-1 col-auto">{{ $unit->type['title_'. app()->getLocale()] }}</p>
                             <p class="ad-card bed col-auto"><svg class="me-2" id="bed" xmlns="http://www.w3.org/2000/svg" width="34.454"
                                                                  height="28.149" viewBox="0 0 34.454 22.149">
                                     <g id="Group_815" data-name="Group 815" transform="translate(0 0)">
@@ -255,7 +253,7 @@
                                               transform="translate(0 -84)" fill="#2c2c2c" />
                                     </g>
                                 </svg>
-                                {{ $unit->bed_number }} Bed Rooms</p>
+                                {{ $unit->bed_number }} {{ __('msg.bed_rooms') }}</p>
                             <p class="ad-card bathrom col-auto"><svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="30.279"
                                                                      height="30.279" viewBox="0 0 30.279 28.279">
                                     <g id="bathtub_1_" data-name="bathtub (1)" transform="translate(0.25 0.25)">
@@ -264,7 +262,7 @@
                                               transform="translate(-0.001 0)" fill="#2c2c2c" stroke="#fff" stroke-width="0.5" />
                                     </g>
                                 </svg>
-                                {{ $unit->bathroom_number }} Bathrooms</p>
+                                {{ $unit->bathroom_number }} {{ __('msg.Bathrooms') }}</p>
                             <p class="ad-card area col-auto"><svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="30.028" height="27.411"
                                                                   viewBox="0 0 30.028 28.411">
                                     <g id="blueprint" transform="translate(0.125 0.125)">
@@ -285,7 +283,7 @@
                                               transform="translate(-280.525 -173.994)" fill="#2c2c2c" stroke="#fff"
                                               stroke-width="0.25" />
                                     </g>
-                                </svg>Area {{ $unit->area }} M2</p>
+                                </svg>{{ __('msg.area') }} {{ $unit->area }} M2</p>
                         </div>
 
                         <div class="about-dev d-flex">
@@ -294,11 +292,11 @@
                             </div>
                             <div class="about-dev-details">
                                 <h3>
-                                    About Developer
+                                    {{ __('msg.about_developer') }}
                                 </h3>
 
                                 <div class="read-more-parent">
-                                    <span class="read-more-content" data-length="200">{{ $unit->compound->description_en }}</span>
+                                    <span class="read-more-content" data-length="200">{{ $unit->compound['title_'. app()->getLocale()] }}</span>
                                     <button class="read-more-btn"> ...Read More</button>
                                 </div>
 
@@ -311,14 +309,14 @@
                     </div>
 
                     <div class="offers-home">
-                        <p class="my-lg-auto my-3 offers-home-header">What this home offers</p>
+                        <p class="my-lg-auto my-3 offers-home-header">{{ __('msg.what_this_home_offers') }}</p>
 
                         <div class="home-features-container">
                             <div class="home-features-grid">
                                 @foreach($unit->amenities as $amenitie)
                                     <div class="hfg-card">
                                         <img class="img-fluid" src="{{asset('uploads'.$amenitie->image->image_path)}}" alt="" />
-                                        <div class="hfg-title">{{ $amenitie->title_en }}</div>
+                                        <div class="hfg-title">{{ $amenitie['title_'. app()->getLocale()] }}</div>
                                     </div>
                                 @endforeach
                             </div>
@@ -333,7 +331,7 @@
 
                     <div class="justify-content-between loc-video">
                         <div class="">
-                            <p class="head mb-3">Where you’ll be</p>
+                            <p class="head mb-3">{{ __('msg.where_be') }}</p>
                             <div id="map" data-lat="{{ $unit->location_lat }}" data-lng="{{ $unit->location_log }}"></div>
                         </div>
                     </div>
@@ -344,8 +342,7 @@
                                 <path id="video-camera" d="M29.98,1.7a.642.642,0,0,0-.635-.012l-6.951,3.8V3.209A3.213,3.213,0,0,0,19.184,0H3.209A3.213,3.213,0,0,0,0,3.209V15.88a3.213,3.213,0,0,0,3.209,3.209H19.184a3.213,3.213,0,0,0,3.209-3.209V13.644l6.951,3.8a.642.642,0,0,0,.949-.563V2.254A.642.642,0,0,0,29.98,1.7ZM21.109,15.88a1.927,1.927,0,0,1-1.925,1.925H3.209A1.928,1.928,0,0,1,1.284,15.88V3.209A1.928,1.928,0,0,1,3.209,1.284H19.184A1.928,1.928,0,0,1,21.11,3.209Zm7.9-.086-6.617-3.613V6.949L29.01,3.336Zm0,0" fill="#707070"/>
                             </svg>
 
-                            <p class="head mb-0 ms-2">
-                                Watch the video</p>
+                            <p class="head mb-0 ms-2">{{ __('msg.watch_video') }}</p>
                         </div>
                         @if($unit->is_youtube)
                             <iframe class="embed-iframe-vid" width="100%" height="400" src="https://www.youtube.com/embed/{{ $unit->video_path }}?autoplay=1&mute=1"></iframe>
@@ -359,13 +356,13 @@
                         @endif
                     </div>
                     <div class="unit-details-points">
-                        <div class="unit-det-title">Things to know</div>
+                        <div class="unit-det-title">{{ __('msg.things_know') }}</div>
                         @foreach($description as $item)
                             <div class="unit-det-point">{{ $item }}</div>
                         @endforeach
                     </div>
                     <div class="unit-details-points udp-2">
-                        <div class="unit-det-title white-color">Things to know</div>
+                        <div class="unit-det-title white-color">{{ __('msg.things_know') }}</div>
                         @foreach($description_left as $item)
                             <div class="unit-det-point">{{ $item }}</div>
                         @endforeach
@@ -374,9 +371,9 @@
             </div>
             <div class="advanc-slider w-100 row gx-0 justify-content-between  mb-74">
                 <div class="col-12 my-4">
-                    <h3 class="Similar pb-4">Similar Homes</h3>
+                    <h3 class="Similar pb-4">{{ __('msg.similar_homes') }}</h3>
                 </div>
-                <div class="similar-homes-title">{{ $unit->compound->title_en }} Compound</div>
+                <div class="similar-homes-title">{{ $unit->compound['title_'. app()->getLocale()] }} {{ __('msg.compound') }}</div>
 
 
                 <div class="areas-container">
@@ -402,12 +399,12 @@
                             <a href="{{route('unit_details', ['compound'=>$unit->compound->slug_en,'unit_id'=> $unit->id])}}">
                                 <div class="d-flex justify-content-between col-12">
                                     <div class="text-gallery col-md-5 col-6 img-49 ps-0 ">
-                                        <span>Location</span>
-                                        <p>{{ $unit->location->title_en }}</p>
+                                        <span>{{ __('msg.locations') }}</span>
+                                        <p>{{ $unit->location['title_'. app()->getLocale()] }}</p>
                                     </div>
                                     <div class="text-gallery col-md-5 col-6 img-49 ps-0">
-                                        <span>Property Type</span>
-                                        <p>{{ $unit->type->title_en }}</p>
+                                        <span>{{ __('msg.property_type') }}</span>
+                                        <p>{{ $unit->type['title_'. app()->getLocale()] }}</p>
                                     </div>
                                 </div>
                             </a>

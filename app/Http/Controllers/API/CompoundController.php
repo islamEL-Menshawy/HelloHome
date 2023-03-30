@@ -40,7 +40,9 @@ class CompoundController extends BaseController
     {
         $request->validate([
             'title_en'=>'required|string|unique:compounds',
+            'title_ar'=>'required|string|unique:compounds',
             'description_en'=>'required|string',
+            'description_ar'=>'required|string',
             'website'=>'required|url',
             'compound_image'=>'required',
             'location' => 'required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/'
@@ -51,9 +53,12 @@ class CompoundController extends BaseController
         $image->image_path = $image_path;
         $image->save();
         $compound = new Compound();
+        $compound->title_ar = $request->title_ar;
         $compound->title_en = $request->title_en;
+        $compound->slug_ar = Str::slug($request->title_ar);
         $compound->slug_en = $slug;
         $compound->description_en = $request->description_en;
+        $compound->description_ar = $request->description_ar;
         $compound->website = $request->website;
         $compound->order = $request->order;
         $compound->location = $request->location;
@@ -89,16 +94,21 @@ class CompoundController extends BaseController
     {
         $request->validate([
             'title_en'=>'required|string',
+            'title_ar'=>'required|string',
             'description_en'=>'required|string',
+            'description_ar'=>'required|string',
             'website'=>'required|url',
             'location' => 'required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/'
         ]);
         try {
             $slug = Str::slug($request->title_en);
             $compound = Compound::findOrFail($id);
+            $compound->title_ar = $request->title_ar;
             $compound->title_en = $request->title_en;
             $compound->slug_en = $slug;
+            $compound->slug_ar = Str::slug($request->title_ar);
             $compound->description_en = $request->description_en;
+            $compound->description_ar = $request->description_ar;
             $compound->website = $request->website;
             $compound->order = $request->order;
             $compound->location = $request->location;

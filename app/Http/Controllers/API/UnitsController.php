@@ -74,9 +74,12 @@ class UnitsController extends BaseController
             $video_path = $this->fileService->uploadFile($request->file('video_path'), 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
         }
         $unit = new Unites();
-        $unit->title = $request->title;
-        $unit->description = $request->description;
-        $unit->description_left = $request->description_left;
+        $unit->title_en = $request->title_en;
+        $unit->title_ar = $request->title_ar;
+        $unit->description_en = $request->description_en;
+        $unit->description_ar = $request->description_ar;
+        $unit->description_left_en = $request->description_left_en;
+        $unit->description_left_ar = $request->description_left_ar;
         $unit->bed_number = $request->bed_number;
         $unit->bathroom_number = $request->bathroom_number;
         $unit->area = $request->area;
@@ -158,9 +161,12 @@ class UnitsController extends BaseController
                 $video_path = $this->fileService->uploadFile($request->video_path, 'unit-video'.date('YmdHis'), $this->MODEL_NAME);
                 $unit->video_path = $video_path;
             }
-            $unit->title = $request->title;
-            $unit->description = $request->description;
-            $unit->description_left = $request->description_left;
+            $unit->title_en = $request->title_en;
+            $unit->title_ar = $request->title_ar;
+            $unit->description_en = $request->description_en;
+            $unit->description_ar = $request->description_ar;
+            $unit->description_left_en = $request->description_left_en;
+            $unit->description_left_ar = $request->description_left_ar;
             $unit->bed_number = $request->bed_number;
             $unit->bathroom_number = $request->bathroom_number;
             $unit->area = $request->area;

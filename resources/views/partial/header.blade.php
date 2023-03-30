@@ -10,24 +10,24 @@
                 <button class="navbar-toggle-btn navbar-close-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/close.png') }}" alt="Close" /></button>
                 <div class="navbar-links-content">
                     <div class="navbar-links-box">
-                        <a href="{{ route('explore_homes') }}">Explore Homes <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
-                        <a href="{{ route('about') }}">About <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
-                        <a href="{{ route('service') }}">Services <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
-                        <a href="{{ route('contact-us') }}">Contact Us <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('explore_homes') }}">{{ __('msg.explore_homes') }}<img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('about') }}">{{ __('msg.about') }}<img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('service') }}">{{ __('msg.services') }} <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
+                        <a href="{{ route('contact-us') }}">{{ __('msg.contact_us') }}<img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
                     </div>
                     <div class="navbar-footer">
-                        <div class="nf-title">News & Offers</div>
+                        <div class="nf-title">{{ __('msg.news_offers') }}</div>
                         <div class="nf-subscribe">
                             <input type="text" class="form-control border-0 bg-transparent pb-2"
-                                   placeholder="Your email here" aria-label="Recipient's username"
+                                   placeholder="{{ __('msg.your_email_here') }}" aria-label="Recipient's username"
                                    aria-describedby="button-addon2">
                             <button class="btn foot-btn-subscribe btn-outline-secondary border-0 bg-transparent"type="button" id="button-addon2">
-                                <span>Subscribe</span>
+                                <span>{{ __('msg.subscribe') }}</span>
                             </button>
                         </div>
-                        <div class="nf-text">Sign up to receive exclusive news and offers about the latest launches</div>
+                        <div class="nf-text">{{ __('msg.sign_up_to_receive') }}</div>
                         <div class="nf-socialmedida d-flex justify-content-between align-items-center">
-                            <div class="nfs-title">Follow Us On</div>
+                            <div class="nfs-title">{{ __('msg.follow_us') }}</div>
                             <div class="nfs-social">
                                 <a class="foot-social-link" href="{{ $config['facebook'] }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a class="foot-social-link" href="{{ $config['youtube'] }}" target="_blank"><i class="fa-brands fa-youtube"></i></a>

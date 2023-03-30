@@ -21,9 +21,12 @@ class UnitsCollection extends JsonResource
         }
         return [
             'id' => $this->id,
-            'title' => $this->title,
-            'description' => $this->description,
-            'description_left' => $this->description_left,
+            'title_en' => $this->title_en,
+            'description_en' => $this->description_en,
+            'description_left_en' => $this->description_left_en,
+            'title_ar' => $this->title_ar,
+            'description_ar' => $this->description_ar,
+            'description_left_ar' => $this->description_left_ar,
             'bathroom_number' => $this->bathroom_number ,
             'area' => $this->area ,
             'bed_number' => $this->bed_number,

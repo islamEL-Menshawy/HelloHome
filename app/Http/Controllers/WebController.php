@@ -127,10 +127,10 @@ class WebController extends Controller
     }
 
 
-    public function compound($compound){
+    public function compound($locale, $compound){
         try{
             $compound = Compound::where('slug_en' , $compound)->first();
-            $units = Unites::where('compound_id', $compound->id)->orderBy('order', 'ASC')->get();
+            $units = Unites::where('compound_id', $compound['id'])->orderBy('order', 'ASC')->get();
             if ($compound == null){
                 abort(404);
             }
@@ -140,7 +140,7 @@ class WebController extends Controller
             ];
             return view('compound', $data);
         }catch (\Exception $ex){
-            abort(404);
+            return $ex;
         }
     }
 
@@ -157,7 +157,7 @@ class WebController extends Controller
         return view('explore_homes', $data);
     }
 
-    public function unit_details($compound, $unit_id){
+    public function unit_details($locale, $compound, $unit_id){
         $unit = Unites::find($unit_id);
         $compound = Compound::where('slug_en', $compound)->first();
         if ($unit == null || $compound == null){

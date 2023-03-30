@@ -40,6 +40,7 @@ class AmenitiesController extends BaseController
     {
         $request->validate([
             'title_en'=>'required|string|unique:amenities',
+            'title_ar'=>'required|string|unique:amenities',
             'amenity_image'=>'required|file'
         ]);
         $slug = Str::slug($request->title_en);
@@ -48,7 +49,9 @@ class AmenitiesController extends BaseController
         $image->image_path = $image_path;
         $image->save();
         $amenity = new Amenitie();
+        $amenity->title_ar = $request->title_ar;
         $amenity->title_en = $request->title_en;
+        $amenity->slug_ar = Str::slug($request->title_ar);
         $amenity->slug_en = $slug;
         $amenity->image_id = $image->id;
         $amenity->save();
@@ -82,11 +85,13 @@ class AmenitiesController extends BaseController
     {
         $request->validate([
             'title_en'=>'required|string',
+            'title_ar'=>'required|string',
         ]);
         try {
             $slug = Str::slug($request->title_en);
             $amenitie = Amenitie::findOrFail($id);
             $amenitie->title_en = $request->title_en;
+            $amenitie->title_ar = $request->title_ar;
             $amenitie->save();
             $image = Images::findOrFail($amenitie->image_id);
             $newPath = $this->fileService->renameFileByPath($image->image_path, "/amenities/". $slug);

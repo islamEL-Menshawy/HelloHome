@@ -17,6 +17,7 @@ class AmenitiesCollection extends JsonResource
         return [
             "id"=>$this->id,
             "title_en"=> $this->title_en,
+            "title_ar"=> $this->title_ar,
             "image"=> new ImageCollection($this->image),
             "number_of_unites"=> $this->number_of_unites,
             "last_modify" => $this->last_modify,

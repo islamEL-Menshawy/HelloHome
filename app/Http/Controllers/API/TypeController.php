@@ -32,8 +32,10 @@ class TypeController extends BaseController
     {
         $request->validate([
             'title_en' => 'required|unique:types',
+            'title_ar' => 'required|unique:types',
         ]);
         $type = new Type();
+        $type->title_ar = $request->title_ar;
         $type->title_en = $request->title_en;
         $type->slug_en = Str::slug($request->title_en);
         $type->save();
@@ -72,8 +74,10 @@ class TypeController extends BaseController
         ]);
         try {
             $savedType = Type::findOrFail($id);
+            $savedType->title_ar = $request->title_ar;
             $savedType->title_en = $request->title_en;
             $savedType->slug_en = Str::slug($request->title_en);
+            $savedType->slug_ar = Str::slug($request->title_ar);
             $savedType->save();
             return $this->sendResponse($savedType,'Type updated successfully');
         }catch (\Exception $e){

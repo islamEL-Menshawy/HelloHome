@@ -29,10 +29,13 @@ class LocationController extends BaseController
     public function store(Request $request):JsonResponse
     {
         $request->validate([
-            'title_en' => 'required|unique:locations'
+            'title_en' => 'required|unique:locations',
+            'title_ar' => 'required|unique:locations'
         ]);
         $location = new Location();
+        $location->title_ar = $request->title_ar;
         $location->title_en = $request->title_en;
+        $location->slug_ar = Str::slug($request->title_ar);
         $location->slug_en = Str::slug($request->title_en);
         $location->save();
         return $this->sendResponse($location, "Location created");
@@ -70,7 +73,9 @@ class LocationController extends BaseController
         ]);
         try {
             $savedLocation = Location::findOrFail($id);
+            $savedLocation->title_ar = $request->title_ar;
             $savedLocation->title_en = $request->title_en;
+            $savedLocation->slug_ar = Str::slug($request->title_ar);
             $savedLocation->slug_en = Str::slug($request->title_en);
             $savedLocation->save();
             return $this->sendResponse($savedLocation,'Location updated successfully');
