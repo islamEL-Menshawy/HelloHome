@@ -48,8 +48,8 @@
                 </ul>
                 <div
                     class=" order-lg-4 order-3 row justify-content-between row Subscribe col-lg-7 col-12 mx-auto px-0 my-md-5 my-3">
-                    <p class="col-lg-auto order-1 ps-0 ">{{ __('msg.news_offers') }}</p>
-                    <span class="col-lg order-lg-2 order-3 px-lg-2 px-0">{{ __('msg.sign_up_to_receive') }}</span>
+                    <p class="footer-news-title col-lg-auto order-1 ps-0 ">{{ __('msg.news_offers') }}</p>
+                    <span class="footer-news-desc col-lg order-lg-2 order-3 px-lg-2 px-0">{{ __('msg.sign_up_to_receive') }}</span>
 
                     <div
                         class=" col-12 order-lg-3 order-2 input-group mb-3 bg-transparent Subscribe-input border p-0 w-100">

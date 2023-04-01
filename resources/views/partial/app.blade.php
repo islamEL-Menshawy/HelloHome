@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick-theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/toast.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/rtl-dir.css') }}">
 
 
     <style>
@@ -43,7 +44,7 @@
     </style>
 </head>
 
-<body class="bg-white">
+<body class="bg-white"> <!-- body-rtl -->
 
 @include('partial.header')
 @yield('content')
@@ -233,19 +234,19 @@
 
 <script type="text/javascript">
     window.fbAsyncInit = function() {
-    FB.init({
-        appId: '629322731899614',
-        xfbml: true,
-        version: 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-};
-function isMobile() {
-    const toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
-    return toMatch.some((toMatchItem) => {
-        return navigator.userAgent.match(toMatchItem);
-    });
-}
+        FB.init({
+            appId: '629322731899614',
+            xfbml: true,
+            version: 'v2.9'
+        });
+        FB.AppEvents.logPageView();
+    };
+    function isMobile() {
+        const toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
+        return toMatch.some((toMatchItem) => {
+            return navigator.userAgent.match(toMatchItem);
+        });
+    }
 function messengerShare() {
     var url = window.location.href;
     if (isMobile()) {

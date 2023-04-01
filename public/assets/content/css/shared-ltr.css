@@ -4397,7 +4397,7 @@ a img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 200px;
-  height: 200px; 
+  height: 200px;
 }
 /* PreLoader */
 
@@ -4684,6 +4684,60 @@ body {
 .navbar-footer {
   display: none;
 }
+.navbar-lang {
+    margin-right: 4px;
+    display: inline-block;
+    margin-left: 30px;
+}
+.nav-lang-img {
+    width: 18px
+}
+.navbar-lang .btn {
+    padding: 3px 7px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2px
+}
+.navbar-lang .dropdown-toggle::after {
+    border-top: 0.25em solid;
+    border-right: 0.25em solid transparent;
+    border-left: 0.25em solid transparent;
+}
+.navbar-lang .btn .icon {
+    font-size: 18px;
+}
+.navbar-lang .dropdown-item {
+    padding: 5px 13px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+}
+.navbar-lang .btn,
+.navbar-lang .btn:focus,
+.navbar-lang .btn:hover,
+.navbar-lang .btn:active {
+    border: none !important;
+    outline: none !important;
+}
+.navbar-lang .dropdown-menu {
+    min-width: 100%;
+    padding: 3px 0;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    border: none;
+    border-radius: 4px;
+    max-width: 100%
+}
+.lang-text {
+    font-size: 13px;
+    padding: 0 3px;
+    display: block;
+    font-weight: 600;
+}
+.navbar-lang .dropdown-menu a {
+    margin: 0 !important;
+}
 /* End New Navbar */
 
 /*------------End navbar ------------*/
@@ -4914,7 +4968,7 @@ body {
 .filter-section .search-icon::before {
   content: " ";
   width: 22px;
-  height: 21px; 
+  height: 21px;
   background-image: url(../../App_Images/SearchIcon.png);
   background-repeat: no-repeat;
   position: absolute;
@@ -5155,7 +5209,7 @@ a:link {
   to {
       -webkit-transform: translateX(-100%);
               transform: translateX(-100%);
-  } 
+  }
 }
 .soi-container .slick-slide.slick-current.slick-active > div:first-of-type img {
   border-radius: 18px 18px 0 18px !important ;
@@ -5543,6 +5597,9 @@ div.multiselect-dropdown {
 }
 .neway-sec-heading {
   padding-left: 16px;
+}
+.neway-sec img {
+    border-radius: 0 25px 25px 0;
 }
 
 /*------------ end about  ------------*/
@@ -6418,7 +6475,7 @@ div.multiselect-dropdown {
 }
 .reg-ask-btns > .ra-btn img {
   width: 24px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 .reg-ask-btns button {
   display: flex;
@@ -6500,7 +6557,7 @@ border-radius: 6px;
   padding: 0 !important;
 }
 .soi-container img {
-  height: 165px;    
+  height: 165px;
 }
 .vp-slider img {
   height: 414px
@@ -6794,7 +6851,7 @@ border-radius: 6px;
   border: none;
 }
 #tel-keys {
-  width: 59px;  
+  width: 59px;
   border: none;
 }
 .cform-action .button-default > * {
@@ -6940,7 +6997,7 @@ border-radius: 6px;
 .slider.slick-initialized,
 .swiper.swiper-initialized {
   visibility: visible;
-    opacity: 1;  
+    opacity: 1;
 }
 
 /* Areas */
@@ -7208,7 +7265,7 @@ footer nav .navbar-nav .nav-link:hover {
     left: 0;
     top: 59.5px;
     padding: 20px;
-    
+
   }
   .container {
     padding: 0 20px !important;
@@ -7396,7 +7453,7 @@ footer nav .navbar-nav .nav-link:hover {
         font-size: 14px;
   }
   /* View Products (Details) */
-  
+
 }
 @media screen and (max-width: 992px) {
   header nav .nav-item {
@@ -7624,7 +7681,7 @@ footer nav .navbar-nav .nav-link:hover {
   }
   .servce .section-tree img {
     border-radius: 25px 25px 0 0 !important;
-  } 
+  }
   .servce .mainbuton .mainServices-but, .servce .mainbuton a,
   .servce .mainbuton .mainOwner-but, .servce .mainbuton a {
     font-size: 2.5rem;
@@ -7918,7 +7975,7 @@ footer nav .navbar-nav .nav-link:hover {
   .price-share-flexable {
     width: auto;
   }
-  
+
 }
 
 /*# sourceMappingURL=shared-ltr.css.map */
@@ -7955,7 +8012,7 @@ footer nav .navbar-nav .nav-link:hover {
     gap: 20px;
   }
   /* Areas */
-  
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -8097,7 +8154,7 @@ footer nav .navbar-nav .nav-link:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
- 
+
   footer nav .followdash {
     width: 110px;
   }
@@ -8176,7 +8233,7 @@ footer nav .navbar-nav .nav-link:hover {
     width: 20px;
   }
   /* Areas */
-  
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -8190,5 +8247,5 @@ footer nav .navbar-nav .nav-link:hover {
 }
 
 @media (min-width: 1400px) {
-  
+
 }
