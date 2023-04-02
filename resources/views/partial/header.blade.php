@@ -6,6 +6,21 @@
             </div>
             <div class="navbar-links d-flex">
                 <a href="tel:{{ $config['phone_number'] }}" class="navbar-toggle-btn navbar-call-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/phone.svg') }}" alt="Hamburger" /></a>
+                <div class="navbar-lang">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle flex-center-v" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="{{ asset('assets/App_Images/globe.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text">EN</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:void(0)">AR</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:void(0)">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <button class="navbar-toggle-btn navbar-burger-btn active"><img class="img-fluid" src="{{ asset('assets/App_Images/hamburger.png') }}" alt="Hamburger" /></button>
                 <button class="navbar-toggle-btn navbar-close-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/close.png') }}" alt="Close" /></button>
                 <div class="navbar-links-content">
@@ -14,21 +29,6 @@
                         <a href="{{ route('about') }}">{{ __('msg.about') }}<img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
                         <a href="{{ route('service') }}">{{ __('msg.services') }} <img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
                         <a href="{{ route('contact-us') }}">{{ __('msg.contact_us') }}<img class="nav-arrow-icon" src="{{ asset('assets/App_Images/green-arrowright.png') }}" alt="" /></a>
-                        <div class="navbar-lang">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle flex-center-v" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ asset('assets/App_Images/globe.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text">EN</span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0)">AR</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0)">EN</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                     <div class="navbar-footer">
                         <div class="nf-title">{{ __('msg.news_offers') }}</div>

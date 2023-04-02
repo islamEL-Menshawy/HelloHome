@@ -34,8 +34,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick-theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/toast.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/rtl-dir.css') }}">
-
-
+    
     <style>
         select {
             width: 100%;
@@ -44,7 +43,7 @@
     </style>
 </head>
 
-<body class="bg-white"> <!-- body-rtl -->
+<body class="bg-white body-rtl"> <!-- body-rtl -->
 
 @include('partial.header')
 @yield('content')
