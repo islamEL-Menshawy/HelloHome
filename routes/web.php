@@ -32,12 +32,13 @@ Route::group([
     Route::get('explore-homes', [WebController::class, 'explore_homes'])->name('explore_homes');
     Route::get('explore-homes/{compound}', [WebController::class, 'compound'])->name('compound');
     Route::get('unit/{compound}/{unit_id}', [WebController::class, 'unit_details'])->name('unit_details');
-    Route::get('/change-lang',function (Request $request)
+    Route::get('/change-lang',function ()
     {
+
         if (app()->getLocale() === "ar"){
-            return redirect(str_replace("/ar/", "/en/", url()->previous()));
+            return redirect(str_replace("/ar", "/en/", url()->previous()));
         }else{
-            return redirect(str_replace("/en/", "/ar/", url()->previous()));
+            return redirect(str_replace("/en", "/ar/", url()->previous()));
         }
     })->name('change.lang');
 });
