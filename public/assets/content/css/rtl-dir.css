@@ -41,7 +41,8 @@ body.body-rtl .footer-news-desc,
 body.body-rtl .footer-news-title,
 body.body-rtl .modal-b-title,
 body.body-rtl .follow-us-text,
-body.body-rtl .hfg-title, body.body-rtl .hfg-show-all button{
+body.body-rtl .hfg-title, body.body-rtl .hfg-show-all button,
+body.body-rtl .proto-name-app {
     text-align: right !important;
 }
 body.body-rtl .our-home .sec-titleHome {
@@ -238,6 +239,10 @@ body.body-rtl .share-linked-card img {
     margin-left: 10px;
     margin-right: 0;
 }
+body.body-rtl .proto-name-app {
+    margin-left: 0;
+    margin-right: 0;
+}
 /* Unit */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -313,6 +318,10 @@ body.body-rtl .share-linked-card img {
     }
     body.body-rtl .our-home .Guests-section .Guests-go::after {
         top: 0;
+    }
+    body.body-rtl .proto-name-app {
+        margin-left: 10px;
+        margin-right: 0;
     }
 }
 
