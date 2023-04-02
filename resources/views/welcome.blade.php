@@ -117,7 +117,7 @@
 
             <div class="row sections mt-md-74 mt-4 justify-content-between gx-0">
                 <div class="col-md-6 col-12 my-4 img-49-sm Guests-section position-relative">
-                    <a href="{{ $attributes['section_one_link'] }}" class="Guests-Lay">
+                    <a href="{{ app()->getLocale(). $attributes['section_one_link'] }}" class="Guests-Lay">
                         <img class="img-fluid w-100" src="{{asset($attributes['section_one_image'])}}"
                               alt="Guests Services" alt="Guests Services">
                         <div class="Guests-go d-block"><span>{{ $attributes['section_one_title_'. app()->getLocale()] }}</span> </div>
@@ -127,7 +127,7 @@
                         </div>
                     </a>
                 </div>
-                <a href="{{ $attributes['section_two_link'] }}" style="background-color: {{ $attributes['section_two_color'] }};" class="col-md-6 co-12 my-4 img-49-sm owners-section position-relative row gx-0">
+                <a href="{{ app()->getLocale(). $attributes['section_two_link'] }}" style="background-color: {{ $attributes['section_two_color'] }};" class="col-md-6 co-12 my-4 img-49-sm owners-section position-relative row gx-0">
                     <div class="owners-go d-block">{{ $attributes['section_two_title_'. app()->getLocale()] }}</div>
 
                     <div class="owners-services-title col-12 px-3 pt-3 row gx-0 d-flex align-self-end">
