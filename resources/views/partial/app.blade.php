@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/slick/slick-theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/toast.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/rtl-dir.css') }}">
-    
+
     <style>
         select {
             width: 100%;
@@ -42,8 +42,7 @@
         .iti__flag {background-image: url("{{ asset('assets/App_Images/flags.png') }}");}
     </style>
 </head>
-
-<body class="bg-white body-rtl"> <!-- body-rtl -->
+<body class="bg-white @if(app()->getLocale() === "ar") body-rtl @endif"> <!-- body-rtl -->
 
 @include('partial.header')
 @yield('content')

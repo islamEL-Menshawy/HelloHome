@@ -5,22 +5,25 @@
                 <a href="{{ route('home') }}"><img src="{{ asset('assets/App_Images/logo.png') }}" class="img-fluid" alt="" /></a>
             </div>
             <div class="navbar-links d-flex">
-                <a href="tel:{{ $config['phone_number'] }}" class="navbar-toggle-btn navbar-call-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/phone.svg') }}" alt="Hamburger" /></a>
                 <div class="navbar-lang">
                     <div class="dropdown">
                         <button class="btn dropdown-toggle flex-center-v" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('assets/App_Images/globe.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text">EN</span>
+                            <img src="{{ asset('assets/App_Images/globe.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text"> {{ Str::upper(app()->getLocale()) }}</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="javascript:void(0)">AR</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="javascript:void(0)">EN</a>
-                            </li>
+                            @if(app()->getLocale() === "en")
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}">AR</a>
+                                </li>
+                            @else
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}">EN</a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                 </div>
+                <a href="tel:{{ $config['phone_number'] }}" class="navbar-toggle-btn navbar-call-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/phone.svg') }}" alt="Hamburger" /></a>
                 <button class="navbar-toggle-btn navbar-burger-btn active"><img class="img-fluid" src="{{ asset('assets/App_Images/hamburger.png') }}" alt="Hamburger" /></button>
                 <button class="navbar-toggle-btn navbar-close-btn"><img class="img-fluid" src="{{ asset('assets/App_Images/close.png') }}" alt="Close" /></button>
                 <div class="navbar-links-content">

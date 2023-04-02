@@ -6477,7 +6477,7 @@ div.multiselect-dropdown {
   align-items: center;
 }
 .reg-ask-btns > .ra-btn img {
-  width: 24px;
+  width: 19px;
   margin-right: 10px;
 }
 .reg-ask-btns button {
@@ -7548,7 +7548,7 @@ footer nav .navbar-nav .nav-link:hover {
     text-align: center;
   }
   .about .neway-sec {
-    border-radius: 22px !important;
+    border-radius: 25px !important;
   }
   /* About */
   .search-mainimg-img {
@@ -7727,7 +7727,6 @@ footer nav .navbar-nav .nav-link:hover {
     width: 1em !important;
   }
   .filters-main-title {
-    text-align: left !important;
     font-size: 15px;
   }
   /* Filters */

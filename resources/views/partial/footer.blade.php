@@ -23,7 +23,7 @@
                 <ul
                     class=" order-lg-3 order-4 navbar-nav mb-2 mb-lg-0 col-lg-3 col-11 d-flex justify-content-between ">
                     <li class="nav-item mx-lg-2 mx-0 py-lg-0 py-2">
-                        <p class="nav-link active py-0 my-0 followdash px-0">{{ __('msg.follow_us') }}</p>
+                        <p class="follow-us-text nav-link active py-0 my-0 followdash px-0">{{ __('msg.follow_us') }}</p>
                     </li>
                     <li class="nav-item mx-lg-2 mx-0 py-lg-0 py-2">
                         <a class="foot-social-link" href="{{ $config['facebook'] }}" target="_blank">
