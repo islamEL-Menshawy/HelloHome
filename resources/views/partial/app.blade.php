@@ -44,7 +44,7 @@
     </style>
 </head>
 
-<body class="bg-white"> <!-- body-rtl -->
+<body class="bg-white @if(app()->getLocale() === "ar") body-rtl @endif"> <!-- body-rtl -->
 
 @include('partial.header')
 @yield('content')

@@ -17,14 +17,14 @@
                         <div class="navbar-lang">
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle flex-center-v" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ asset('assets/App_Images/globe.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text">EN</span>
+                                    <img src="{{ asset('assets/App_Images/globe.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text"> {{ Str::upper(app()->getLocale()) }}</span>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="javascript:void(0)">AR</a>
+                                        <a class="dropdown-item" href="{{ route('change.lang') }}">AR</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="javascript:void(0)">EN</a>
+                                        <a class="dropdown-item" href="{{ route('change.lang') }}">EN</a>
                                     </li>
                                 </ul>
                             </div>
