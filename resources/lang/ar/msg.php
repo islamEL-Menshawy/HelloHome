@@ -14,7 +14,7 @@ return [
     */
     // General
     'homes' => 'الرئيسية',
-    'about' => 'حول',
+    'about' => 'من نحن',
     'services' => 'خدمات',
     'contact_us' => 'اتصل بنا',
     'follow_us' => 'تابعنا',
@@ -29,14 +29,14 @@ return [
 
     // Home
     'locations' => 'الموقع',
-    'compound' => 'مُجَمَّع',
-    'property_type' => 'نوع الوحدة',
-    'filters' => 'المرشحات',
+    'compound' => 'كومباوند',
+    'property_type' => 'شقة',
+    'filters' => 'الخيارات',
     'search' => 'بحث',
     'learn_more' => 'اعرف اكثر',
 
     // Explore Homes
-    'explore_homes' => 'استكشف المنازل',
+    'explore_homes' => 'استكشف البيوت',
     'explore_Hotel' => 'اكتشف أكثر من 100 شقة فندقية وفيلا في مصر',
     'explore_our_home_collection' => 'اكتشف مجموعتنا الرئيسية',
 
@@ -69,9 +69,9 @@ return [
     'where_be' => 'أين ستكون',
     'watch_video' => 'شاهد الفيديو',
     'things_know' => 'أشياء يجب معرفتها',
-    'similar_homes' => 'منازل مماثلة',
+    'similar_homes' => 'بيوت مماثلة',
     'share_with_family' => 'شارك هذا المكان مع الأصدقاء والعائلة',
-    'share' => 'يشارك',
+    'share' => 'شارك',
 
 
 ];

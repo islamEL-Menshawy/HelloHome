@@ -4693,11 +4693,12 @@ body {
     order: 2
 }
 .nav-lang-img {
-    width: 18px
+    height: 12px;
+    object-fit: cover;
+    display: inline-block;
 }
 .navbar-lang .btn {
     padding: 3px 7px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     display: flex;
     align-items: center;
     position: relative;
@@ -4712,7 +4713,7 @@ body {
     font-size: 18px;
 }
 .navbar-lang .dropdown-item {
-    padding: 5px 13px;
+    padding: 5px 7px;
     font-weight: 600;
     font-size: 13px;
     line-height: 1;
@@ -4734,7 +4735,7 @@ body {
 }
 .lang-text {
     font-size: 13px;
-    padding: 0 3px;
+    padding: 0 5px 0 4px;
     display: block;
     font-weight: 600;
 }
@@ -5430,6 +5431,13 @@ div.multiselect-dropdown {
   overflow: hidden;
   border-radius: 15px;
 }
+.filter-search-btn .btn,
+.filter-search-btn .btn:hover,
+.filter-search-btn .btn:active,
+.filter-search-btn .btn:focus {
+    border: none !important;
+    outline: none !important
+}
 .filter-search-btn img {
   width: 25px;
   margin: 0 10px 0 0;
@@ -5458,6 +5466,11 @@ div.multiselect-dropdown {
   background: #000;
   color: #000;
   filter: grayscale(100%);
+}
+.single-selectbox,
+.filter-spanTitel,
+.filters-title span   {
+    font-family: "Dubai-Medium";
 }
 /* End New Filters */
 

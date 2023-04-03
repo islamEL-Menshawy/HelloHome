@@ -34,7 +34,7 @@
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">{{ __('msg.locations') }}</span>
                             <select class="single-selectbox slim-select slim-select-1" name="location">
-                                <option selected value="all">{{ __('msg.locations') }}</option>
+                                <!-- <option selected value="all">{{ __('msg.locations') }}</option> -->
                                 @foreach($locations as $location)
                                     <option value="{{ $location->slug_en }}">{{ $location['title_'. app()->getLocale()] }}</option>
                                 @endforeach
@@ -44,7 +44,7 @@
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">{{ __('msg.compound') }}</span>
                             <select class="single-selectbox slim-select slim-select-2" name="compound" >
-                                <option selected value="all">{{ __('msg.compound') }}</option>
+                                <!-- <option selected value="all">{{ __('msg.compound') }}</option> -->
                                 @foreach($compounds as $compound)
                                     <option value="{{ $compound->slug_en }}">{{ $compound['title_'. app()->getLocale()] }}</option>
                                 @endforeach
@@ -53,7 +53,7 @@
                         <div class="filter-card">
                             <span class="filter-spanTitel px-md-3">{{ __('msg.property_type') }}</span>
                             <select class="single-selectbox slim-select slim-select-3" name="type" >
-                                <option selected value="all">{{ __('msg.property_type') }}</option>
+                                <!--  <option selected value="all">{{ __('msg.property_type') }}</option> -->
                                 @foreach($types as $type)
                                     <option value="{{ $type->slug_en }}">{{ $type['title_'. app()->getLocale()] }}</option>
                                 @endforeach

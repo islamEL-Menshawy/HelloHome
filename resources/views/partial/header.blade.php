@@ -8,16 +8,20 @@
                 <div class="navbar-lang">
                     <div class="dropdown">
                         <button class="btn dropdown-toggle flex-center-v" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('assets/App_Images/globe.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text"> {{ Str::upper(app()->getLocale()) }}</span>
+                            @if(app()->getLocale() === "en")
+                                <img src="{{ asset('assets/App_Images/flags/us.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text"> {{ Str::upper(app()->getLocale()) }}</span>
+                            @else
+                                <img src="{{ asset('assets/App_Images/flags/eg.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span class="lang-text"> {{ Str::upper(app()->getLocale()) }}</span>
+                            @endif
                         </button>
                         <ul class="dropdown-menu">
                             @if(app()->getLocale() === "en")
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('change.lang') }}">AR</a>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/eg.svg') }}" class="nav-lang-img img-fluid" alt="" /> AR</a>
                                 </li>
                             @else
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('change.lang') }}">EN</a>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/us.svg') }}" class="nav-lang-img img-fluid" alt="" /> EN</a>
                                 </li>
                             @endif
                         </ul>

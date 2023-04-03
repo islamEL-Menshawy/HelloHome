@@ -42,16 +42,22 @@ body.body-rtl .footer-news-title,
 body.body-rtl .modal-b-title,
 body.body-rtl .follow-us-text,
 body.body-rtl .hfg-title, body.body-rtl .hfg-show-all button,
-body.body-rtl .proto-name-app {
+body.body-rtl .proto-name-app,
+body.body-rtl .navbar-lang .dropdown-menu a {
     text-align: right !important;
 }
 body.body-rtl .our-home .sec-titleHome {
     text-align: center !important;
 }
 body.body-rtl .breadcrumb-item+.breadcrumb-item::before {
-    transform: scale(-1);
-    padding-right: 0;
+    transform: rotate(180deg);
+    /*padding-right: 0;*/
     padding-left: var(--bs-breadcrumb-item-padding-x);
+    float: right;
+    padding-bottom: 1.5px
+}
+body.body-rtl .breadcrumb-item+.breadcrumb-item {
+    padding: 0 !important
 }
 body.body-rtl .ss-main .ss-single-selected .placeholder,
 body.body-rtl .ss-main .ss-single-selected .placeholder * {
@@ -69,6 +75,9 @@ body.body-rtl .navbar-lang .btn {
 }
 body.body-rtl .navbar-lang {
     margin: 0;
+}
+body.body-rtl .lang-text {
+    padding: 0 4px 0 5px;
 }
 /* Navbar */
 
