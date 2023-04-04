@@ -18,6 +18,7 @@ return [
     'about' => 'About',
     'services' => 'Services',
     'contact_us' => 'Contact Us',
+    'news' => 'News',
     'follow_us' => 'Follow Us',
     'news_offers' => 'News & Offers',
     'sign_up_to_receive' => 'Sign up to receive exclusive news and offers about the latest launches',
@@ -74,5 +75,9 @@ return [
     'share_with_family' => 'Share this place with friends and family',
     'share' => 'Share',
 
+    // Footer
+    'privacy_policy' => 'Privacy Policy',
+    'designed_by' => 'Designed by',
+    'rights_reserved' => 'HelloHome 2023 © All rights reserved'
 
 ];

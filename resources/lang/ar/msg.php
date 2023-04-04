@@ -17,6 +17,7 @@ return [
     'about' => 'من نحن',
     'services' => 'خدمات',
     'contact_us' => 'اتصل بنا',
+    'news' => 'الأخبار',
     'follow_us' => 'تابعنا',
     'news_offers' => 'الأخبار والعروض',
     'sign_up_to_receive' => 'اشترك لتلقي أخبار وعروض حصرية حول أحدث الإصدارات',
@@ -55,7 +56,7 @@ return [
 
     'bed_rooms' => 'غرف نوم',
     'Bathrooms' => 'الحمامات',
-    'area' => 'منطقة',
+    'area' => 'مسافة',
     'what_this_home_offers' => 'ما يقدمه هذا المنزل',
     'register_interest' => 'سجل اهتمامك',
     'ask_now' => 'اسأل الآن',
@@ -73,5 +74,8 @@ return [
     'share_with_family' => 'شارك هذا المكان مع الأصدقاء والعائلة',
     'share' => 'شارك',
 
-
+    // Footer
+    'privacy_policy' => 'سياسة الخصوصية',
+    'designed_by' => 'تم التصميم بواسطة',
+    'rights_reserved' => 'HelloHome 2023 © All rights reserved'
 ];

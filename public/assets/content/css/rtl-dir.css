@@ -43,7 +43,9 @@ body.body-rtl .modal-b-title,
 body.body-rtl .follow-us-text,
 body.body-rtl .hfg-title, body.body-rtl .hfg-show-all button,
 body.body-rtl .proto-name-app,
-body.body-rtl .navbar-lang .dropdown-menu a {
+body.body-rtl .navbar-lang .dropdown-menu a,
+body.body-rtl .news-wrapper,
+body.body-rtl .foot-center {
     text-align: right !important;
 }
 body.body-rtl .our-home .sec-titleHome {
@@ -111,21 +113,28 @@ body.body-rtl .marquee {
 /* Home */
 
 /* Footer */
-body.body-rtl footer nav .followdash:after {
-    content: none
+/*body.body-rtl footer nav .followdash:after {*/
+/*    content: none*/
+/*}*/
+/*body.body-rtl footer .Subscribe-input button {*/
+/*    border-right: 2px solid !important;*/
+/*    border-left: none !important;*/
+/*}*/
+/*body.body-rtl footer .Subscribe-input button::after {*/
+/*    transform: scale(-1);*/
+/*}*/
+/*body.body-rtl .footer-news-title {*/
+/*    order: 1 !important;*/
+/*}*/
+/*body.body-rtl .footer-news-desc {*/
+/*    order: 2 !important;*/
+/*}*/
+body.body-rtl .foot-center {
+    min-width: 580px;
 }
-body.body-rtl footer .Subscribe-input button {
-    border-right: 2px solid !important;
-    border-left: none !important;
-}
-body.body-rtl footer .Subscribe-input button::after {
-    transform: scale(-1);
-}
-body.body-rtl .footer-news-title {
-    order: 1 !important;
-}
-body.body-rtl .footer-news-desc {
-    order: 2 !important;
+body.body-rtl .social-link {
+    margin-right: 13px;
+    margin-left: 0;
 }
 /* Footer */
 
@@ -146,17 +155,25 @@ body.body-rtl .contact .contact-text .go-direc::after {
     top: 2px;
     transform: scale(-1);
 }
-body.body-rtl .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+body.body-rtl .iti--allow-dropdown .iti__flag-container, body.body-rtl .iti--separate-dial-code .iti__flag-container {
     right: 0;
     left: auto;
 }
-body.body-rtl .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
+body.body-rtl .iti--allow-dropdown input,
+body.body-rtl .iti--allow-dropdown input[type=text],
+body.body-rtl .iti--allow-dropdown input[type=tel],
+body.body-rtl .iti--separate-dial-code input,
+body.body-rtl .iti--separate-dial-code input[type=text],
+body.body-rtl .iti--separate-dial-code input[type=tel] {
     padding-right: 52px;
     padding-left: 6px;
 }
 body.body-rtl .iti__arrow {
     margin-left: 0;
     margin-right: 6px;
+}
+body.body-rtl .contact-info ul li {
+    direction: ltr;
 }
 /* Contact */
 
@@ -203,8 +220,8 @@ body.body-rtl .slick-prev.slick-arrow {
 
 /* Unit */
 body.body-rtl .share-to svg {
-    margin-left: 0.25rem!important;
-    margin-right: 0 rem!important;
+    margin-left: 0.5rem!important;
+    margin-right: 0rem!important;
 }
 body.body-rtl .slick-counter-arrows {
     right: auto;
@@ -254,6 +271,30 @@ body.body-rtl .proto-name-app {
 }
 /* Unit */
 
+/* News */
+body.body-rtl .news-social-icon .icon {
+    margin-left: 13px;
+    margin-right: 0;
+}
+body.body-rtl .article-img {
+    margin-left: 20px;
+    margin-right: 0;
+}
+body.body-rtl .foot-form-text .title {
+    margin-left: 20px;
+    margin-right: 0;
+}
+body.body-rtl .foot-link {
+    margin-left: 25px;
+    margin-right: 0;
+}
+body.body-rtl .input-newsletter .icon {
+    transform: scale(-1);
+    margin-right: 12px;
+    margin-left: 0;
+}
+/* News */
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     body.body-rtl .navbar-links-box a {
@@ -292,6 +333,12 @@ body.body-rtl .proto-name-app {
     body.body-rtl .contact .bef-contact p {
         text-align: right;
     }
+
+    /* Footer */
+    body.body-rtl .foot-center {
+        min-width: auto;
+    }
+    /* Footer */
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -342,6 +389,9 @@ body.body-rtl .proto-name-app {
     body.body-rtl .widget-benefits {
         padding-right: 21px !important;
         padding-left: 0 !important;
+    }
+    body.body-rtl .foot-center {
+        min-width: auto;
     }
 }
 

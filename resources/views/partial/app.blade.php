@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/toast.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/rtl-dir.css') }}">
 
+    @yield('main-style')
+
     <style>
         select {
             width: 100%;

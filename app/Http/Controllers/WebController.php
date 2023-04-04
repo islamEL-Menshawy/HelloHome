@@ -97,6 +97,42 @@ class WebController extends Controller
         return view('service',$data);
     }
 
+    public function news(){
+//        $page_attributes = Page::find(3);
+//        $attributes = array();
+//
+//        foreach ($page_attributes->attributes as $attribute){
+//            $key = $attribute->title;
+//            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
+//            $attributes += [$key=>$value];
+//        }
+//        $data = [
+//            'page_attributes' => $page_attributes,
+//            'attributes' => $attributes
+//
+//        ];
+        return view('news');
+//        return view('news',$data);
+    }
+
+    public function view_news(){
+//        $page_attributes = Page::find(3);
+//        $attributes = array();
+//
+//        foreach ($page_attributes->attributes as $attribute){
+//            $key = $attribute->title;
+//            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
+//            $attributes += [$key=>$value];
+//        }
+//        $data = [
+//            'page_attributes' => $page_attributes,
+//            'attributes' => $attributes
+//
+//        ];
+        return view('view-news');
+//        return view('news',$data);
+    }
+
     public function search(Request $request){
         $unites = Unites::select('*');
         if ($request->type != 'all'){
