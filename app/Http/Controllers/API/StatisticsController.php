@@ -12,7 +12,7 @@ use App\Models\Vistor;
 class StatisticsController extends BaseController
 {
     public function getStatisticsByCountry(){
-        $collection = \App\Models\Vistor::groupBy('country')
+        $collection = Vistor::groupBy('country')
             ->selectRaw('count(*) as total, country')
             ->get();
         $entities = [];
