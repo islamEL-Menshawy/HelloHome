@@ -74,6 +74,7 @@ return [
     'similar_homes' => 'Similar Homes',
     'share_with_family' => 'Share this place with friends and family',
     'share' => 'Share',
+    'price' => 'Price',
 
     // Footer
     'privacy_policy' => 'Privacy Policy',

@@ -73,6 +73,7 @@ return [
     'similar_homes' => 'بيوت مماثلة',
     'share_with_family' => 'شارك هذا المكان مع الأصدقاء والعائلة',
     'share' => 'شارك',
+    'price' => 'السعر',
 
     // Footer
     'privacy_policy' => 'سياسة الخصوصية',

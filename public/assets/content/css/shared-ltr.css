@@ -44,6 +44,7 @@
 }
 body {
   padding-bottom: 0 !important;
+    font-family: "Dubai-Regular";
 }
 
 body::-webkit-scrollbar {
@@ -4574,7 +4575,7 @@ body {
   font-size: 19px;
   color: #2d2d2d;
   font-weight: 400;
-  margin-left: 30px;
+  margin-left: 20px;
   display: inline-block;
 }
 .navbar-links-box a:hover {
@@ -4691,7 +4692,7 @@ body {
 }
 .navbar-lang {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 20px;
     order: 2
 }
 .nav-lang-img {
@@ -4743,6 +4744,11 @@ body {
 }
 .navbar-lang .dropdown-menu a {
     margin: 0 !important;
+    display: flex;
+    align-items: center;
+}
+.navbar-lang .dropdown-menu a img {
+    margin-right: 7px;
 }
 /* End New Navbar */
 
@@ -6969,7 +6975,31 @@ border-radius: 6px;
     max-width: 48.5%;
     line-height: 1;
 }
-
+.unit-details {
+    display: flex;
+    justify-content: space-between;
+}
+.unit-details .text-gallery:nth-of-type(2) {
+    padding: 0 10px;
+}
+.unit-card-images {
+    position: relative;
+}
+.unit-card-price {
+    background: #52BA64;
+    color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: inline-block;
+    font-weight: 600;
+    z-index: 20;
+    font-size: 14px;
+}
+.slick-slide.slick-current.slick-active .unit-card-price {
+    padding: 4px 14px !important;
+}
 .bc-pss {
   margin-bottom: 13px;
 }
@@ -7254,6 +7284,7 @@ border-radius: 6px;
 /* Footer */
 footer {
     background: #52BA64;
+    font-family: "Dubai-Medium";
 }
 .footer-content {
     padding-top: 30px;
@@ -7390,6 +7421,40 @@ footer {
     align-items: center;
 }
 /* Footer */
+
+/* Services */
+.guest-service-widget {
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.gsw-details {
+    width: 550px;
+    padding: 3rem;
+}
+.gsw-view {
+    width: calc(100% - 550px);
+}
+.gsw-view img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gsw-sub-title {
+    font-family: "Dubai-Regular";
+    font-size: 1.9rem;
+    line-height: 2rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.gsw-title {
+    font-family: "Dubai-Bold";
+    font-size: 3.86rem;
+    line-height: 3.3rem;
+    overflow: visible;
+    color: #fff;
+}
+/* Services */
 
 /*------------ Page ------------*/
 /*------------ Global Media Queries ------------*/
@@ -8194,6 +8259,27 @@ footer {
         line-height: 1;
     }
     /* Footer */
+
+    /* Services */
+    .guest-service-widget {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        border-radius: 25px;
+    }
+    .gsw-details {
+        width: 100%;
+        padding: 2rem;
+    }
+    .gsw-view {
+        width: 100%;
+    }
+    .gsw-sub-title {
+        font-size: 1.8rem;
+    }
+    .gsw-title {
+        font-size: 2.6rem;
+    }
+    /* Services */
 }
 
 @media screen and (max-width: 992px) {
@@ -8429,6 +8515,26 @@ footer {
   }
   /* View Product */
 
+    /* Services */
+    .guest-service-widget {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .gsw-details {
+        width: 100%;
+        padding: 2rem;
+    }
+    .gsw-view {
+        width: 100%;
+    }
+    .gsw-sub-title {
+        font-size: 1.8rem;
+    }
+    .gsw-title {
+        font-size: 2.6rem;
+    }
+    /* Services */
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -8486,6 +8592,19 @@ footer {
     font-size: 23px;
     line-height: 1.2;
   }
+    .gsw-details {
+        width: 50%;
+        /*padding: 2rem;*/
+    }
+    .gsw-view {
+        width: 50%;
+    }
+    .gsw-sub-title {
+        font-size: 1.8rem;
+    }
+    .gsw-title {
+        font-size: 2.6rem;
+    }
   /* Services */
 
   /* Filters */
