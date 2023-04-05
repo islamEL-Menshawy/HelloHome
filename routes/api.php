@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\GlobalController;
+use App\Http\Controllers\API\StatisticsController;
 use App\Http\Controllers\API\TypeController;
 use App\Http\Controllers\API\LocationController;
 use App\Http\Controllers\API\CompoundController;
@@ -62,7 +63,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('content/get/{page}',[ContentController::class, 'getContent']);
     Route::get('content/data/{model}',[ContentController::class, 'getAllData']);
     Route::delete('content/delete/{id}/{type}',[NotificationController::class, 'delete_notification']);
+    Route::get('statistics/entity', [StatisticsController::class, 'getEntityStatistics']);
+    Route::get('statistics/visitors-per-months', [StatisticsController::class, 'postViewsMonthly']);
+    Route::get('statistics/country', [StatisticsController::class, 'getStatisticsByCountry']);
 });
+
 
 
 Route::post('subscribe', [NotificationController::class, 'newsletter']);

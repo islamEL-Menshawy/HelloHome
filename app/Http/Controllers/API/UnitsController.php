@@ -48,7 +48,8 @@ class UnitsController extends BaseController
             'bed_number'=>'required|numeric',
             'bathroom_number'=>'required|numeric',
             'area'=>'required|numeric',
-            'price'=>'required|string',
+            'price_en'=>'required|string',
+            'price_ar'=>'required|string',
             'is_youtube'=>'required',
             'video_path'=>"required",
             'location'=>"required|string|regex:/@(\-?[0-9]+\.[0-9]+),(\-?[0-9]+\.[0-9]+)/",
@@ -83,7 +84,8 @@ class UnitsController extends BaseController
         $unit->bed_number = $request->bed_number;
         $unit->bathroom_number = $request->bathroom_number;
         $unit->area = $request->area;
-        $unit->price = $request->price;
+        $unit->price_en = $request->price_en;
+        $unit->price_ar = $request->price_ar;
         $unit->location_link = $request->location;
         $unit->video_link = $request->video_path;
         $unit->is_youtube = $request->is_youtube;
@@ -143,7 +145,8 @@ class UnitsController extends BaseController
             'bed_number'=>'required|numeric',
             'bathroom_number'=>'required|numeric',
             'area'=>'required|numeric',
-            'price'=>'required|string',
+            'price_en'=>'required|string',
+            'price_ar'=>'required|string',
             'is_youtube'=>'required',
             'compound_id'=>'required|numeric',
             'type_id'=>'required|numeric',
@@ -170,7 +173,8 @@ class UnitsController extends BaseController
             $unit->bed_number = $request->bed_number;
             $unit->bathroom_number = $request->bathroom_number;
             $unit->area = $request->area;
-            $unit->price = $request->price;
+            $unit->price_en = $request->price_en;
+            $unit->price_ar = $request->price_ar;
             $unit->is_youtube = $request->is_youtube;
             $unit->order = $request->order;
             $unit->phone_number = $request->phone_number;

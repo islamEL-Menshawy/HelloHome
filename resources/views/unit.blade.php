@@ -1,5 +1,5 @@
 @extends('partial.app')
-@section('title', $unit->title)
+@section('title', $unit['title_' . app()->getLocale()])
 @section('seo-tags')
     <!-- Facebook -->
     <meta property="fb:app_id" content="629322731899614" />
@@ -42,9 +42,9 @@
             </div>
             <div class="bc-pss d-flex justify-content-between align-items-center">
 
-                <div class="unit-title">{{ $unit->title }}</div>
+                <div class="unit-title">{{ $unit['title_' . app()->getLocale()] }}</div>
                 <div class="d-flex price-share-flexable optian-details align-items-center">
-                    <p class="total-salary mb-0 me-2">{{ $unit->price }}</p>
+                    <p class="total-salary mb-0 me-2">{{ $unit['price_' . app()->getLocale()] }}</p>
                     <button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn mx-2 share-to d-flex align-items-center">
                         <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="14.826" height="16.163"
                              viewBox="0 0 14.826 16.163">
