@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseController;
 use App\Models\Compound;
 use App\Models\ContactUs;
 use App\Models\Location;
+use App\Models\Type;
 use App\Models\Unites;
 use App\Models\Vistor;
 
@@ -33,11 +34,13 @@ class StatisticsController extends BaseController
         $locations = Location::count();
         $inbox = ContactUs::count();
         $visitors = Vistor::count();
+        $types = Type::count();
         $object = [
             'units' => $units,
             'compound' => $compound,
-            '$locations' => $locations,
+            'locations' => $locations,
             'visitors' => $visitors,
+            'types' => $types,
             'inbox' => $inbox
         ];
         return $this->sendResponse($object, "");
