@@ -28,6 +28,8 @@ Route::group([
     Route::get('about', [WebController::class, 'about'])->name('about');
     Route::get('contact-us', [WebController::class, 'contactUs'])->name('contact-us');
     Route::get('services', [WebController::class, 'service'])->name('service');
+    Route::get('news', [WebController::class, 'news'])->name('news');
+    Route::get('view-news/{id}', [WebController::class, 'view_news'])->name('view-news');
     Route::get('search', [WebController::class, 'search'])->name('search');
     Route::get('explore-homes', [WebController::class, 'explore_homes'])->name('explore_homes');
     Route::get('explore-homes/{compound}', [WebController::class, 'compound'])->name('compound');

@@ -14,9 +14,10 @@ return [
     */
     // General
     'homes' => 'الرئيسية',
-    'about' => 'حول',
+    'about' => 'من نحن',
     'services' => 'خدمات',
     'contact_us' => 'اتصل بنا',
+    'news' => 'الأخبار',
     'follow_us' => 'تابعنا',
     'news_offers' => 'الأخبار والعروض',
     'sign_up_to_receive' => 'اشترك لتلقي أخبار وعروض حصرية حول أحدث الإصدارات',
@@ -29,14 +30,14 @@ return [
 
     // Home
     'locations' => 'الموقع',
-    'compound' => 'مُجَمَّع',
-    'property_type' => 'نوع الوحدة',
-    'filters' => 'المرشحات',
+    'compound' => 'كومباوند',
+    'property_type' => 'شقة',
+    'filters' => 'الخيارات',
     'search' => 'بحث',
     'learn_more' => 'اعرف اكثر',
 
     // Explore Homes
-    'explore_homes' => 'استكشف المنازل',
+    'explore_homes' => 'استكشف البيوت',
     'explore_Hotel' => 'اكتشف أكثر من 100 شقة فندقية وفيلا في مصر',
     'explore_our_home_collection' => 'اكتشف مجموعتنا الرئيسية',
 
@@ -55,7 +56,7 @@ return [
 
     'bed_rooms' => 'غرف نوم',
     'Bathrooms' => 'الحمامات',
-    'area' => 'منطقة',
+    'area' => 'مسافة',
     'what_this_home_offers' => 'ما يقدمه هذا المنزل',
     'register_interest' => 'سجل اهتمامك',
     'ask_now' => 'اسأل الآن',
@@ -69,9 +70,12 @@ return [
     'where_be' => 'أين ستكون',
     'watch_video' => 'شاهد الفيديو',
     'things_know' => 'أشياء يجب معرفتها',
-    'similar_homes' => 'منازل مماثلة',
+    'similar_homes' => 'بيوت مماثلة',
     'share_with_family' => 'شارك هذا المكان مع الأصدقاء والعائلة',
-    'share' => 'يشارك',
+    'share' => 'شارك',
 
-
+    // Footer
+    'privacy_policy' => 'سياسة الخصوصية',
+    'designed_by' => 'تم التصميم بواسطة',
+    'rights_reserved' => 'HelloHome 2023 © All rights reserved'
 ];

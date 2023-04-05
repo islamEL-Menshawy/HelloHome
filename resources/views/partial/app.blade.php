@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/toast.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/content/css/rtl-dir.css') }}">
 
+    @yield('main-style')
 
     <style>
         select {
@@ -43,7 +44,6 @@
         .iti__flag {background-image: url("{{ asset('assets/App_Images/flags.png') }}");}
     </style>
 </head>
-
 <body class="bg-white @if(app()->getLocale() === "ar") body-rtl @endif"> <!-- body-rtl -->
 
 @include('partial.header')

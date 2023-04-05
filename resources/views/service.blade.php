@@ -172,7 +172,7 @@
 
 
                 </div>
-                <div class="col-lg-8 col-12 my-4  position-relative row gx-0 pl-md-21">
+                <div class="col-lg-8 col-12 my-4  position-relative row gx-0 pl-md-21 widget-benefits">
                     <h3 class="d-lg-block d-none justify-content-center align-items-center p-4 mb-md-39 mb-5">{{ $attributes['service_section_15_title_'. app()->getLocale()] }}</h3>
                     <div class="row d-flex justify-content-between ">
                         <ul class="col-md-6 img-49-sm">
