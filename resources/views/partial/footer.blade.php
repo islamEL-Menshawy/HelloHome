@@ -54,9 +54,9 @@
                             <a class="social-link" href="{{ $config['linkedin'] }}" target="_blank">
                                 <i class="fa-brands fa-linkedin-in icon"></i>
                             </a>
-                            <a class="social-link" href="{{ $config['tiktok'] }}" target="_blank">
-                                <img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" />
-                            </a>
+{{--                            <a class="social-link" href="{{ $config['tiktok'] }}" target="_blank">--}}
+{{--                                <img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" />--}}
+{{--                            </a>--}}
                         </div>
                     </div>
                 </div>

@@ -56,7 +56,7 @@ return [
 
     'bed_rooms' => 'غرف نوم',
     'Bathrooms' => 'الحمامات',
-    'area' => 'مسافة',
+    'area' => 'المساحة',
     'what_this_home_offers' => 'ما يقدمه هذا المنزل',
     'register_interest' => 'سجل اهتمامك',
     'ask_now' => 'اسأل الآن',

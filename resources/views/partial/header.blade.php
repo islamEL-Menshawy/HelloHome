@@ -17,11 +17,11 @@
                         <ul class="dropdown-menu">
                             @if(app()->getLocale() === "en")
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/eg.svg') }}" class="nav-lang-img img-fluid" alt="" /> AR</a>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/eg.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span>AR</span></a>
                                 </li>
                             @else
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/us.svg') }}" class="nav-lang-img img-fluid" alt="" /> EN</a>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/us.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span>EN</span></a>
                                 </li>
                             @endif
                         </ul>
