@@ -78,5 +78,5 @@ return [
     // Footer
     'privacy_policy' => 'سياسة الخصوصية',
     'designed_by' => 'تم التصميم بواسطة',
-    'rights_reserved' => 'HelloHome 2023 © All rights reserved'
+    'rights_reserved' => 'كل الحقوق محفوظة © HelloHome 2023'
 ];

@@ -382,6 +382,9 @@ body.body-rtl .about .section-1 .pref {
     body.body-rtl .foot-center {
         min-width: auto;
     }
+    body.body-rtl .foot-social-link .social-img {
+        margin-left: 0;
+    }
     /* Footer */
 }
 

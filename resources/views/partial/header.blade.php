@@ -55,12 +55,13 @@
                                 <a class="foot-social-link" href="{{ $config['youtube'] }}" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                                 <a class="foot-social-link" href="{{ $config['instegram'] }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                 <a class="foot-social-link" href="{{ $config['linkedin'] }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a class="foot-social-link" href="{{ $config['tiktok'] }}" target="_blank"><img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" /></a>
                             </div>
                         </div>
                         <div class="nf-copyright">
                             <div class="nf-left">HelloHome 2022 &copy; All Rights Reserved</div>
-                            <div class="nf-right"><a class="foot-des-link" href="#" target="_blank">Privacy Policy</a></div>
-                            <div class="nf-bottom">Designed by <a class="foot-des-link" href="https://directorstudio.me/" target="_blank">Director Studio</a></div>
+                            <div class="nf-right"><a class="foot-des-link" href="#" target="_blank">{{ __('msg.privacy_policy') }}</a></div>
+                            <div class="nf-bottom">{{ __('msg.designed_by') }} <a class="foot-des-link" href="https://directorstudio.me/" target="_blank">Director Studio</a></div>
                         </div>
                     </div>
                 </div>

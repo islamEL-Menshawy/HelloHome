@@ -54,9 +54,9 @@
                             <a class="social-link" href="{{ $config['linkedin'] }}" target="_blank">
                                 <i class="fa-brands fa-linkedin-in icon"></i>
                             </a>
-{{--                            <a class="social-link" href="{{ $config['tiktok'] }}" target="_blank">--}}
-{{--                                <img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" />--}}
-{{--                            </a>--}}
+                            <a class="social-link" href="{{ $config['tiktok'] }}" target="_blank">
+                                <img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="footer-bottom d-flex align-items-center justify-content-between">
-            <div class="fb-text">HelloHome 2023 © All rights reserved</div>
+            <div class="fb-text">{{ __('msg.rights_reserved') }}</div>
             <div class="fb-text">{{ __('msg.designed_by') }} <a target="_blank" href="https://www.directorstudio.me">Director Studio</a></div>
             <div class="fb-text"><a href="privacy.html">{{ __('msg.privacy_policy') }}</a></div>
         </div>
