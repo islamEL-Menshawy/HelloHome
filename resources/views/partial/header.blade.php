@@ -48,14 +48,14 @@
                             </button>
                         </div>
                         <div class="nf-text">{{ __('msg.sign_up_to_receive') }}</div>
-                        <div class="nf-socialmedida d-flex justify-content-between align-items-center">
+                        <div class="nf-socialmedia d-flex justify-content-between align-items-center">
                             <div class="nfs-title">{{ __('msg.follow_us') }}</div>
                             <div class="nfs-social">
                                 <a class="foot-social-link" href="{{ $config['facebook'] }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a class="foot-social-link" href="{{ $config['youtube'] }}" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                                 <a class="foot-social-link" href="{{ $config['instegram'] }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                 <a class="foot-social-link" href="{{ $config['linkedin'] }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a class="foot-social-link" href="{{ $config['tiktok'] }}" target="_blank"><img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" /></a>
+{{--                                <a class="foot-social-link" href="{{ $config['tiktok'] }}" target="_blank"><img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" /></a>--}}
                             </div>
                         </div>
                         <div class="nf-copyright">

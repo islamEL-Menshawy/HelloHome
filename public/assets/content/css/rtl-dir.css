@@ -362,9 +362,6 @@ body.body-rtl .about .section-1 .pref {
         margin-right: 0;
         margin-left: 10px;
     }
-    body.body-rtl .navbar-call-btn img {
-        transform: rotateZ(270deg);
-    }
     body.body-rtl .follow-us-text {
         width: auto;
     }

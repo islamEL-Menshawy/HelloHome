@@ -25,10 +25,7 @@ return [
     'your_email_here' => 'Your email here',
     'subscribe' => 'Subscribe',
     'download_our_profile' => 'Download Our Profile',
-
     'search_results' => 'Search Results',
-
-
 
     // Home
     'locations' => 'Location',
@@ -48,14 +45,13 @@ return [
     'for_all_other_inquiries' => 'For all other inquiries, please complete the form below.',
     'get_direction' => 'Get Direction',
 
-    // form
+    // Form
     'first_name' => 'First Name',
     'last_name' => 'Last Name',
     'write_your_message' => 'Write your message',
     'send_now' => 'Send Now',
 
-    //Unit
-
+    // Unit
     'bed_rooms' => 'Bed Rooms',
     'Bathrooms' => 'Bathrooms',
     'area' => 'Area',
@@ -79,6 +75,6 @@ return [
     // Footer
     'privacy_policy' => 'Privacy Policy',
     'designed_by' => 'Designed by',
-    'rights_reserved' => 'HelloHome 2023 © All rights reserved'
-
+    'rights_reserved' => 'HelloHome 2023 © All rights reserved',
+    'newsletter_description' => 'Sign up to receive exclusive news and offers about the latest launches'
 ];
