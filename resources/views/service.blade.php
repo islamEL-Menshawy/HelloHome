@@ -46,24 +46,34 @@
 
             </div>
 
-
-
-
-            <div class="col-12 row Guests-sec justify-content-between gx-0 mb-md-74 my-4">
-                <div class="col-12 d-lg-none d-block">
+            <div class="guest-service-widget">
+                <div class="gsw-details" style="background-color: {{ $attributes['service_section_4_color'] }}">
+                    <div class="gsw-sub-title">{{ $attributes['service_section_4_text_1_'. app()->getLocale()] }}</div>
+                    <div class="gsw-title">{{ $attributes['service_section_4_text_2_'. app()->getLocale()] }}</div>
+                </div>
+                <div class="gsw-view">
                     <img class="img-fluid" src="{{ asset($attributes['service_section_6_image']) }}" alt="">
                 </div>
-
-                <div style="background-color: {{ $attributes['service_section_4_color'] }}" class="col-lg-5 img-49-ds col-12 d-flex align-items-center guets-se px-5 p-4 row gx-0">
-
-                    <p class="pref col-12">
-                        {{ $attributes['service_section_4_text_1_'. app()->getLocale()] }}
-                    </p>
-                    <h3 class="col-12">
-                        {{ $attributes['service_section_4_text_2_'. app()->getLocale()] }}
-                    </h3>
-                </div>
             </div>
+
+
+
+
+{{--            <div class="col-12 row Guests-sec justify-content-between gx-0 mb-md-74 my-4">--}}
+{{--                <div class="col-12 d-lg-none d-block">--}}
+{{--                    <img class="img-fluid" src="{{ asset($attributes['service_section_6_image']) }}" alt="">--}}
+{{--                </div>--}}
+
+{{--                <div style="background-color: {{ $attributes['service_section_4_color'] }}" class="col-lg-5 img-49-ds col-12 d-flex align-items-center guets-se px-5 p-4 row gx-0">--}}
+
+{{--                    <p class="pref col-12">--}}
+{{--                        {{ $attributes['service_section_4_text_1_'. app()->getLocale()] }}--}}
+{{--                    </p>--}}
+{{--                    <h3 class="col-12">--}}
+{{--                        {{ $attributes['service_section_4_text_2_'. app()->getLocale()] }}--}}
+{{--                    </h3>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
 
             <div class="col-lg-9 col-md-10 col-12 text-center mx-auto mt-md-5 mb-md-74 my-3 section-1">

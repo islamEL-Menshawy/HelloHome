@@ -24,9 +24,7 @@ return [
     'your_email_here' => 'بريدك الإلكتروني هنا',
     'subscribe' => 'يشترك',
     'download_our_profile' => 'قم بتنزيل ملف التعريف الخاص بنا',
-
     'search_results' => 'نتائج البحث',
-
 
     // Home
     'locations' => 'الموقع',
@@ -46,17 +44,16 @@ return [
     'for_all_other_inquiries' => 'لجميع الاستفسارات الأخرى ، يرجى إكمال النموذج أدناه.',
     'get_direction' => 'احصل على اتجاه',
 
-    // form
+    // Form
     'first_name' => 'الاسم الأول',
     'last_name' => 'اسم العائلة',
     'write_your_message' => 'اكتب رسالتك',
     'send_now' => 'ارسل الان',
 
     //Unit
-
     'bed_rooms' => 'غرف نوم',
     'Bathrooms' => 'الحمامات',
-    'area' => 'مسافة',
+    'area' => 'المساحة',
     'what_this_home_offers' => 'ما يقدمه هذا المنزل',
     'register_interest' => 'سجل اهتمامك',
     'ask_now' => 'اسأل الآن',
@@ -73,9 +70,11 @@ return [
     'similar_homes' => 'بيوت مماثلة',
     'share_with_family' => 'شارك هذا المكان مع الأصدقاء والعائلة',
     'share' => 'شارك',
+    'price' => 'السعر',
 
     // Footer
     'privacy_policy' => 'سياسة الخصوصية',
     'designed_by' => 'تم التصميم بواسطة',
-    'rights_reserved' => 'HelloHome 2023 © All rights reserved'
+    'rights_reserved' => 'كل الحقوق محفوظة © HelloHome 2023',
+    'newsletter_description' => 'اشترك لتلقي أخبار وعروض حصرية حول أحدث الإصدارات'
 ];

@@ -31,7 +31,7 @@
                                     {{ __('msg.subscribe') }} <i class="fa-solid fa-arrow-right ml-2 icon"></i>
                                 </button>
                             </div>
-                            <div class="text d-none">Sign up to receive exclusive news and offers about the latest launches</div>
+                            <div class="text d-none">{{ __('msg.newsletter_description') }}</div>
                         </form>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="footer-bottom d-flex align-items-center justify-content-between">
-            <div class="fb-text">HelloHome 2023 © All rights reserved</div>
+            <div class="fb-text">{{ __('msg.rights_reserved') }}</div>
             <div class="fb-text">{{ __('msg.designed_by') }} <a target="_blank" href="https://www.directorstudio.me">Director Studio</a></div>
             <div class="fb-text"><a href="privacy.html">{{ __('msg.privacy_policy') }}</a></div>
         </div>

@@ -17,11 +17,11 @@
                         <ul class="dropdown-menu">
                             @if(app()->getLocale() === "en")
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/eg.svg') }}" class="nav-lang-img img-fluid" alt="" /> AR</a>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/eg.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span>AR</span></a>
                                 </li>
                             @else
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/us.svg') }}" class="nav-lang-img img-fluid" alt="" /> EN</a>
+                                    <a class="dropdown-item" href="{{ route('change.lang') }}"><img src="{{ asset('assets/App_Images/flags/us.svg') }}" class="nav-lang-img img-fluid" alt="" /> <span>EN</span></a>
                                 </li>
                             @endif
                         </ul>
@@ -48,19 +48,20 @@
                             </button>
                         </div>
                         <div class="nf-text">{{ __('msg.sign_up_to_receive') }}</div>
-                        <div class="nf-socialmedida d-flex justify-content-between align-items-center">
+                        <div class="nf-socialmedia d-flex justify-content-between align-items-center">
                             <div class="nfs-title">{{ __('msg.follow_us') }}</div>
                             <div class="nfs-social">
                                 <a class="foot-social-link" href="{{ $config['facebook'] }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a class="foot-social-link" href="{{ $config['youtube'] }}" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                                 <a class="foot-social-link" href="{{ $config['instegram'] }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                 <a class="foot-social-link" href="{{ $config['linkedin'] }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a class="foot-social-link" href="{{ $config['tiktok'] }}" target="_blank"><img class="social-img img-fluid" src="{{ asset('assets/App_Images/tiktok.svg') }}" /></a>
                             </div>
                         </div>
                         <div class="nf-copyright">
                             <div class="nf-left">HelloHome 2022 &copy; All Rights Reserved</div>
-                            <div class="nf-right"><a class="foot-des-link" href="#" target="_blank">Privacy Policy</a></div>
-                            <div class="nf-bottom">Designed by <a class="foot-des-link" href="https://directorstudio.me/" target="_blank">Director Studio</a></div>
+                            <div class="nf-right"><a class="foot-des-link" href="#" target="_blank">{{ __('msg.privacy_policy') }}</a></div>
+                            <div class="nf-bottom">{{ __('msg.designed_by') }} <a class="foot-des-link" href="https://directorstudio.me/" target="_blank">Director Studio</a></div>
                         </div>
                     </div>
                 </div>

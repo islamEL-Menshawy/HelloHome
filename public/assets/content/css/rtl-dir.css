@@ -45,7 +45,8 @@ body.body-rtl .hfg-title, body.body-rtl .hfg-show-all button,
 body.body-rtl .proto-name-app,
 body.body-rtl .navbar-lang .dropdown-menu a,
 body.body-rtl .news-wrapper,
-body.body-rtl .foot-center {
+body.body-rtl .foot-center,
+body.body-rtl .gsw-details {
     text-align: right !important;
 }
 body.body-rtl .our-home .sec-titleHome {
@@ -69,7 +70,7 @@ body.body-rtl .ss-main .ss-single-selected .placeholder * {
 
 /* Navbar */
 body.body-rtl .navbar-links-box a {
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: 0;
 }
 body.body-rtl .navbar-lang .btn {
@@ -79,7 +80,11 @@ body.body-rtl .navbar-lang {
     margin: 0;
 }
 body.body-rtl .lang-text {
-    padding: 0 4px 0 5px;
+    padding: 2px 4px 0 5px;
+}
+body.body-rtl .navbar-lang .dropdown-menu a img {
+    margin-left: 7px;
+    margin-right: 0;
 }
 /* Navbar */
 
@@ -193,6 +198,12 @@ body.body-rtl .servce .section-emplo ul li {
     padding-right: 20px;
     padding-left: 0;
 }
+body.body-rtl .gsw-sub-title {
+    line-height: 1.8;
+}
+body.body-rtl .gsw-title {
+    line-height: 1.4;
+}
 /* Services */
 
 /* Search */
@@ -269,6 +280,10 @@ body.body-rtl .proto-name-app {
     margin-left: 0;
     margin-right: 0;
 }
+body.body-rtl .unit-card-price {
+    right: 15px;
+    left: auto;
+}
 /* Unit */
 
 /* News */
@@ -294,6 +309,32 @@ body.body-rtl .input-newsletter .icon {
     margin-left: 0;
 }
 /* News */
+
+/* Customization */
+body.body-rtl .our-home .owners-section .owners-services-title .title,
+body.body-rtl .our-home .Guests-section .Guests-title .title,
+body.body-rtl .about .neway-sec h3,
+body.body-rtl .servce .neway-sec .pref {
+    line-height: 1.5;
+}
+body.body-rtl .about .section-1 .pref,
+body.body-rtl .about .section-1 .sup-title,
+body.body-rtl .about .section-main .pref,
+body.body-rtl .contact .our-mission .pref {
+    line-height: 1.8;
+}
+body.body-rtl .servce .experince-sec .pref,
+body.body-rtl .servce .section-1 .pref,
+body.body-rtl .servce .our-mission .pref,
+body.body-rtl .servce .our-col-det .pref,
+body.body-rtl .location .pref,
+body.body-rtl .contact-info ul li {
+    line-height: 1.7;
+}
+body.body-rtl .about .section-1 .pref {
+    line-height: 2;
+}
+/* Customization */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -321,9 +362,6 @@ body.body-rtl .input-newsletter .icon {
         margin-right: 0;
         margin-left: 10px;
     }
-    body.body-rtl .navbar-call-btn img {
-        transform: rotateZ(270deg);
-    }
     body.body-rtl .follow-us-text {
         width: auto;
     }
@@ -333,10 +371,16 @@ body.body-rtl .input-newsletter .icon {
     body.body-rtl .contact .bef-contact p {
         text-align: right;
     }
+    body.body-rtl .navbar-lang {
+        margin-left: 0;
+    }
 
     /* Footer */
     body.body-rtl .foot-center {
         min-width: auto;
+    }
+    body.body-rtl .foot-social-link .social-img {
+        margin-left: 0;
     }
     /* Footer */
 }

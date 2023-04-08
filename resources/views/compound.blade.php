@@ -32,7 +32,8 @@
                         <!-- Images -->
                         <div class="slider advsear ">
                             @foreach($unit->images->slice(0,4) as $image)
-                                <a href="{{route('unit_details', ['compound' => $unit->compound->slug_en, 'unit_id'=> $unit->id])}}">
+                                <a class="unit-card-images" href="{{route('unit_details', ['compound' => $unit->compound->slug_en, 'unit_id'=> $unit->id])}}">
+                                    <div class="unit-card-price">{{$unit->price}}</div>
                                     <div>
                                         <div class="image position-relative">
                                             <img class="img-fluid w-100" src="{{asset('uploads'. $image->image_path)}}" data-src="" />
@@ -45,14 +46,18 @@
 
                         <!-- Details -->
                             <a href="{{route('unit_details', ['compound' => $unit->compound->slug_en, 'unit_id'=> $unit->id])}}">
-                                <div class="row container justify-content-between col-12">
-                                    <div class="text-gallery col-md-5 col-6 img-49 ps-0 ">
+                                <div class="unit-details">
+                                    <div class="text-gallery">
                                         <span>{{ __('msg.locations') }}</span>
                                         <p>{{$unit->location['title_'. app()->getLocale()]}}</p>
                                     </div>
-                                    <div class="text-gallery col-md-5 col-6 img-49 ps-0">
+                                    <div class="text-gallery">
                                         <span>{{ __('msg.property_type') }}</span>
                                         <p>{{$unit->type['title_'. app()->getLocale()]}}</p>
+                                    </div>
+                                    <div class="text-gallery">
+                                        <span>{{ __('msg.price') }}</span>
+                                        <p>{{$unit->price}}</p>
                                     </div>
                                 </div>
                             </a>
