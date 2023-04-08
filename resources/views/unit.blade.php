@@ -1,7 +1,7 @@
 @extends('partial.app')
 @section('title', $unit['title_' . app()->getLocale()])
 @section('seo-tags')
-    <!-- Facebook -->
+    <!-- Facebook -->`
     <meta property="fb:app_id" content="629322731899614" />
     <meta property="og:title" content="{{ $unit->title }}" />
     <meta property="og:description" content="{{ $unit->description }}" />
