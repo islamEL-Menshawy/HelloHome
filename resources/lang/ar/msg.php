@@ -36,33 +36,33 @@ return [
 
     // Explore Homes
     'explore_homes' => 'استكشف البيوت',
-    'explore_Hotel' => 'اكتشف أكثر من 100 شقة فندقية وفيلا في مصر',
+    'explore_Hotel' => 'اكتشف اكتر من 100 شقة فندقية وفيلا في مصر',
     'explore_our_home_collection' => 'اكتشف مجموعتنا الرئيسية',
 
     // Contact us
-    'send_us_a_message' => 'أرسل لنا رسالة',
-    'for_all_other_inquiries' => 'لجميع الاستفسارات الأخرى ، يرجى إكمال النموذج أدناه.',
-    'get_direction' => 'احصل على اتجاه',
+    'send_us_a_message' => 'ارسل لنا رسالة',
+    'for_all_other_inquiries' => 'لجميع الأستفسارات الأخرى , يرجى إكمال انموذج أدناه.',
+    'get_direction' => 'أحصل على إتجاه',
 
     // Form
-    'first_name' => 'الاسم الأول',
-    'last_name' => 'اسم العائلة',
-    'write_your_message' => 'اكتب رسالتك',
-    'send_now' => 'ارسل الان',
+    'first_name' => 'الأسم الأول',
+    'last_name' => 'أسم العائلة',
+    'write_your_message' => 'أكتب رسالتك',
+    'send_now' => 'أرسل الأن',
 
     //Unit
     'bed_rooms' => 'غرف نوم',
     'Bathrooms' => 'الحمامات',
     'area' => 'المساحة',
     'what_this_home_offers' => 'ما يقدمه هذا المنزل',
-    'register_interest' => 'سجل اهتمامك',
-    'ask_now' => 'اسأل الآن',
-    'full_name' => 'الاسم الكامل',
-    'email' => 'بريد إلكتروني',
-    'phone' => 'الهاتف (اختياري)',
+    'register_interest' => 'سجل أهتمامك',
+    'ask_now' => 'اسأل الأن',
+    'full_name' => 'الأسم الكامل',
+    'email' => 'بريد إلكترونى',
+    'phone' => 'الهاتف (إختبارى)',
     'interested_sale' => 'أنا مهتم بـ Sale',
-    'send_now' => 'ارسل الان',
-    'agree_policy' => 'أوافق على شروط الاستخدام وسياسة الخصوصية',
+    'send_now' => 'أرسل الأن',
+    'agree_policy' => 'أوافق على شروط الإستخدام وسياسة الخصوصية',
     'about_developer' => 'عن المطور',
     'where_be' => 'أين ستكون',
     'watch_video' => 'شاهد الفيديو',
@@ -76,5 +76,5 @@ return [
     'privacy_policy' => 'سياسة الخصوصية',
     'designed_by' => 'تم التصميم بواسطة',
     'rights_reserved' => 'كل الحقوق محفوظة © HelloHome 2023',
-    'newsletter_description' => 'اشترك لتلقي أخبار وعروض حصرية حول أحدث الإصدارات'
+    'newsletter_description' => 'أشترك لتلقى أخبار وعروض حصرية حول أحدث الأصدارات'
 ];

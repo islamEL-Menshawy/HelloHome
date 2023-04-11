@@ -1,50 +1,87 @@
 /*------------ Fonts ------------*/
+/*@font-face {*/
+/*  font-family: "Dubai-Regular";*/
+/*  src: url("../webfonts/Dubai-Regular.eot");*/
+/*  src: url("../webfonts/Dubai-Regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/Dubai-Regular.svg#Dubai-Regular") format("svg"), url("../webfonts/Dubai-Regular.ttf") format("truetype"), url("../webfonts/Dubai-Regular.woff") format("woff"), url("../webfonts/Dubai-Regular.woff2") format("woff2");*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*  font-display: swap;*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "Dubai-Medium";*/
+/*  src: url("../webfonts/Dubai-Medium.eot");*/
+/*  src: url("../webfonts/Dubai-Medium.eot?#iefix") format("embedded-opentype"), url("../webfonts/Dubai-Medium.svg#Dubai-Regular") format("svg"), url("../webfonts/Dubai-Medium.ttf") format("truetype"), url("../webfonts/Dubai-Medium.woff") format("woff"), url("../webfonts/Dubai-Medium.woff2") format("woff2");*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*  font-display: swap;*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "Dubai-Bold";*/
+/*  src: url("../webfonts/Dubai-Bold.eot");*/
+/*  src: url("../webfonts/Dubai-Bold.eot?#iefix") format("embedded-opentype"), url("../webfonts/Dubai-Bold.svg#Dubai-Regular") format("svg"), url("../webfonts/Dubai-Bold.ttf") format("truetype"), url("../webfonts/Dubai-Bold.woff") format("woff"), url("../webfonts/Dubai-Bold.woff2") format("woff2");*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*  font-display: swap;*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "DubaiW23-Light";*/
+/*  src: url("../webfonts/DubaiW23-Light.eot");*/
+/*  src: url("../webfonts/DubaiW23-Light.eot?#iefix") format("embedded-opentype"), url("../webfonts/DubaiW23-Light.ttf") format("truetype"), url("../webfonts/DubaiW23-Light.woff") format("woff"), url("../webfonts/DubaiW23-Light.woff2") format("woff2");*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*  font-display: swap;*/
+/*}*/
+
+/* Dubai Font */
 @font-face {
-  font-family: "Dubai-Regular";
-  src: url("../webfonts/Dubai-Regular.eot");
-  src: url("../webfonts/Dubai-Regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/Dubai-Regular.svg#Dubai-Regular") format("svg"), url("../webfonts/Dubai-Regular.ttf") format("truetype"), url("../webfonts/Dubai-Regular.woff") format("woff"), url("../webfonts/Dubai-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Arabic Dubai";
+    src: url("../webfonts/dubai_fonts/DubaiW23-Regular.eot") format("eot");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Regular.ttf") format("ttf");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Regular.woff") format("woff");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: "Dubai-Medium";
-  src: url("../webfonts/Dubai-Medium.eot");
-  src: url("../webfonts/Dubai-Medium.eot?#iefix") format("embedded-opentype"), url("../webfonts/Dubai-Medium.svg#Dubai-Regular") format("svg"), url("../webfonts/Dubai-Medium.ttf") format("truetype"), url("../webfonts/Dubai-Medium.woff") format("woff"), url("../webfonts/Dubai-Medium.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Arabic Dubai";
+    src: url("../webfonts/dubai_fonts/DubaiW23-Medium.eot") format("eot");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Medium.ttf") format("ttf");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Medium.woff") format("woff");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Medium.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
 }
 @font-face {
-  font-family: "Dubai-Bold";
-  src: url("../webfonts/Dubai-Bold.eot");
-  src: url("../webfonts/Dubai-Bold.eot?#iefix") format("embedded-opentype"), url("../webfonts/Dubai-Bold.svg#Dubai-Regular") format("svg"), url("../webfonts/Dubai-Bold.ttf") format("truetype"), url("../webfonts/Dubai-Bold.woff") format("woff"), url("../webfonts/Dubai-Bold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Arabic Dubai";
+    src: url("../webfonts/dubai_fonts/DubaiW23-Bold.eot") format("eot");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Bold.ttf") format("ttf");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Bold.woff") format("woff");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
 }
 @font-face {
-  font-family: "DubaiW23-Light";
-  src: url("../webfonts/DubaiW23-Light.eot");
-  src: url("../webfonts/DubaiW23-Light.eot?#iefix") format("embedded-opentype"), url("../webfonts/DubaiW23-Light.ttf") format("truetype"), url("../webfonts/DubaiW23-Light.woff") format("woff"), url("../webfonts/DubaiW23-Light.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Arabic Dubai";
+    src: url("../webfonts/dubai_fonts/DubaiW23-Light.eot") format("eot");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Light.ttf") format("ttf");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Light.woff") format("woff");
+    src: url("../webfonts/dubai_fonts/DubaiW23-Light.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
 }
-/*------------ Fonts ------------*/
-/*------------ Colors ------------*/
-/*------------ Colors ------------*/
-/*------------ Direction ------------*/
-/*------------ Direction ------------*/
-/*------------ Mixins ------------*/
-/*------------ Mixins ------------*/
-/*------------ Framework ------------*/
+
+/* Set weight to items */
+
+/* Set weight to items */
+
 * {
   box-sizing: border-box;
+    font-family: "Arabic Dubai";
 }
 body {
   padding-bottom: 0 !important;
-    font-family: "Dubai-Regular";
+    font-family: "Arabic Dubai" !important;
+    /*font-family: "Dubai-Regular";*/
 }
 
 body::-webkit-scrollbar {
@@ -177,7 +214,7 @@ a img {
 
 .time,
 .date {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 0.86rem;
   line-height: 1rem;
   overflow: visible;
@@ -204,7 +241,7 @@ a img {
   }*/
 }
 .time.time-black {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 0.933rem;
   line-height: 1rem;
   overflow: visible;
@@ -222,7 +259,7 @@ a img {
 }
 
 .btn-more {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.66rem;
   line-height: 36px;
   overflow: hidden;
@@ -4367,11 +4404,12 @@ a img {
   margin-bottom: 50px;
 }
 .bg-gra .layer-gray {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 3.2rem;
   line-height: 3.25rem;
   overflow: visible;
   color: #808080;
+    font-weight: 700;
 }
 
 /* PreLoader */
@@ -4410,7 +4448,7 @@ a img {
 /*------------ Framework ------------*/
 /*------------ Page ------------*/
 .section-title {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 2.4rem;
   line-height: 2.4rem;
   overflow: visible;
@@ -4418,7 +4456,7 @@ a img {
   text-transform: uppercase;
 }
 .section-title .heavy {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
 }
 .section-title.border-danger {
   border-color: #ff0000 !important;
@@ -4463,13 +4501,13 @@ a img {
   left: 0;
 }
 .details .lightbox-contaner #closee span {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-weight: 500;
   font-size: 17px;
   margin-left: 6px;
 }
 .news-items .headline-39 {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 2.2rem;
   line-height: 2.6rem;
   overflow: hidden;
@@ -4481,7 +4519,7 @@ a img {
   height: 78px;
 }
 .news-items .headline-35 {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.33rem;
   line-height: 2.8rem;
   overflow: hidden;
@@ -4869,7 +4907,7 @@ body {
   position: absolute;
   bottom: 13%;
   right: 23%;
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   line-height: 3.46rem;
   overflow: visible;
   color: #fff;
@@ -4882,7 +4920,7 @@ body {
   border-bottom-right-radius: 25px;
 }
 .home-slidr .slick-dots li button:before {
-  font-family: "slick";
+  /*font-family: "slick";*/
   font-size: 6px;
   line-height: 20px;
   position: absolute;
@@ -4904,6 +4942,7 @@ body {
 }
 .hlm-btn {
   border-radius: 10px;
+    font-weight: 600;
 }
 
 .filter-section .form-select:focus {
@@ -4912,7 +4951,7 @@ body {
   box-shadow: none;
 }
 .filter-section .filter-exp {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.4rem;
   line-height: 1.5rem;
   overflow: visible;
@@ -4937,7 +4976,7 @@ body {
   border: 0 !important;
 }
 .filter-section .filter-spanTitel {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1rem;
   line-height: 1.2rem;
   overflow: visible;
@@ -4963,7 +5002,7 @@ body {
 }
 .filter-section .check-sel-filter .multiselect-dropdown .optext {
   background-color: transparent !important;
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.2rem;
   line-height: 1.2rem;
   overflow: visible;
@@ -4998,9 +5037,10 @@ body {
 }
 .breadcrumb li {
   text-transform: capitalize;
+    font-weight: 600;
 }
 .breadcrumb li a {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1rem;
   line-height: 1.5rem;
   overflow: visible;
@@ -5009,7 +5049,7 @@ body {
 }
 
 .breadcrumb li.active {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1rem;
   line-height: 1.5rem;
   overflow: visible;
@@ -5017,12 +5057,13 @@ body {
 }
 
 .our-home .sec-titleHome {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.4rem;
   line-height: 2rem;
   overflow: visible;
   color: #7E7E7E;
   text-align: center;
+    font-weight: 600;
 }
 .our-home .Guests-section {
   border-radius: 25px;
@@ -5032,7 +5073,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .our-home .Guests-section .Guests-go {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.73rem;
   line-height: 2rem;
   overflow: visible;
@@ -5065,7 +5106,7 @@ body {
   right: 15px;
   top: 10px;
   color: #fff;
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 1.2rem;
   padding: 12px 18px;
 }
@@ -5077,14 +5118,15 @@ body {
   background: linear-gradient(to bottom, transparent, black);
 }
 .our-home .Guests-section .Guests-title .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.5rem;
   line-height: 2rem;
   overflow: visible;
+    font-weight: 700;
   color: #fff;
 }
 .our-home .Guests-section .Guests-title .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 2rem;
   line-height: 2rem;
   overflow: visible;
@@ -5096,7 +5138,7 @@ body {
   background-color: #52BA64;
 }
 .our-home .owners-section .owners-go {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.73rem;
   line-height: 2rem;
   overflow: visible;
@@ -5112,7 +5154,7 @@ body {
   right: 40px;
   top: 25px;
   color: #fff;
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 1.2rem;
   padding: 12px 18px;
 }
@@ -5120,14 +5162,15 @@ body {
   overflow: hidden;
 }
 .our-home .owners-section .owners-services-title .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.5rem;
   line-height: 2rem;
   overflow: visible;
+    font-weight: 700;
   color: #fff;
 }
 .our-home .owners-section .owners-services-title .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 2rem;
   line-height: 2rem;
   overflow: visible;
@@ -5139,14 +5182,15 @@ body {
   overflow: hidden;
 }
 .our-home .home-mission .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.5rem;
   line-height: 2.8rem;
   overflow: visible;
   color: #fff;
+    font-weight: 700;
 }
 .our-home .home-mission .pref {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 2rem;
   line-height: 2.3rem;
   overflow: visible;
@@ -5357,7 +5401,7 @@ a:link {
   margin-bottom: 40px;
 }
 .filters-main-title {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
     font-size: 24px;
     line-height: 1.3;
     overflow: visible;
@@ -5388,7 +5432,7 @@ a:link {
   border: 1px solid #707070
 }
 .filter-card .filter-spanTitel {
-  font-weight: 500;
+  font-weight: 600;
   color: #848484;
   line-height: 1.6;
   font-size: 13px;
@@ -5486,7 +5530,7 @@ div.multiselect-dropdown {
 .single-selectbox,
 .filter-spanTitel,
 .filters-title span   {
-    font-family: "Dubai-Medium";
+    /*font-family: "Dubai-Medium";*/
 }
 /* End New Filters */
 
@@ -5511,44 +5555,48 @@ div.multiselect-dropdown {
 .about .about-mainimg .sup-text {
   position: absolute;
   top: 13%;
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.6rem;
   line-height: 1.5rem;
   overflow: visible;
   color: #484848;
+    font-weight: 700;
 }
 .about .about-mainimg .main-text {
   position: absolute;
   bottom: 36%;
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.6rem;
   line-height: 2.8rem;
   overflow: visible;
   color: #fff;
+    font-weight: 700;
 }
 .about .section-1 .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.33rem;
   line-height: 2.55rem;
   overflow: visible;
   color: #52BA64;
+    font-weight: 700;
 }
 .about .section-1 .sup-title {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.8rem;
   line-height: 2rem;
   overflow: visible;
   color: #747474;
+    font-weight: 600;
 }
 .about .section-1 .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.5rem;
   line-height: 1.2;
   overflow: visible;
   color: #454545;
 }
 .about .section-1 .smallQus {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.5rem;
   line-height: 1.5rem;
   overflow: visible;
@@ -5563,28 +5611,30 @@ div.multiselect-dropdown {
   border-radius: 25px;
 }
 .about .neway-sec h3 {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.53rem;
   line-height: 3rem;
   overflow: visible;
   color: #fff;
+    font-weight: 700;
 }
 .about .our-mission .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2rem;
   line-height: 2.55rem;
   overflow: visible;
   color: #7E7E7E;
+    font-weight: 700;
 }
 .about .our-mission .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.5rem;
   line-height: 1.2;
   overflow: visible;
   color: #7E7E7E;
 }
 .about .our-mission .smallQus {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.8rem;
   line-height: 2.2rem;
   overflow: visible;
@@ -5594,7 +5644,7 @@ div.multiselect-dropdown {
   border-radius: 17px;
 }
 .about .section-main .Services-but {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.3rem;
   line-height: 2.55rem;
   overflow: visible;
@@ -5603,9 +5653,10 @@ div.multiselect-dropdown {
   height: 6rem;
   border: none;
   border-radius: 17px;
+    font-weight: 700;
 }
 .about .section-main .Owner-but {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.3rem;
   line-height: 2.55rem;
   overflow: visible;
@@ -5614,9 +5665,10 @@ div.multiselect-dropdown {
   height: 6rem;
   border: none;
   border-radius: 17px;
+    font-weight: 700;
 }
 .about .section-main .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.3rem;
   line-height: 1.2;
   overflow: visible;
@@ -5648,22 +5700,24 @@ div.multiselect-dropdown {
   bottom: 1%;
 }
 .servce .servce-mainimg .main-text .sup-text {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.8rem;
   line-height: 1.8rem;
   overflow: visible;
   color: #fff;
+    font-weight: 600;
 }
 .servce .servce-mainimg .main-text h1 {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.5rem;
   line-height: 2.4rem;
   overflow: visible;
   color: #fff;
+    font-weight: 700;
 }
 .servce .mainbuton .mainServices-but,
 .servce .mainbuton a {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 3rem;
   line-height: 2.55rem;
   overflow: visible;
@@ -5672,10 +5726,11 @@ div.multiselect-dropdown {
   height: 13rem;
   border: none;
   border-radius: 25px;
+    font-weight: 700;
 }
 .servce .mainbuton .mainOwner-but,
 .servce .mainbuton a {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 3rem;
   line-height: 2.55rem;
   overflow: visible;
@@ -5684,7 +5739,7 @@ div.multiselect-dropdown {
   height: 13rem;
   border: none;
   border-radius: 25px;
-
+    font-weight: 700;
 }
 .servce .our-mission {
   scroll-margin-top: 70px;
@@ -5693,14 +5748,15 @@ div.multiselect-dropdown {
   scroll-margin-top: 100px !important;
 }
 .servce .our-mission .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.6rem;
   line-height: 2.55rem;
   overflow: visible;
   color: #000;
+    font-weight: 600;
 }
 .servce .our-mission .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.7rem;
   line-height: 1.2;
   overflow: visible;
@@ -5714,35 +5770,36 @@ div.multiselect-dropdown {
   color: #afafaf !important;
 }
 .servce .our-mission .smallQus {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 2rem;
   line-height: 2.2rem;
   overflow: visible;
   color: #7E7E7E;
 }
 .servce .section-1 .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.33rem;
   line-height: 2.55rem;
   overflow: visible;
   color: #52BA64;
+    font-weight: 600;
 }
 .servce .section-1 .sup-title {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.8rem;
   line-height: 2rem;
   overflow: visible;
   color: #454545;
 }
 .servce .section-1 .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.8rem;
   line-height: 1.2;
   overflow: visible;
   color: #454545;
 }
 .servce .section-1 .smallQus {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.2rem;
   line-height: 1.3rem;
   overflow: visible;
@@ -5762,14 +5819,14 @@ div.multiselect-dropdown {
   background-color: #C97A2C;
 }
 .servce .Guests-sec .guets-se .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.9rem;
   line-height: 2rem;
   overflow: visible;
   color: #fff;
 }
 .servce .Guests-sec .guets-se h3 {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 3.86rem;
   line-height: 3.3rem;
   overflow: visible;
@@ -5783,14 +5840,15 @@ div.multiselect-dropdown {
   border-radius: 25px;
 }
 .servce .experince-sec h3 {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.5rem;
   line-height: 3rem;
   overflow: visible;
   color: #52BA64;
+    font-weight: 700;
 }
 .servce .experince-sec .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.6rem;
   line-height: 1.2;
   overflow: visible;
@@ -5804,29 +5862,31 @@ div.multiselect-dropdown {
   border-radius: 25px;
 }
 .servce .neway-sec h3 {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 4.2rem;
   line-height: 4.2rem;
   overflow: visible;
   color: #fff;
+    font-weight: 700;
 }
 .servce .neway-sec .pref {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 2.4rem;
   line-height: 2.5rem;
   overflow: visible;
   color: #fff;
 }
 .servce .our-col-det h3 {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.7rem;
   line-height: 1.9rem;
   overflow: hidden;
   color: #747474;
   height: 27px;
+    font-weight: 600;
 }
 .servce .our-col-det .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.6rem;
   line-height: 1.2;
   overflow: visible;
@@ -5839,7 +5899,7 @@ div.multiselect-dropdown {
   background-color: unset;
 }
 .servce .section-emplo h3 {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 3.2rem;
   line-height: 3.5rem;
   overflow: visible;
@@ -5848,7 +5908,7 @@ div.multiselect-dropdown {
   border-radius: 25px;
 }
 .servce .section-emplo .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.3rem;
   line-height: 2rem;
   overflow: visible;
@@ -5857,7 +5917,7 @@ div.multiselect-dropdown {
 .servce .section-emplo ul {
   list-style-type: none;
   color: #D4D4D4;
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.3rem;
   line-height: 2rem;
   overflow: visible;
@@ -5882,7 +5942,7 @@ div.multiselect-dropdown {
   border-radius: 25px;
 }
 .servce .section-tree .tree-text h3 {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 2.6rem;
   line-height: 2.7rem;
   overflow: visible;
@@ -5891,7 +5951,7 @@ div.multiselect-dropdown {
   padding-left: 0 !important;
 }
 .servce .section-tree .tree-text .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.6rem;
   line-height: 2rem;
   overflow: visible;
@@ -5931,16 +5991,17 @@ div.multiselect-dropdown {
 .search-mainimg .main-text {
   position: absolute;
   bottom: 40%;
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.6rem;
   line-height: 1.5rem;
   overflow: visible;
   color: #000;
+    font-weight: 600;
 }
 
 .seemore-buton {
   border: none !important;
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.3rem;
   line-height: 1.5rem;
   overflow: visible;
@@ -5982,14 +6043,14 @@ div.multiselect-dropdown {
   font-size: 26px !important;
 }
 .advanc-slider .text-gallery span {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 0.8rem;
   line-height: 1.1rem;
   overflow: visible;
   color: #000;
 }
 .advanc-slider .text-gallery p {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1rem;
   line-height: 1.3rem;
   overflow: visible;
@@ -6013,21 +6074,23 @@ div.multiselect-dropdown {
   bottom: 44%;
 }
 .contact .contact-mainimg .main-text h1 {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2.6rem;
   line-height: 2.8rem;
   overflow: visible;
   color: #fff;
+    font-weight: 700;
 }
 .contact .our-mission .title {
-  font-family: "Dubai-Bold";
+  /*font-family: "Dubai-Bold";*/
   font-size: 2rem;
   line-height: 2.55rem;
   overflow: visible;
   color: #7E7E7E;
+    font-weight: 700;
 }
 .contact .our-mission .pref {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.3rem;
   line-height: 1.2;
   overflow: visible;
@@ -6060,14 +6123,14 @@ div.multiselect-dropdown {
   border-radius: 10px;
 }
 .contact .contact-text {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.2rem;
   line-height: 1.4rem;
   overflow: visible;
   color: #747474;
 }
 .contact .contact-text .go-direc {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.15rem;
   line-height: 1.4rem;
   overflow: visible;
@@ -6083,19 +6146,20 @@ div.multiselect-dropdown {
   right: -46px;
     top: 4px;
     color: #fff;
-    font-family: "Dubai-Bold";
+    /*font-family: "Dubai-Bold";*/
     font-size: 1.2rem;
     padding: 9px 15px;
 }
 .contact .bef-contact p {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.1rem;
   line-height: 1.4rem;
   overflow: visible;
   color: #000;
+    font-weight: 600;
 }
 .contact .bef-contact .smal {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 0.8rem;
   line-height: 1rem;
   overflow: visible;
@@ -6150,14 +6214,14 @@ div.multiselect-dropdown {
   content: url(../../App_Images/right-arrow.png) !important;
 }
 .details .optian-details .total-salary {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 22px;
   line-height: 1.5rem;
   overflow: visible;
   color: #438d54;
 }
 .details .optian-details .total-salary span {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.2rem;
   line-height: 1rem;
   overflow: visible;
@@ -6168,14 +6232,14 @@ div.multiselect-dropdown {
   margin-right: 15px;
 }
 .details .optian-details .save-to {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1rem;
   line-height: 1rem;
   overflow: visible;
   color: #606060;
 }
 .details .optian-details .share-to {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1rem;
   line-height: 1rem;
   overflow: visible;
@@ -6201,7 +6265,7 @@ div.multiselect-dropdown {
 }
 .details .slider-for-contint .details-larg-button .Register-but {
   background-color: #000;
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.2rem;
   line-height: 1rem;
   overflow: visible;
@@ -6210,7 +6274,7 @@ div.multiselect-dropdown {
 }
 .details .slider-for-contint .details-larg-button .Ask-but {
   background-color: #52BA64;
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.2rem;
   line-height: 1rem;
   overflow: visible;
@@ -6253,7 +6317,7 @@ div.multiselect-dropdown {
   font-size: 26px !important;
 }
 .areas-grid .text-gallery span {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.1rem;
@@ -6261,7 +6325,7 @@ div.multiselect-dropdown {
   color: #666;
 }
 .areas-grid .text-gallery p {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.1rem;
   line-height: 1.3rem;
   overflow: visible;
@@ -6281,7 +6345,7 @@ div.multiselect-dropdown {
   left: 0;
 }
 .details .offers-home {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1rem;
   line-height: 1rem;
   overflow: visible;
@@ -6292,21 +6356,21 @@ div.multiselect-dropdown {
   border-radius: 18px;
 }
 .details .offers-home .main-ifoRom .proto {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 0.93rem;
   line-height: 1rem;
   overflow: visible;
   color: #747474;
 }
 .details .offers-home .main-ifoRom .name-app {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.26rem;
   line-height: 1.3rem;
   overflow: visible;
   color: #000;
 }
 .details .offers-home .offers-home-header {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 21px;
   line-height: 1.3rem;
   overflow: visible;
@@ -6320,6 +6384,7 @@ div.multiselect-dropdown {
 }
 .ad-card {
   font-size: 16px;
+    font-weight: 600;
 }
 .details .offers-home .area {
   position: relative;
@@ -6348,7 +6413,7 @@ div.multiselect-dropdown {
 .details .offers-home .show-all button {
   border: 1px solid #454545 !important;
   border-radius: 7px;
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 0.95rem;
   line-height: 1em;
   overflow: visible;
@@ -6356,11 +6421,12 @@ div.multiselect-dropdown {
   width: auto;
 }
 .details .offers-home .loc-video .head {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.3rem;
   line-height: 1.4em;
   overflow: visible;
   color: #454545;
+    font-weight: 600;
 }
 .details .offers-home .loc-video .video {
   position: relative;
@@ -6369,7 +6435,7 @@ div.multiselect-dropdown {
   color: #555;
   font-size: 18px;
   margin-bottom: 15px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .details .offers-home .loc-video .video::before {
   content: " ";
@@ -6384,12 +6450,13 @@ div.multiselect-dropdown {
 }
 .details .offers-home .Similar {
   text-align: center;
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
   font-size: 1.86rem;
   line-height: 1em;
   overflow: visible;
   color: #747474;
   border-bottom: 1px solid #D4D4D4;
+    font-weight: 600;
 }
 .details .lightbox-contaner {
   background-color: black;
@@ -6466,26 +6533,27 @@ div.multiselect-dropdown {
   object-fit: contain;
 }
 .details .about-dev h3 {
-  font-family: "Dubai-Regular";
+  /*font-family: "Dubai-Regular";*/
   font-size: 1.13rem;
   line-height: 1.2em;
   overflow: visible;
   color: #000;
 }
 .details .about-dev p {
-  font-family: "DubaiW23-Light";
+  /*font-family: "DubaiW23-Light";*/
   font-size: 16px;
   line-height: 1.2;
   overflow: visible;
   color: #000;
 }
 .details .about-dev span {
-  font-family: "DubaiW23-Light";
+  /*font-family: "DubaiW23-Light";*/
   font-size: 1rem;
   line-height: 1.2em;
   overflow: visible;
   color: #000;
   word-break: break-all;
+    font-weight: 600;
 }
 
 /* View Product */
@@ -6539,7 +6607,7 @@ div.multiselect-dropdown {
 }
 .reg-ask-btns .Register-but {
 background-color: #000;
-font-family: "Dubai-Regular";
+/*font-family: "Dubai-Regular";*/
 font-size: 1.2rem;
 line-height: 1rem;
 overflow: visible;
@@ -6548,7 +6616,7 @@ height: 53px;
 }
 .reg-ask-btns .Ask-but {
 background-color: #52BA64;
-font-family: "Dubai-Regular";
+/*font-family: "Dubai-Regular";*/
 font-size: 1.2rem;
 line-height: 1rem;
 overflow: visible;
@@ -6650,6 +6718,7 @@ border-radius: 6px;
 }
 .wat-vid-title {
   margin-bottom: 23px !important;
+    font-weight: 600;
 }
 .share-btn {
   position: absolute;
@@ -6756,7 +6825,7 @@ border-radius: 6px;
   color: #fff;
 }
 .slick-counter {
-  font-family: "Dubai-Medium";
+  /*font-family: "Dubai-Medium";*/
       font-weight: 500;
     font-size: 22px;
     margin: 0 3px;
@@ -7304,7 +7373,7 @@ footer nav .navbar-nav .nav-link:hover {
 /* Footer */
 footer {
     background: #52BA64;
-    font-family: "Dubai-Medium";
+    /*font-family: "Dubai-Medium";*/
 }
 .footer-content {
     padding-top: 30px;
@@ -7339,7 +7408,7 @@ footer {
 .social-text {
     color: #fff;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .social-line {
     width: 35px;
@@ -7422,6 +7491,7 @@ footer {
 .fb-text {
     color: #fff;
     padding: 13px 0;
+    font-weight: 600;
 }
 .fb-text a {
     color: #fff;
@@ -7461,18 +7531,19 @@ footer {
     object-fit: cover;
 }
 .gsw-sub-title {
-    font-family: "Dubai-Regular";
+    /*font-family: "Dubai-Regular";*/
     font-size: 1.9rem;
     line-height: 2rem;
     color: #fff;
     margin-bottom: 40px;
 }
 .gsw-title {
-    font-family: "Dubai-Bold";
+    /*font-family: "Dubai-Bold";*/
     font-size: 3.86rem;
     line-height: 3.3rem;
     overflow: visible;
     color: #fff;
+    font-weight: 700;
 }
 /* Services */
 
@@ -7723,7 +7794,7 @@ footer {
     right: 15px;
     top: 10px;
     color: #fff;
-    font-family: "Dubai-Bold";
+    /*font-family: "Dubai-Bold";*/
     font-size: 1.2rem;
     padding: 12px 18px;
   }
@@ -7733,7 +7804,7 @@ footer {
     height: 390px;
   }
   .home-slidr .main-text {
-    font-family: "Dubai-Bold";
+    /*font-family: "Dubai-Bold";*/
     font-size: 1.666rem;
     line-height: 1.67rem;
     overflow: visible;
@@ -7756,14 +7827,14 @@ footer {
     background-color: unset !important;
   }
   .servce .Guests-sec .guets-se .pref {
-    font-family: "Dubai-Regular";
+    /*font-family: "Dubai-Regular";*/
     font-size: 1.9rem;
     line-height: 2rem;
     overflow: visible;
     color: #fff;
   }
   .servce .Guests-sec .guets-se h3 {
-    font-family: "Dubai-Bold";
+    /*font-family: "Dubai-Bold";*/
     font-size: 2.53rem;
     line-height: 3rem;
     overflow: visible;
@@ -7932,6 +8003,7 @@ footer {
   .servce .mainbuton .mainServices-but, .servce .mainbuton a,
   .servce .mainbuton .mainOwner-but, .servce .mainbuton a {
     font-size: 2.5rem;
+      font-weight: 700;
   }
   .servce .experince-sec h3,
   .aue-para {
