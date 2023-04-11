@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\GlobalController;
+use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\StatisticsController;
 use App\Http\Controllers\API\TypeController;
 use App\Http\Controllers\API\LocationController;
@@ -53,6 +54,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::apiResource('slider', SliderController::class);
     Route::post('slider/update-image/{id}', [SliderController::class, 'updateImage']);
+
+    Route::apiResource('news', NewsController::class);
 
     Route::put('update-status/{id}/{model}', [GlobalController::class, 'switchStatus']);
 

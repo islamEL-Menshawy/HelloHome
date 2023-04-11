@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\News;
 use App\Models\Slider;
 use App\Models\Type;
 use App\Models\Compound;
@@ -98,39 +99,20 @@ class WebController extends Controller
     }
 
     public function news(){
-//        $page_attributes = Page::find(3);
-//        $attributes = array();
-//
-//        foreach ($page_attributes->attributes as $attribute){
-//            $key = $attribute->title;
-//            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
-//            $attributes += [$key=>$value];
-//        }
-//        $data = [
-//            'page_attributes' => $page_attributes,
-//            'attributes' => $attributes
-//
-//        ];
-        return view('news');
-//        return view('news',$data);
+        $news = News::paginate(1);
+        $data = [
+            'news' => $news
+        ];
+        return view('news', $data);
     }
 
-    public function view_news(){
-//        $page_attributes = Page::find(3);
-//        $attributes = array();
-//
-//        foreach ($page_attributes->attributes as $attribute){
-//            $key = $attribute->title;
-//            $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
-//            $attributes += [$key=>$value];
-//        }
-//        $data = [
-//            'page_attributes' => $page_attributes,
-//            'attributes' => $attributes
-//
-//        ];
-        return view('view-news');
-//        return view('news',$data);
+    public function view_news($local, $id){
+
+        $news = News::findOrFail($id);
+        $data = [
+            'news' => $news
+        ];
+        return view('view-news', $data);
     }
 
     public function search(Request $request){

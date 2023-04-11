@@ -11,6 +11,16 @@
 
     @yield('seo-tags')
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QKSEJ88RZG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QKSEJ88RZG');
+    </script>
+
 
     <!-- Bing Search meta tags -->
     <meta name="msvalidate.01" content="" />

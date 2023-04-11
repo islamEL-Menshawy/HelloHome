@@ -34,72 +34,22 @@
                     </div>
 
                     <div class="articles-grid">
-                        <div class="article-row">
-                            <div class="article-img">
-                                <img
-                                    src="https://magazine.realtor/sites/default/files/styles/asset_image_teaser/public/assets/images/2003_DN_LosAngeles.jpg?itok=hpEJXyRa"
-                                    class="img-fluid" alt="" />
-                            </div>
-                            <div class="article-details">
-                                <a href="{{route('view-news', ['id'=> 1])}}" class="article-title">Affordable Alternatives to the 7 Largest U.S.
-                                    Cities</a>
-                                <div class="article-text">Though bidding wars are pushing up prices in the suburbs, these towns offer
-                                    home shoppers a respite from the expensive urban lifestyle.
-                                </div>
-                                <div class="article-date">May 24, 2021</div>
-                            </div>
-                        </div>
 
-                        <div class="article-row">
-                            <div class="article-img">
-                                <img
-                                    src="https://magazine.realtor/sites/default/files/styles/asset_image_teaser/public/assets/images/10_10_19_California_Blackout_Power.jpeg?itok=LOPgB25N"
-                                    class="img-fluid" alt="" />
-                            </div>
-                            <div class="article-details">
-                                <a href="{{route('view-news', ['id'=> 1])}}" class="article-title">
-                                    Blackout Fears Fuel Interest in Off-Grid Homes
-                                    Cities</a>
-                                <div class="article-text">After 10 million Texans lost power during an ice storm earlier this year,
-                                    homeowners and builders are turning their attention to self-powered homes.
+                      @foreach($news as $item)
+                            <div class="article-row">
+                                <div class="article-img">
+                                    <img
+                                        src="{{ $item['image_url'] }}"
+                                        class="img-fluid" alt="" />
                                 </div>
-                                <div class="article-date">May 24, 2021</div>
-                            </div>
-                        </div>
-
-                        <div class="article-row">
-                            <div class="article-img">
-                                <img
-                                    src="https://magazine.realtor/sites/default/files/styles/asset_image_teaser/public/assets/images/10_15_18_Historic_Town_Primary.jpg?itok=hWuFqb1i"
-                                    class="img-fluid" alt="" />
-                            </div>
-                            <div class="article-details">
-                                <a href="{{route('view-news', ['id'=> 1])}}" class="article-title">
-                                    Buyers Eye Older Homes for Affordability, Historic Charm</a>
-                                <div class="article-text">Many are seeking larger properties with a more traditional floor plan to cut
-                                    down on noise while family members work and learn remotely.
+                                <div class="article-details">
+                                    <a href="{{route('view-news', ['id'=> $item['id']])}}" class="article-title">{{ $item['title_'. app()->getLocale()] }}</a>
+                                    <div class="article-text">{{ $item['author'] }}</div>
+                                    <div class="article-date">{{ $item['date'] }}</div>
                                 </div>
-                                <div class="article-date">May 24, 2021</div>
                             </div>
-                        </div>
-
-                        <div class="article-row">
-                            <div class="article-img">
-                                <img
-                                    src="https://magazine.realtor/sites/default/files/styles/asset_image_teaser/public/assets/images/2003_DN_LosAngeles.jpg?itok=hpEJXyRa"
-                                    class="img-fluid" alt="" />
-                            </div>
-                            <div class="article-details">
-                                <a href="{{route('view-news', ['id'=> 1])}}" class="article-title">Affordable Alternatives to the 7 Largest U.S.
-                                    Cities</a>
-                                <div class="article-text">Though bidding wars are pushing up prices in the suburbs, these towns offer
-                                    home shoppers a respite from the expensive urban lifestyle.
-                                </div>
-                                <div class="article-date">May 24, 2021</div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-
                     <div class="articles-pagination">
                         <div aria-label="Page navigation example">
                             <ul class="pagination">

@@ -3,10 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\Controller;
-use App\Http\Resources\CompoundCollection;
 use App\Http\Resources\SliderCollection;
-use App\Models\Compound;
 use App\Models\Images;
 use App\Models\Slider;
 use App\Service\API\FileService;
