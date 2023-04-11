@@ -11,15 +11,7 @@
 
     @yield('seo-tags')
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QKSEJ88RZG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-QKSEJ88RZG');
-    </script>
 
 
     <!-- Bing Search meta tags -->
@@ -54,6 +46,15 @@
         .iti__flag {background-image: url("{{ asset('assets/App_Images/flags.png') }}");}
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QKSEJ88RZG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QKSEJ88RZG');
+</script>
 <body class="bg-white @if(app()->getLocale() === "ar") body-rtl @endif"> <!-- body-rtl -->
 
 @include('partial.header')
