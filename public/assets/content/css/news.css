@@ -58,8 +58,13 @@
 }
 .article-img {
   width: 180px;
+    height: 105px;
   margin-right: 20px;
   object-fit: cover;
+}
+.article-img img {
+    height: 100%;
+    width: 100%;
 }
 .article-details {
   width: calc(100% - 200px);
@@ -89,14 +94,16 @@
   justify-content: center;
   padding: 30px 0 50px;
 }
-.page-link {
+.page-item .page-link {
   border: none;
   color: #4f7690;
   padding: 5px 0.5em;
   margin: 0 0.5em !important;
   font-size: 18px;
+    background: transparent;
+
 }
-.page-link.active {
+.page-item.active .page-link {
   border-bottom: 2px solid #52BA64;
   color: #52BA64;
     background: transparent;
@@ -109,6 +116,39 @@
   width: 100%;
   margin-bottom: 27px;
 }
+
+
+.page-item:first-of-type .page-link:after,
+.page-item:last-of-type .page-link:after {
+    position: relative;
+    z-index: 10;
+    color: #6E6E6E;
+}
+.page-item:first-of-type .page-link:after {
+    content: "Previous";
+    width: 22px;
+}
+.page-item:last-of-type .page-link:after {
+    content: "Next";
+    width: 18px;
+}
+.page-item:first-of-type .page-link:hover,
+.page-item:last-of-type .page-link:hover {
+    color: transparent;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+.page-item:first-of-type .page-link,
+.page-item:last-of-type .page-link {
+    color: transparent !important;
+    padding-right: 16.2px;
+}
+.page-item .page-link:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -123,11 +163,17 @@
   }
   .article-img {
     margin-bottom: 22px;
+      height: 205px;
   }
   .article-img,
   .article-details {
     width: 100%;
   }
+    .page-item .page-link {
+        padding: 5px 0.4em;
+        margin: 0 0.3em !important;
+        font-size: 16px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */

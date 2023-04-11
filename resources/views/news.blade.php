@@ -50,17 +50,17 @@
                             </div>
                         @endforeach
                     </div>
+                    <!-- Pagination -->
                     <div class="articles-pagination">
-                        <div aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                            </ul>
-                        </div>
+                        @if ($news->hasPages())
+                            <div class="profile-pagination main-pagination mt-5 pb-2">
+                                <div aria-label="Page navigation">
+                                    {{ $news->links('pagination::bootstrap-4') }}
+                                </div>
+                            </div>
+                        @endif
                     </div>
+                    <!-- Pagination -->
 
                 </div>
             </div>
