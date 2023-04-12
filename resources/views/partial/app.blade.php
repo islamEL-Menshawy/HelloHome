@@ -47,13 +47,13 @@
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QKSEJ88RZG"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8GGXF6CL6"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-QKSEJ88RZG');
+    gtag('config', 'G-Z8GGXF6CL6');
 </script>
 <body class="bg-white @if(app()->getLocale() === "ar") body-rtl @endif"> <!-- body-rtl -->
 
