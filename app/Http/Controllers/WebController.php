@@ -99,7 +99,7 @@ class WebController extends Controller
     }
 
     public function news(){
-        $news = News::paginate(1);
+        $news = News::paginate(10, ['*'], 'news');
         $data = [
             'news' => $news
         ];
