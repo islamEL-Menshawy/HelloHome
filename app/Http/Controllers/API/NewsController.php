@@ -107,6 +107,25 @@ class NewsController extends BaseController
         return $this->sendResponse([],"News created successfully") ;
     }
 
+
+    public function updateImage(Request $request,int $id){
+        $request->validate([
+            'image'=>'required'
+        ]);
+        try {
+            $news = News::findOrFail($id);
+            $slug = Str::slug($news->title_en);
+            $this->fileService->deleteFileByPath($news->image->image_path);
+            $path = $this->fileService->uploadFile($request->file('image'), $slug, "news");
+            $image = Images::findOrFail($news->image_id);
+            $image->image_path = $path;
+            $image->save();
+            return $this->sendResponse("","News image updated successfully") ;
+        }catch (\Exception $exception ){
+            return $this->sendError('News not found', 404);
+        }
+    }
+
     /**
      * Remove the specified resource from storage.
      *

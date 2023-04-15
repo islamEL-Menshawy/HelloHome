@@ -56,6 +56,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('slider/update-image/{id}', [SliderController::class, 'updateImage']);
 
     Route::apiResource('news', NewsController::class);
+    Route::post('news/update-image/{id}', [NewsController::class, 'updateImage']);
 
     Route::put('update-status/{id}/{model}', [GlobalController::class, 'switchStatus']);
 
