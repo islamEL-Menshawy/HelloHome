@@ -52,7 +52,7 @@
                     <div class="gsw-title">{{ $attributes['service_section_4_text_2_'. app()->getLocale()] }}</div>
                 </div>
                 <div class="gsw-view">
-                    <img class="img-fluid" src="{{ asset($attributes['service_section_6_image']) }}" alt="">
+                    <img class="img-fluid" src="{{ asset($attributes['section_4_image']) }}" alt="">
                 </div>
             </div>
 
