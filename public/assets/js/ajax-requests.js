@@ -10,11 +10,11 @@ $('#subscribeBtn').on("click", function () {
     var subscribe = $("#subscribeInput").val();
     var _token = $("#_token").val();
     $.ajax({
-        url: "api/subscribe?email=" + subscribe,
+        url: "/api/subscribe?email=" + subscribe,
         type: "POST",
         data: {_token: _token},
         beforeSend: function() {
-            
+
         },
         success: function (data) {
             console.log(data);
@@ -25,7 +25,7 @@ $('#subscribeBtn').on("click", function () {
               autoclose: true,
               autotimeout: 5000,
           });
-          $("#subscribeInput").val("");   
+          $("#subscribeInput").val("");
         },
         error: function(data) {
           new Notify ({
@@ -45,11 +45,11 @@ $('#contactUsBtn').on("click", function () {
     var _token = $("#_token").val();
     $('#contactUsBtn').attr('disabled', true);
     $.ajax({
-        url: "api/contact-us",
+        url: "/api/contact-us",
         type: "POST",
         data: data,
         beforeSend: function() {
-            
+
         },
         success: function (data) {
             console.log(data);
@@ -60,7 +60,7 @@ $('#contactUsBtn').on("click", function () {
               autoclose: true,
               autotimeout: 5000,
           });
-          $("#contactUsForm")[0].reset(); 
+          $("#contactUsForm")[0].reset();
           $('#contactUsBtn').attr('disabled', false);
         },
         error: function(data) {
@@ -99,7 +99,7 @@ $('#intrestsBtn').on("click", function () {
           unit_url: unit_url
         },
         beforeSend: function() {
-            
+
         },
         success: function (data) {
             console.log(data);

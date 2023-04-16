@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\BaseController;
+use App\Mail\ContactUsMail;
+use App\Mail\UnitInterestMail;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Models\Newsletter;
 use App\Models\UnitIntrest;
 use App\Models\ContactUs;
+use Illuminate\Support\Facades\Mail;
 
 class NotificationController extends BaseController
 {
@@ -41,6 +44,7 @@ class NotificationController extends BaseController
         $record->massage = $request->massage;
         $record->unit_url = $request->unit_url;
         if ($record->save()){
+            Mail::to("m.reda@capitallords.com")->send(new UnitInterestMail($record));
             return $this->sendResponse([], 'Thanks for your interesting');
         }
     }
@@ -63,6 +67,7 @@ class NotificationController extends BaseController
         $record->phone_number = $request->phone_number;
         $record->massage = $request->massage;
         if ($record->save()){
+            Mail::to("m.reda@capitallords.com")->send(new ContactUsMail($record));
             return $this->sendResponse([], 'Thanks for contacting us');
         }
     }

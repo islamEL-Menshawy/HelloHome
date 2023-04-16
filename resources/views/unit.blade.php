@@ -365,13 +365,13 @@
                     </div>
                     <div class="unit-details-points">
                         <div class="unit-det-title">{{ __('msg.things_know') }}</div>
-                        @foreach($description as $item)
+                        @foreach(explode('.', $unit['description_'. app()->getLocale()] ) as $item)
                             <div class="unit-det-point">{{ $item }}</div>
                         @endforeach
                     </div>
                     <div class="unit-details-points udp-2">
                         <div class="unit-det-title white-color">{{ __('msg.things_know') }}</div>
-                        @foreach($description_left as $item)
+                        @foreach(explode('.', $unit['description_left_'. app()->getLocale()]) as $item)
                             <div class="unit-det-point">{{ $item }}</div>
                         @endforeach
                     </div>
