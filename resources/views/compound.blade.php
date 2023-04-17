@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="text-gallery">
                                         <span>{{ __('msg.price') }}</span>
-                                        <p>{{$unit->price}}</p>
+                                        <p>{{$unit['price_'. app()->getLocale()]}}</p>
                                     </div>
                                 </div>
                             </a>
