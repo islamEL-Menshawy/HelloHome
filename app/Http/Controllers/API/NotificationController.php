@@ -44,7 +44,7 @@ class NotificationController extends BaseController
         $record->massage = $request->massage;
         $record->unit_url = $request->unit_url;
         if ($record->save()){
-            Mail::to("m.reda@capitallords.com")->send(new UnitInterestMail($record));
+            Mail::to("inbox@hhegypt.com")->send(new UnitInterestMail($record));
             return $this->sendResponse([], 'Thanks for your interesting');
         }
     }
@@ -67,7 +67,7 @@ class NotificationController extends BaseController
         $record->phone_number = $request->phone_number;
         $record->massage = $request->massage;
         if ($record->save()){
-            Mail::to("m.reda@capitallords.com")->send(new ContactUsMail($record));
+            Mail::to("inbox@hhegypt.com")->send(new ContactUsMail($record));
             return $this->sendResponse([], 'Thanks for contacting us');
         }
     }
