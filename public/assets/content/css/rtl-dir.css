@@ -46,7 +46,8 @@ body.body-rtl .proto-name-app,
 body.body-rtl .navbar-lang .dropdown-menu a,
 body.body-rtl .news-wrapper,
 body.body-rtl .foot-center,
-body.body-rtl .gsw-details {
+body.body-rtl .gsw-details,
+body.body-rtl .unit-details-points {
     text-align: right !important;
 }
 body.body-rtl .our-home .sec-titleHome {
