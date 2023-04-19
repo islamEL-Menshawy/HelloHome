@@ -12,8 +12,8 @@ class FileService
     {
         // Define upload path
         $destinationPath = public_path("uploads/".$path); // upload path
-        // Upload Orginal Image
-        $profileImage = $fileName . "." . $file->getClientOriginalExtension();
+        // Upload Original Image
+        $profileImage = $fileName ."_". time() . "." . $file->getClientOriginalExtension();
         $file->move($destinationPath, $profileImage);
         return  "/" . $path . "/" . $profileImage;
     }
