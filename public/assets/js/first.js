@@ -386,17 +386,11 @@ $(document).ready(function () {
 
             // if (text.includes('night')) { $(this).text(text.replace('night', ' ')); }
 
-            if (text.includes('per month')) { $(this).text(text.replace('per month', ' ')); }
-
-            if (text.includes('month')) { $(this).text(text.replace('month', ' ')); }
-
             if (text.includes('شهريا')) { $(this).text(text.replace('شهريا', ' ')); }
 
             if (text.includes('شهريا')) { $(this).text(text.replace('شهريا', ' ')); }
 
             if (text.includes('في الشهر')) { $(this).text(text.replace('في الشهر', ' ')); }
-
-            if (text.includes('الشهر')) { $(this).text(text.replace('الشهر', ' ')); }
 
             if (text.includes('فى الشهر')) { $(this).text(text.replace('فى الشهر', ' ')); }
         });
