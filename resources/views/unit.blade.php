@@ -393,7 +393,7 @@
                             <div class="slider advsear ">
                                 @foreach($unit->images->slice(0,4) as $image)
                                     <a class="unit-card-images" href="{{route('unit_details', ['compound'=>$unit->compound->slug_en,'unit_id'=> $unit->id])}}">
-                                        <div class="unit-card-price">{{$unit->price}}</div>
+{{--                                        <div class="unit-card-price">{{$unit->price}}</div>--}}
                                         <div>
                                             <div class="image position-relative">
                                                 <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
@@ -417,7 +417,7 @@
                                     </div>
                                     <div class="text-gallery">
                                         <span>{{ __('msg.price') }}</span>
-                                        <p>{{$unit->price}}</p>
+                                        <p class="price-replace">{{$unit->price}}</p>
                                     </div>
                                 </div>
                             </a>
