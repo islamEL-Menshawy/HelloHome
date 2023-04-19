@@ -371,28 +371,34 @@ $(document).ready(function () {
 
 
 // Replace words
-$(function () {
-    $(".price-replace").each(function () {
-        let text = $(this).text();
+$(document).ready(function () {
+    $(function () {
+        $(".price-replace").each(function () {
+            let text = $(this).text().toLowerCase();
 
-        if ($(this).text(text.toLowerCase().replace('per night', ' '))) { $(this).text(text.replace('per night', ' ')); }
+            if (text.includes('per night') || text.includes('per')) {
+                $(this).text(text.replace('per night', ' '));
+            }
 
-        if ($(this).text(text.toLowerCase().replace('monthly', ' '))) { $(this).text(text.replace('monthly', ' ')); }
+            if (text.includes('monthly') || text.includes('per monthly')) {
+                $(this).text(text.replace('per monthly', ' '));
+            }
 
-        if ($(this).text(text.toLowerCase().replace('night', ' '))) { $(this).text(text.replace('night', ' ')); }
+            // if (text.includes('night')) { $(this).text(text.replace('night', ' ')); }
 
-        if ($(this).text(text.toLowerCase().replace('per month', ' '))) { $(this).text(text.replace('per month', ' ')); }
+            if (text.includes('per month')) { $(this).text(text.replace('per month', ' ')); }
 
-        if ($(this).text(text.toLowerCase().replace('month', ' '))) { $(this).text(text.replace('month', ' ')); }
+            if (text.includes('month')) { $(this).text(text.replace('month', ' ')); }
 
-        if ($(this).text(text.toLowerCase().replace('شهريا', ' '))) { $(this).text(text.replace('شهريا', ' ')); }
+            if (text.includes('شهريا')) { $(this).text(text.replace('شهريا', ' ')); }
 
-        if ($(this).text(text.toLowerCase().replace('شهريا', ' '))) { $(this).text(text.replace('شهريا', ' ')); }
+            if (text.includes('شهريا')) { $(this).text(text.replace('شهريا', ' ')); }
 
-        if ($(this).text(text.toLowerCase().replace('في الشهر', ' '))) { $(this).text(text.replace('في الشهر', ' ')); }
+            if (text.includes('في الشهر')) { $(this).text(text.replace('في الشهر', ' ')); }
 
-        if ($(this).text(text.toLowerCase().replace('الشهر', ' '))) { $(this).text(text.replace('الشهر', ' ')); }
+            if (text.includes('الشهر')) { $(this).text(text.replace('الشهر', ' ')); }
 
-        if ($(this).text(text.toLowerCase().replace('فى الشهر', ' '))) { $(this).text(text.replace('فى الشهر', ' ')); }
+            if (text.includes('فى الشهر')) { $(this).text(text.replace('فى الشهر', ' ')); }
+        });
     });
 });
