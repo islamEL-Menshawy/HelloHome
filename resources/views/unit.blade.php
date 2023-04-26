@@ -304,13 +304,9 @@
                                 </h3>
 
                                 <div class="read-more-parent">
-                                    <span class="read-more-content" data-length="200">{{ $unit->compound['title_'. app()->getLocale()] }}</span>
+                                    <span class="read-more-content" data-length="200">{{ $unit->compound['description_'. app()->getLocale()] }}</span>
                                     <button class="read-more-btn"> ...Read More</button>
                                 </div>
-
-
-
-
                                 <a class="about-dev-url" href="{{ $unit->compound->website }}" target="_blank">{{ $unit->compound->website }}</a>
                             </div>
                         </div>
@@ -365,15 +361,11 @@
                     </div>
                     <div class="unit-details-points">
                         <div class="unit-det-title">{{ __('msg.things_know') }}</div>
-                        @foreach(explode('.', $unit['description_'. app()->getLocale()] ) as $item)
-                            <div class="unit-det-point">{{ $item }}</div>
-                        @endforeach
+                        <div class="unit-det-point">{!! $unit['description_'. app()->getLocale()] !!} </div>
                     </div>
                     <div class="unit-details-points udp-2">
                         <div class="unit-det-title white-color">{{ __('msg.things_know') }}</div>
-                        @foreach(explode('.', $unit['description_left_'. app()->getLocale()]) as $item)
-                            <div class="unit-det-point">{{ $item }}</div>
-                        @endforeach
+                        <div>{!! $unit['description_left_'. app()->getLocale()] !!}</div>
                     </div>
                 </div>
             </div>
