@@ -381,7 +381,7 @@ $(document).ready(function () {
             }
 
             if (text.includes('monthly') || text.includes('per monthly')) {
-                $(this).text(text.replace('per monthly', ' '));
+                $(this).text(text.replace('monthly', ' '));
             }
 
             // if (text.includes('night')) { $(this).text(text.replace('night', ' ')); }
