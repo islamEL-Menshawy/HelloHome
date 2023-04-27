@@ -1353,6 +1353,7 @@ a img {
   }
 }
 @media screen and (min-width: 768px) {
+
   .img-100-sm {
     max-width: 100%;
   }
@@ -6688,6 +6689,7 @@ border-radius: 6px;
 }
 .about-dev-details {
   width: calc(100% - 130px);
+    padding-right: 32px;
 }
 .about-dev-details h3 {
   font-weight: bold;
@@ -7095,6 +7097,7 @@ border-radius: 6px;
   font-size: 17px;
     margin-bottom: 17px;
     color: #000;
+    line-height: 1.7;
 }
 /* Contact Form  */
 
@@ -7772,6 +7775,11 @@ footer {
   }
   /* View Products (Details) */
 
+}
+@media screen and (max-width: 768px) {
+    .about-dev-details {
+        padding-right: 0;
+    }
 }
 @media screen and (max-width: 992px) {
   header nav .nav-item {

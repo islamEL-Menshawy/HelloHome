@@ -285,6 +285,10 @@ body.body-rtl .unit-card-price {
     right: 15px;
     left: auto;
 }
+body.body-rtl .about-dev-details {
+    padding-left: 32px;
+    padding-right: 0;
+}
 /* Unit */
 
 /* News */
@@ -374,6 +378,10 @@ body.body-rtl .about .section-1 .pref {
     }
     body.body-rtl .navbar-lang {
         margin-left: 0;
+    }
+    body.body-rtl .about-dev-details {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     /* Footer */

@@ -364,8 +364,8 @@
                         <div class="unit-det-point">{!! $unit['description_'. app()->getLocale()] !!} </div>
                     </div>
                     <div class="unit-details-points udp-2">
-                        <div class="unit-det-title white-color">{{ __('msg.things_know') }}</div>
-                        <div>{!! $unit['description_left_'. app()->getLocale()] !!}</div>
+                        <div class="unit-det-title opacity-0">{{ __('msg.things_know') }}</div>
+                        <div class="unit-det-point">{!! $unit['description_left_'. app()->getLocale()] !!}</div>
                     </div>
                 </div>
             </div>
