@@ -4890,7 +4890,9 @@ body {
 .flex-icon #services li div:hover {
   width: 5.3rem;
 }
-
+.read-more-content {
+    word-break: break-word !important;
+}
 /*------------ start home  ------------*/
 .home-slidr img,
 .home-slidr video {

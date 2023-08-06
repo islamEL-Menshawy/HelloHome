@@ -26,7 +26,7 @@
     <meta name="keywords" content="">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!-- Swiper Js -->
+    <link rel="stylesheet" href="{{ asset('assets/content/css/swiper-bundle.min.css') }}" /> <!-- Swiper Js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css"></link>
     <link rel="stylesheet" href="{{ asset('assets/content/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/content/css/bootstrap.min.css') }}">
@@ -70,7 +70,7 @@
 @include('partial.footer')
 
 <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Swiper Js -->
+<script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script> <!-- Swiper Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn_HgrPw1nlEQr3tyYsdAL0yfbbRIGeGc&callback=initMap&v=weekly"        defer>
 </script> -->
