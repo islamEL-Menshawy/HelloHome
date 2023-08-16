@@ -39,8 +39,8 @@
                             <div class="article-row">
                                 <div class="article-img">
                                     <img
-                                        src="{{ $item['image_url'] }}"
-                                        class="img-fluid" alt="" />
+                                        src="{{ asset($item->image->image_path) }}"
+                                        class="img-fluid" alt="{{ $item->image['alter_' . app()->getLocale()] }}" />
                                 </div>
                                 <div class="article-details">
                                     <a href="{{route('view-news', ['id'=> $item['id']])}}" class="article-title">{{ $item['title_'. app()->getLocale()] }}</a>

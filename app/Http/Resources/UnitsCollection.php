@@ -45,6 +45,7 @@ class UnitsCollection extends JsonResource
             'location' => $this->location ,
             'images' => ImageCollection::collection($this->images) ,
             'amenities' => $this->amenities ,
+            'seo' => $this->seo ,
             "last_modify" => $this->last_modify,
             'updated_at'=> $this->updated_at,
             'created_at'=> $this->created_at

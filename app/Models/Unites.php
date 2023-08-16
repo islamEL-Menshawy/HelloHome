@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Unites extends Model
 {
@@ -83,5 +84,10 @@ class Unites extends Model
     public function type(): BelongsTo
     {
         return $this->belongsTo(Type::class);
+    }
+
+    public function seo(): HasOne
+    {
+        return $this->hasOne(SEO::class, 'unit_id');
     }
 }

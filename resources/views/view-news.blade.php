@@ -11,8 +11,9 @@
                 <div class="news-wrapper">
                     <div class="view-article-header">
                         <img
-                            src="{{ $news['image_url'] }}"
-                            class="img-fluid" alt="" />
+                            src="{{ asset($news->image->image_path) }}"
+                            class="img-fluid" alt="{{ $news->image['alter_' . app()->getLocale()] }}"
+                        />
                     </div>
                     <div class="news-main-title">{{ $news['title_'. app()->getLocale() ] }}</div>
                     <div class="article-line"></div>

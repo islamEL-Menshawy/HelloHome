@@ -73,7 +73,7 @@
             <div class="brands-container">
                 <div class="brands-grid">
                     @foreach($compounds as $compound)
-                        <a href="{{ route('compound', $compound->slug_en) }}"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"> </a>
+                        <a href="{{ route('compound', $compound->slug_en) }}"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}" alt="{{ $compound['title_' . app()->getLocale()] }}"> </a>
                     @endforeach
                 </div>
             </div>

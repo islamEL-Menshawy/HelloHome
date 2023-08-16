@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\BaseController;
 use App\Http\Resources\UnitsCollection;
 use App\Models\Images;
+use App\Models\SEO;
 use App\Models\Unites;
 use App\Service\API\FileService;
 use App\Service\HelperService;
@@ -114,6 +115,14 @@ class UnitsController extends BaseController
             }
             $unit->images()->attach($imageList);
         }
+        $seo = SEO::where("unit_id", $unit['id'])->first();
+        $seo['keywords_en'] = "";
+        $seo['keywords_ar'] = "";
+        $seo['description_en'] = "";
+        $seo['description_ar'] = "";
+        $seo['page_type'] = "";
+        $seo['robots'] = "";
+        $seo->save();
         return $this->sendResponse(new UnitsCollection($unit) ,'unite created');
     }
 
@@ -126,7 +135,7 @@ class UnitsController extends BaseController
     public function show(int $id):JsonResponse
     {
         try {
-            $saved = Unites::findOrFail($id);
+            $saved = Unites::with('seo')->findOrFail($id);
             return $this->sendResponse(new UnitsCollection($saved),'');
         }catch (\Exception $e){
             return $this->sendError('Unit not found', $e->getMessage());
@@ -190,6 +199,15 @@ class UnitsController extends BaseController
             $unit->save();
             $unit->amenities()->detach();
             $unit->amenities()->attach($request->aminites);
+
+            $seo = SEO::where("unit_id", $unit['id'])->first();
+            $seo['keywords_en'] = $request['seo']['keywords_en'];
+            $seo['keywords_ar'] = $request['seo']['keywords_ar'];
+            $seo['description_en'] = $request['seo']['description_en'];
+            $seo['description_ar'] = $request['seo']['description_ar'];
+            $seo['page_type'] = $request['seo']['page_type'];
+            $seo['robots'] = $request['seo']['robots'];
+            $seo->save();
             return $this->sendResponse(new UnitsCollection($unit) ,'unite created');
 
         }catch (\Exception $e){

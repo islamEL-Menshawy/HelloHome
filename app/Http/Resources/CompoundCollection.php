@@ -29,6 +29,7 @@ class CompoundCollection extends JsonResource
             'is_active' => $this->isActive ,
             'number_of_unites'=> $this->number_of_unites,
             "last_modify" => $this->last_modify,
+            "seo" => $this->seo,
             "updated_at"=> $this->updated_at,
             "created_at"=> $this->created_at
         ];

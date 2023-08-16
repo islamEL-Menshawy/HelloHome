@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Compound extends Model
 {
@@ -47,6 +48,11 @@ class Compound extends Model
     public function unites(): HasMany
     {
         return $this->hasMany(Unites::class);
+    }
+
+    public function seo(): HasOne
+    {
+        return $this->hasOne(SEO::class);
     }
 
 }

@@ -27,12 +27,18 @@ class WebController extends Controller
             $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
             $locations = Location::where('isActive' , true)->get();
             $slider = Slider::where('is_active', true)->get();
-            $page_attributes = Page::find(1);
+            $page_attributes = Page::with('seo')->find(1);
             $attributes = array();
             foreach ($page_attributes->attributes as $attribute){
                 $key = $attribute->title;
                 $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
                 $attributes += [$key=>$value];
+//                if ($attribute->is_image){
+//                    $attributes += [
+//                        $key . "_alter_en" => $attribute->image->alter_en,
+//                        $key . "_alter_ar" => $attribute->image->alter_ar
+//                    ];
+//                }
             }
             $data = [
                 'types'     => $types,
@@ -40,7 +46,8 @@ class WebController extends Controller
                 'locations' => $locations,
                 'slider'    => $slider,
                 'page_attributes' => $page_attributes,
-                'attributes' => $attributes
+                'attributes' => $attributes,
+                'seo' => $page_attributes['seo']
 
             ];
             return view('welcome', $data);
@@ -50,67 +57,88 @@ class WebController extends Controller
 
     }
     public function about(){
-        $page_attributes = Page::find(2);
+        $page_attributes = Page::with('seo')->find(2);
         $attributes = array();
 
         foreach ($page_attributes->attributes as $attribute){
             $key = $attribute->title;
             $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
             $attributes += [$key=>$value];
+//            if ($attribute->is_image){
+//                $attributes += [
+//                    $key . "_alter_en" => $attribute->image->alter_en,
+//                    $key . "_alter_ar" => $attribute->image->alter_ar
+//                ];
+//            }
         }
         $data = [
             'page_attributes' => $page_attributes,
-            'attributes' => $attributes
+            'attributes' => $attributes,
+            'seo' => $page_attributes['seo']
 
         ];
         return view('about', $data);
     }
     public function contactUs(){
-        $page_attributes = Page::find(4);
+        $page_attributes = Page::with('seo')->find(4);
         $attributes = array();
 
         foreach ($page_attributes->attributes as $attribute){
             $key = $attribute->title;
             $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
             $attributes += [$key=>$value];
+//            if ($attribute->is_image){
+//                $attributes += [
+//                    $key . "_alter_en" => $attribute->image->alter_en,
+//                    $key . "_alter_ar" => $attribute->image->alter_ar
+//                ];
+//            }
         }
         $data = [
             'page_attributes' => $page_attributes,
-            'attributes' => $attributes
-
+            'attributes' => $attributes,
+            'seo' => $page_attributes['seo']
         ];
         return view('contact-us', $data);
     }
     public function service(){
-        $page_attributes = Page::find(3);
+        $page_attributes = Page::with('seo')->find(3);
         $attributes = array();
-
         foreach ($page_attributes->attributes as $attribute){
             $key = $attribute->title;
             $value = $attribute->is_image ? $attribute->image->image_path : $attribute->content;
             $attributes += [$key=>$value];
+//            if ($attribute->is_image){
+//                $attributes += [
+//                    $key . "_alter_en" => $attribute->image->alter_en,
+//                    $key . "_alter_ar" => $attribute->image->alter_ar
+//                ];
+//            }
         }
         $data = [
             'page_attributes' => $page_attributes,
-            'attributes' => $attributes
-
+            'attributes' => $attributes,
+            'seo' => $page_attributes['seo']
         ];
         return view('service',$data);
     }
 
     public function news(){
+        $page_attributes = Page::query()->where("page_title", "news")->with('seo')->first();
         $news = News::paginate(10, ['*'], 'news');
         $data = [
-            'news' => $news
+            'news' => $news,
+            'seo' => $page_attributes['seo']
         ];
         return view('news', $data);
     }
 
     public function view_news($local, $id){
 
-        $news = News::findOrFail($id);
+        $news = News::with('seo')->findOrFail($id);
         $data = [
-            'news' => $news
+            'news' => $news,
+            'seo' => $news['seo']
         ];
         return view('view-news', $data);
     }
@@ -131,6 +159,8 @@ class WebController extends Controller
             $unites = $unites->where('location_id', $location->id);
         }
 
+
+        $page_attributes = Page::query()->where("page_title", "search")->with('seo')->first();
         $types = Type::where('isActive' , true)->get();
         $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
         $locations = Location::where('isActive' , true)->get();
@@ -139,7 +169,8 @@ class WebController extends Controller
             'types'     => $types,
             'compounds' => $compounds,
             'locations' => $locations,
-            'unites' => $unites
+            'unites' => $unites,
+            'seo' => $page_attributes['seo']
         ];
         return view('search', $data);
     }
@@ -147,14 +178,15 @@ class WebController extends Controller
 
     public function compound($locale, $compound){
         try{
-            $compound = Compound::where('slug_en' , $compound)->first();
+            $compound = Compound::where('slug_en' , $compound)->with('seo')->first();
             $units = Unites::where('compound_id', $compound['id'])->orderBy('order', 'ASC')->get();
             if ($compound == null){
                 abort(404);
             }
             $data = [
                 'compound' => $compound,
-                'units' => $units
+                'units' => $units,
+                'seo' => $compound['seo']
             ];
             return view('compound', $data);
         }catch (\Exception $ex){
@@ -166,38 +198,26 @@ class WebController extends Controller
         $types = Type::where('isActive' , true)->get();
         $compounds = Compound::where('isActive' , true)->orderBy('order', 'ASC')->get();
         $locations = Location::where('isActive' , true)->get();
-
+        $seo = Page::query()->where("page_title", "explore-homes")->with("seo")->first();
         $data = [
             'types'     => $types,
             'compounds' => $compounds,
-            'locations' => $locations
+            'locations' => $locations,
+            'seo' => $seo
         ];
         return view('explore_homes', $data);
     }
 
     public function unit_details($locale, $compound, $unit_id){
-        $unit = Unites::find($unit_id);
+        $unit = Unites::with('seo')->find($unit_id);
         $compound = Compound::where('slug_en', $compound)->first();
         if ($unit == null || $compound == null){
             abort(404);
         }
-//        if(empty($unit->description)){
-//            $description = [];
-//        }else{
-//            $data = explode('.', $unit->description );
-//            $description =array_slice($data, 0, count($data)-1);
-//        }
-//        if(empty($unit->description_left)){
-//            $description_left = [];
-//        }else{
-//            $data = explode('.', $unit->description_left );
-//            $description_left =array_slice($data, 0, count($data)-1);
-//        }
         $data = [
             'unit' => $unit,
-            'compound' => $compound,
-//            'description' => $description,
-//            'description_left' => $description_left
+            'seo' => $unit['seo'],
+            'compound' => $compound
         ];
         return view('unit', $data);
     }

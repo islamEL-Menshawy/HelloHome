@@ -8,7 +8,7 @@
                 <picture>
                     <source media="(min-width: 768px)" srcset="{{ asset( $attributes['main_image']) }}">
                     <source media="(min-width: 10px)" srcset="{{ asset($attributes['main_image']) }}">
-                    <img class="img-fluid lazy" src="{{ asset($attributes['main_image']) }}" >
+                    <img class="img-fluid lazy" src="{{ asset($attributes['main_image']) }}" alt="{{ $attributes['main_image_alter_' . app()->getLocale()] }}">
                 </picture>
 
 

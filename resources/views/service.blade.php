@@ -15,7 +15,7 @@
 
 
                     <div class="gradient-easing"></div>
-                    <img class="img-fluid lazy" src="{{ asset($attributes['service_section_main_image']) }}" alt="@item.PictureCaption" title="@item.StoryTitle">
+                    <img class="img-fluid lazy" src="{{ asset($attributes['service_section_main_image']) }}" alt="{{ $attributes['service_section_main_image_alter_' . app()->getLocale()] }}" title="@item.StoryTitle">
                 </picture>
 
 
@@ -52,42 +52,19 @@
                     <div class="gsw-title">{{ $attributes['service_section_4_text_2_'. app()->getLocale()] }}</div>
                 </div>
                 <div class="gsw-view">
-                    <img class="img-fluid" src="{{ asset($attributes['section_4_image']) }}" alt="">
+                    <img class="img-fluid" src="{{ asset($attributes['section_4_image']) }}" alt="{{ $attributes['section_4_image_alter_' . app()->getLocale()] }}">
                 </div>
             </div>
-
-
-
-
-{{--            <div class="col-12 row Guests-sec justify-content-between gx-0 mb-md-74 my-4">--}}
-{{--                <div class="col-12 d-lg-none d-block">--}}
-{{--                    <img class="img-fluid" src="{{ asset($attributes['service_section_6_image']) }}" alt="">--}}
-{{--                </div>--}}
-
-{{--                <div style="background-color: {{ $attributes['service_section_4_color'] }}" class="col-lg-5 img-49-ds col-12 d-flex align-items-center guets-se px-5 p-4 row gx-0">--}}
-
-{{--                    <p class="pref col-12">--}}
-{{--                        {{ $attributes['service_section_4_text_1_'. app()->getLocale()] }}--}}
-{{--                    </p>--}}
-{{--                    <h3 class="col-12">--}}
-{{--                        {{ $attributes['service_section_4_text_2_'. app()->getLocale()] }}--}}
-{{--                    </h3>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-
             <div class="col-lg-9 col-md-10 col-12 text-center mx-auto mt-md-5 mb-md-74 my-3 section-1">
                 <h2 class="title mb-4">{{ $attributes['service_section_5_title_'. app()->getLocale()] }}</h2>
                 <p class="pref mb-4">{{ $attributes['service_section_5_text_1_'. app()->getLocale()] }}</p>
                 <p class="pref mb-4">{{ $attributes['service_section_5_text_2_'. app()->getLocale()] }}</p>
                 <p class="pref mb-4">{{ $attributes['service_section_5_text_3_'. app()->getLocale()] }}</p>
-
-
             </div>
             <div class="col-12 row experince-sec justify-content-between gx-0  my-5 mb-74">
                 <div class="col-md-6 img-49-sm col-12">
                     <img class="lazy img-fluid w-100" src="{{ asset($attributes['service_section_6_image']) }}" data-src=""
-                         alt="Guests Services" alt="Guests Services">
+                         alt="{{ $attributes['service_section_6_image_alter_' . app()->getLocale()] }}">
 
                 </div>
 
@@ -133,7 +110,7 @@
             <div style="background-color: {{ $attributes['service_section_9_color'] }}" class="col-12 row neway-sec justify-content-between gx-0 my-5 mb-md-74">
                 <div class="col-lg-6 img-49-ds col-12">
                     <img class="lazy img-fluid w-100" src="{{ asset($attributes['service_section_9_image']) }}"
-                         alt="Guests Services" alt="Guests Services">
+                         alt="{{ $attributes['service_section_9_image_alter_' . app()->getLocale()] }}">
 
                 </div>
                 <div class="hos-details col-lg-6 img-49-ds col-12 d-flex align-items-center p-3 row gx-0">
@@ -175,7 +152,7 @@
                     </div>
                     <div class="wiga-img col-12">
                         <img class="lazy img-fluid w-100 col-12" src="{{ asset($attributes['service_section_14_image']) }}"
-                             alt="Guests Services" alt="Guests Services">
+                             alt="{{ $attributes['service_section_14_image_alter_' . app()->getLocale()] }}">
 
 
                     </div>
@@ -212,7 +189,7 @@
                 </div>
                 <div class="col-lg-4 img-33-ds  my-lg-2 col-12 position-relative row gx-0 tree-dv order-lg-2 order-1">
                     <img class="lazy img-fluid w-100 col-12" src="{{ asset($attributes['service_section_15_image']) }}"
-                          alt="Guests Services" alt="Guests Services">
+                         alt="{{ $attributes['service_section_15_image_alter_' . app()->getLocale()] }}">
                 </div>
 
 

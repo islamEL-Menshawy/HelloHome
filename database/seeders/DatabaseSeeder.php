@@ -16,52 +16,52 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $config = Page::create([
-            'page_title' => 'config'
-        ]);
-
-        Attribut::create([
-            'title' => 'facebook',
-            'page_id' => $config->id,
-            'is_image' => 0,
-            'content' => 'https://www.facebook.com',
-
-        ]);
-        Attribut::create([
-            'title' => 'youtube',
-            'page_id' => $config->id,
-            'is_image' => 0,
-            'content' => 'https://www.youtube.com',
-
-        ]);
-        Attribut::create([
-            'title' => 'instegram',
-            'page_id' => $config->id,
-            'is_image' => 0,
-            'content' => 'https://www.instagram.com',
-
-        ]);
-        Attribut::create([
-            'title' => 'linkedin',
-            'page_id' => $config->id,
-            'is_image' => 0,
-            'content' => 'https://www.linkedinin.com',
-
-        ]);
-        Attribut::create([
-            'title' => 'whatsapp',
-            'page_id' => $config->id,
-            'is_image' => 0,
-            'content' => 'https://www.google.com/',
-
-        ]);
-        Attribut::create([
-            'title' => 'location',
-            'page_id' => $config->id,
-            'is_image' => 0,
-            'content' => 'https://www.google.com/',
-
-        ]);
+//        $config = Page::create([
+//            'page_title' => 'config'
+//        ]);
+//
+//        Attribut::create([
+//            'title' => 'facebook',
+//            'page_id' => $config->id,
+//            'is_image' => 0,
+//            'content' => 'https://www.facebook.com',
+//
+//        ]);
+//        Attribut::create([
+//            'title' => 'youtube',
+//            'page_id' => $config->id,
+//            'is_image' => 0,
+//            'content' => 'https://www.youtube.com',
+//
+//        ]);
+//        Attribut::create([
+//            'title' => 'instegram',
+//            'page_id' => $config->id,
+//            'is_image' => 0,
+//            'content' => 'https://www.instagram.com',
+//
+//        ]);
+//        Attribut::create([
+//            'title' => 'linkedin',
+//            'page_id' => $config->id,
+//            'is_image' => 0,
+//            'content' => 'https://www.linkedinin.com',
+//
+//        ]);
+//        Attribut::create([
+//            'title' => 'whatsapp',
+//            'page_id' => $config->id,
+//            'is_image' => 0,
+//            'content' => 'https://www.google.com/',
+//
+//        ]);
+//        Attribut::create([
+//            'title' => 'location',
+//            'page_id' => $config->id,
+//            'is_image' => 0,
+//            'content' => 'https://www.google.com/',
+//
+//        ]);
 
 //        User::create([
 //            'name' => 'islam',
@@ -69,15 +69,8 @@ class DatabaseSeeder extends Seeder
 //            'password' => bcrypt( 'Mreda@02104878')
 //            ]
 //        );
-//        $this->call([
-//            ImageSeeder::class,
-//            CompoundSeeder::class,
-//            LocationSeeder::class,
-//            TypeSeeder::class,
-//            AmenitiesSeeder::class
-//            PageSeeder::class
-
-
-//        ]);
+        $this->call([
+            SEOMetaDataSeeder::class
+        ]);
     }
 }

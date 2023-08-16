@@ -4,26 +4,22 @@
 <head>
     <!-- Basic meta tags -->
     <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="{{ app()->getLocale() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, ">
     <meta name="rating" content="general">
+    <meta name="keywords" content="{{ $seo['keywords_' . app()->getLocale()] }}">
+    <meta name="description" content="{{ $seo['description_' . app()->getLocale()] }}">
+    <meta name="page-type" content="{{ $seo['page_type'] }}">
+    <meta name="robots" content="{{ $seo['robots'] }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     @yield('seo-tags')
 
-
-
-
     <!-- Bing Search meta tags -->
-    <meta name="msvalidate.01" content="" />
     <!-- Project Shortcut Icon -->
   <link rel="shortcut icon" href="{{ asset('assets/App_Images/heart-logo.png') }}" type="image/x-icon" />
   <link rel="icon" href="{{ asset('assets/App_Images/heart-logo.png') }}" type="image/x-icon" />
 
     <title>HelloHome - @yield('title')</title>
-    <meta name="title" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" href="{{ asset('assets/content/css/swiper-bundle.min.css') }}" /> <!-- Swiper Js -->

@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseController;
 use App\Http\Resources\CompoundCollection;
 use App\Models\Compound;
 use App\Models\Images;
+use App\Models\SEO;
 use App\Service\API\FileService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -64,6 +65,15 @@ class CompoundController extends BaseController
         $compound->location = $request->location;
         $compound->image_id = $image->id;
         $compound->save();
+//        $seo = new SEO();
+//        $seo['compound_id'] = $compound['id'];
+//        $seo['keywords_en'] = $request['seo']['keywords_en'];
+//        $seo['keywords_ar'] = $request['seo']['keywords_ar'];
+//        $seo['description_en'] = $request['seo']['description_en'];
+//        $seo['description_ar'] = $request['seo']['description_ar'];
+//        $seo['page_type'] = $request['seo']['page_type'];
+//        $seo['robots'] = $request['seo']['robots'];
+//        $seo->save();
         return $this->sendResponse(new CompoundCollection($compound),"compound created successfully") ;
     }
 
@@ -76,7 +86,7 @@ class CompoundController extends BaseController
     public function show(int $id):JsonResponse
     {
         try {
-            $saved = Compound::findOrFail($id);
+            $saved = Compound::with('seo')->findOrFail($id);
             return $this->sendResponse(new CompoundCollection($saved),'');
         }catch (\Exception $e){
             return $this->sendError('Compound not found', 404);
@@ -117,6 +127,16 @@ class CompoundController extends BaseController
             $newPath = $this->fileService->renameFileByPath($image->image_path, "/compound/". $compound->slug_en);
             $image->image_path = $newPath;
             $image->save();
+
+            $seo = SEO::where("compound_id", $compound['id'])->first();
+            $seo['keywords_en'] = "";
+            $seo['keywords_ar'] = "";
+            $seo['description_en'] = "";
+            $seo['description_ar'] = "";
+            $seo['page_type'] = "";
+            $seo['robots'] = "";
+            $seo->save();
+
             return $this->sendResponse(new CompoundCollection($compound),"compound created successfully") ;
         }catch (\Exception $exception ){
             return $this->sendError('Compound not found', 404);

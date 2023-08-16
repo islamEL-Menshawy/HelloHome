@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class News extends Model
 {
@@ -33,6 +34,12 @@ class News extends Model
     public function getDateAttribute(){
         return Carbon::createFromFormat('Y-m-d H:i:s', $this->publish_date)->diffForHumans();
 //        return new Carbon($this->publish_date)::$this->getDateAttribute()->diffForHumans();
+    }
+
+
+    public function seo(): HasOne
+    {
+        return $this->hasOne(SEO::class, 'new_id');
     }
 
 }

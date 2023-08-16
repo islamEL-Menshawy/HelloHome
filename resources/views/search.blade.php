@@ -84,7 +84,7 @@
                                 <a href="{{route('unit_details', ['compound' => $unit->compound->slug_en, 'unit_id'=> $unit->id])}}">
                                 <div>
                                     <div class="image position-relative">
-                                        <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
+                                        <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" alt="{{ $image['alter_' . app()->getLocale()] }}"/>
                                     </div>
                                 </div>
                                 </a>
@@ -120,7 +120,7 @@
             <div class="brands-container">
                 <div class="brands-grid">
                     @foreach($compounds as $compound)
-                        <a href="{{ route('compound', $compound->slug_en) }}"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"> </a>
+                        <a href="{{ route('compound', $compound->slug_en) }}"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}" alt="{{ $compound->image['alter_' . app()->getLocale()] }}"> </a>
                     @endforeach
                 </div>
             </div>

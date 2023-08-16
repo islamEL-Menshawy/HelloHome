@@ -1,5 +1,8 @@
 @extends('partial.app')
 @section('title', $page_attributes->page_title)
+@section('seo-tags')
+
+@endsection
 @section('content')
     <div class="container">
         <div id="12" class="home-slidr w-100">
@@ -12,7 +15,7 @@
                             @if($slide->is_image)
                                 <div class="swiper-slide">
                                     <div class="home-header-slide">
-                                        <img src="{{ asset('uploads' .$slide->image->image_path) }}" alt="Home" />
+                                        <img src="{{ asset('uploads' .$slide->image->image_path) }}" alt="{{ $slide->image['alter_' . app()->getLocale()] }}" />
                                         <div class="home-heading text-uppercase text-center">
                                             {{ $slide->first_text }} <br /> {{ $slide->second_text }}
                                         </div>
@@ -99,7 +102,7 @@
                         <div class="marquee__inner" behavior="scroll" direction="right" loop="loop">
                             @foreach($compounds->slice(0, 12) as $compound)
                                 <div class="slide-marquee">
-                                    <a class="slide-mar" href="{{ route('compound', $compound->slug_en) }}" target="_blank"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"></a>
+                                    <a class="slide-mar" href="{{ route('compound', $compound->slug_en) }}" target="_blank"><img class=" img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}" alt="{{ $compound->image['alter_' . app()->getLocale()] }}"></a>
                                 </div>
                             @endforeach
                         </div>
@@ -107,7 +110,7 @@
                         <div class="marquee__inner" behavior="scroll" direction="right" loop="loop">
                             @foreach($compounds->slice(0, 12) as $compound)
                                 <div class="slide-marquee">
-                                    <a class="slide-mar" href="{{ route('compound', $compound->slug_en) }}" target="_blank"><img class="img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}"></a>
+                                    <a class="slide-mar" href="{{ route('compound', $compound->slug_en) }}" target="_blank"><img class="img-fluid w-100" src="{{ asset('uploads'.$compound->image->image_path) }}" alt="{{ $compound->image['alter_' . app()->getLocale()] }}"></a>
                                 </div>
                             @endforeach
                         </div>
@@ -119,7 +122,7 @@
                 <div class="col-md-6 col-12 my-4 img-49-sm Guests-section position-relative">
                     <a href="{{ app()->getLocale(). $attributes['section_one_link'] }}" class="Guests-Lay">
                         <img class="img-fluid w-100" src="{{asset($attributes['section_one_image'])}}"
-                              alt="Guests Services" alt="Guests Services">
+                             alt="{{ $attributes['section_one_image_alter_' . app()->getLocale()] }}">
                         <div class="Guests-go d-block"><span>{{ $attributes['section_one_title_'. app()->getLocale()] }}</span> </div>
                         <div class="Guests-title p-3">
                             <h3 class="title">{{ $attributes['section_one_text_one_'. app()->getLocale()] }}</h3>
@@ -136,8 +139,7 @@
                         <p class="pref col-12">{{ $attributes['section_two_text_two_'. app()->getLocale()] }}</p>
                     </div>
                     <div class="col-12 d-flex">
-                        <img class="lazy img-fluid w-100" src="{{ asset( $attributes['section_two_image'] ) }}"
-                             alt="Guests Services" alt="Guests Services">
+                        <img class="lazy img-fluid w-100" src="{{ asset( $attributes['section_two_image'] ) }}" alt="{{ $attributes['section_two_image_alter_' . app()->getLocale()] }}">
 
                     </div>
                 </a>
@@ -149,7 +151,7 @@
                         <button type="button" class="btn hlm-btn btn-outline-light px-4 ">{{ __('msg.learn_more') }}</button>
                     </div>
                     <img class="img-fluid w-100" src="{{asset($attributes['section_three_image'])}}"
-                         alt="" title="">
+                         alt="{{ $attributes['section_three_image_alter_' . app()->getLocale()] }}">
 
                     <!-- <img class="img-fluid w-100" src="App_Images/hel-mission.png" alt="HELLOHOME IS ON A MISSION"
                         title="HELLOHOME IS ON A MISSION"> -->

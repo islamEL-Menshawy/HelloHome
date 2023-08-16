@@ -23,14 +23,6 @@
 
         <div class=" details-slider justify-content-md-between justify-content-center mb-2">
             <div class="col-auto">
-{{--                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"--}}
-{{--                     aria-label="breadcrumb">--}}
-{{--                    <ol class="breadcrumb">--}}
-{{--                        <li class="breadcrumb-item"><a href="#">{{ $unit->location['title_'. app()->getLocale()] }}</a></li>--}}
-{{--                        <li class="breadcrumb-item active" aria-current="page">{{ $unit->type['title_'. app()->getLocale()] }}</li>--}}
-{{--                        <li class="breadcrumb-item"><a href="{{ route('compound', $unit->compound->slug_en) }}">{{ $unit->compound['title_'. app()->getLocale()] }}</a></li>--}}
-{{--                    </ol>--}}
-{{--                </nav>--}}
 
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -122,7 +114,7 @@
                         <div class="slider slider-for vp-slider">
                             @foreach($unit->images as $image)
                                 <div class="">
-                                    <h3><img class="img-fluid rounded-12" style="width: 100%;" src="{{ asset('uploads'.$image->image_path) }}" alt="">
+                                    <h3><img class="img-fluid rounded-12" style="width: 100%;" src="{{ asset('uploads'.$image->image_path) }}" alt="{{ $unit['title_'. app()->getLocale()] }}">
                                     </h3>
                                 </div>
                             @endforeach
@@ -138,7 +130,7 @@
                     <div class="slider-other-images">
                         <div class="slider slider-nav soi-container">
                             @foreach($unit->images as $image)<div class="px-2 mx-1 img-100">
-                                <h3><img class="img-fluid rounded-12" style="width: 100%;" src="{{ asset('uploads'.$image->image_path) }}" alt="">
+                                <h3><img class="img-fluid rounded-12" style="width: 100%;" src="{{ asset('uploads'.$image->image_path) }}" alt="{{ $unit['title_'. app()->getLocale()] }}">
                                 </h3>
                             </div>
                             @endforeach
@@ -296,7 +288,7 @@
 
                         <div class="about-dev d-flex">
                             <div class="about-dev-img">
-                                <img class="img-fluid" src="{{asset('uploads'.$unit->compound->image->image_path)}}" alt="" />
+                                <img class="img-fluid" src="{{asset('uploads'.$unit->compound->image->image_path)}}" alt="{{ $unit->compound['title_'. app()->getLocale()] }}" />
                             </div>
                             <div class="about-dev-details">
                                 <h3>
@@ -319,7 +311,7 @@
                             <div class="home-features-grid">
                                 @foreach($unit->amenities as $amenitie)
                                     <div class="hfg-card">
-                                        <img class="img-fluid" src="{{asset('uploads'.$amenitie->image->image_path)}}" alt="" />
+                                        <img class="img-fluid" src="{{asset('uploads'.$amenitie->image->image_path)}}" alt="{{ $amenitie['title_'. app()->getLocale()] }}" />
                                         <div class="hfg-title">{{ $amenitie['title_'. app()->getLocale()] }}</div>
                                     </div>
                                 @endforeach
@@ -388,7 +380,7 @@
 {{--                                        <div class="unit-card-price">{{$unit->price}}</div>--}}
                                         <div>
                                             <div class="image position-relative">
-                                                <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" />
+                                                <img class="lazy img-fluid w-100" src="{{asset('uploads'.$image->image_path)}}" alt="{{ $unit['title_' . app()->getLocale()] }}"/>
                                             </div>
                                         </div>
                                     </a>
@@ -409,7 +401,7 @@
                                     </div>
                                     <div class="text-gallery">
                                         <span>{{ __('msg.price') }}</span>
-                                        <p class="price-replace">{{$unit->price}}</p>
+                                        <p class="price-replace">{{$unit['price_'. app()->getLocale() ]}}</p>
                                     </div>
                                 </div>
                             </a>

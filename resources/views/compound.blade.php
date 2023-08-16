@@ -20,7 +20,7 @@
 
             <!-- View Brand -->
             <div class="view-adv-brand">
-                <img class="img-fluid" style="max-height: 110px;" src="{{ asset('uploads'.$compound->image->image_path) }}" />
+                <img class="img-fluid" style="max-height: 110px;" src="{{ asset('uploads'.$compound->image->image_path) }}" alt="{{ $compound['title_' . app()->getLocale()] }}" />
             </div>
 
             <!-- Areas Slider -->
@@ -36,7 +36,7 @@
 {{--                                    <div class="unit-card-price">{{$unit->price}}</div>--}}
                                     <div>
                                         <div class="image position-relative">
-                                            <img class="img-fluid w-100" src="{{asset('uploads'. $image->image_path)}}" data-src="" />
+                                            <img class="img-fluid w-100" src="{{asset('uploads'. $image->image_path)}}" alt="{{ $unit['title_' . app()->getLocale()] }}" />
                                         </div>
                                     </div>
                                 </a>

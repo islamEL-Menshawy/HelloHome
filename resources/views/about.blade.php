@@ -1,7 +1,5 @@
 @extends('partial.app')
 @section('title', $attributes['about_section_main_sub_title_'. app()->getLocale()])
-
-
 @section('content')
     <div class=" container about">
         <div class="about-mainimg w-100">
@@ -12,7 +10,7 @@
                 <picture>
                     <source media="(min-width: 768px)" srcset="{{ asset($attributes['about_section_main_image']) }}">
                     <source media="(min-width: 10px)" srcset="{{ asset($attributes['about_section_main_image']) }}">
-                    <img class="img-fluid " src="{{asset($attributes['about_section_main_image'])}}">
+                    <img class="img-fluid " src="{{asset($attributes['about_section_main_image'])}}" alt="{{ $attributes['about_section_main_image_alter_' . app()->getLocale()] }}">
                 </picture>
 
                 <div class="row container">
@@ -46,7 +44,7 @@
                 </div>
                 <div class="col-lg-6 img-49-ds col-12 order-lg-2 order-1">
                     <img class="lazy img-fluid w-100" src="{{ asset($attributes['about_section_3_image']) }}"
-                         alt="Guests Services" alt="Guests Services">
+                         alt="{{ $attributes['about_section_3_image_alter_' . app()->getLocale()] }}">
 
                 </div>
             </div>
@@ -66,7 +64,7 @@
                             class="btn btn-outline-secondary w-100 col-12 text-center mb-4 Services-but">{{ $attributes['about_section_5_title_'. app()->getLocale()] }}</button>
                     <div>
                         <img class="lazy img-fluid w-100 col-12" src="{{ asset( $attributes['about_section_5_image']) }}"
-                              alt="Guests Services" alt="Guests Services">
+                             alt="{{ $attributes['about_section_5_image_alter_' . app()->getLocale()] }}">
                     </div><p class="pref my-4 px-md-3 px-2">{{ $attributes['about_section_5_text_'. app()->getLocale()] }}</p>
 
                 </div>
@@ -76,7 +74,7 @@
                     <div>
 
                         <img class="lazy img-fluid w-100 col-12" src="{{ asset( $attributes['section_6_image']) }}"
-                              alt="Guests Services" alt="Guests Services">
+                             alt="{{ $attributes['section_6_image_alter_' . app()->getLocale()] }}">
                     </div><p class="pref my-4 px-md-3 px-2">{{ $attributes['about_section_6_text_'. app()->getLocale()] }}</p>
                 </div>
             </div>

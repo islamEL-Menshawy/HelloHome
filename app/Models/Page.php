@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Page extends Model
 {
@@ -18,6 +19,10 @@ class Page extends Model
         return $this->hasMany(Attribut::class);
     }
 
+    public function seo(): HasOne
+    {
+        return $this->hasOne(SEO::class);
+    }
 
 
 

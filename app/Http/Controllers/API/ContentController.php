@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseController;
 use App\Models\ContactUs;
 use App\Models\Images;
 use App\Models\Newsletter;
+use App\Models\SEO;
 use App\Models\UnitIntrest;
 use Illuminate\Http\Request;
 use App\Models\Page;
@@ -15,20 +16,34 @@ use Illuminate\Support\Facades\File;
 class ContentController extends BaseController
 {
     public function getContent($page){
-        $data = Page::where('page_title', $page)->first();
+        $data = Page::where('page_title', $page)->with('seo')->first();
         $object = array();
         foreach ($data->attributes as $value){
             $object[$value->title] = $value->is_image ? getenv('APP_URL'). $value->image->image_path : $value->content;
         }
+        $object['page_id'] = $data['id'];
+        $object['seo'] = $data['seo'];
         return $this->sendResponse($object,"");
     }
     public function updateContent(Request $request){
+        // Update page content
         foreach ($request->data as $key => $value){
             $attribute = Attribut::where('title' , $key)->first();
-            $attribute->content = $value;
-            $attribute->save();
+            if (!is_null($attribute)){
+                $attribute->content = $value;
+                $attribute->save();
+            }
         }
-        return $this->sendResponse("", "Page updated successfully");
+        // Update page seo data
+        $seo = SEO::where("page_id", $request['data']['seo']['page_id'])->first();
+        $seo['keywords_en'] = $request['data']['seo']['keywords_en'];
+        $seo['keywords_ar'] = $request['data']['seo']['keywords_ar'];
+        $seo['description_en'] = $request['data']['seo']['description_en'];
+        $seo['description_ar'] = $request['data']['seo']['description_ar'];
+        $seo['page_type'] = $request['data']['seo']['page_type'];
+        $seo['robots'] = $request['data']['seo']['robots'];
+        $seo->save();
+        return $this->sendResponse("no", "Page updated successfully");
     }
 
     public function updateContentImage(Request $request){
